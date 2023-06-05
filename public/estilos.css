@@ -1,0 +1,502 @@
+/*    */
+:root {
+  --tipo-subtitulo: Verdana, sans-serif;
+  --estilo-letra: bold;
+  --tamano-letra: 0.8rem;
+  --letra-mnu: Anton, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#home {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+header {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 999;
+}
+#cuerpo {
+  position: fixed;
+  top: 120px;
+  left: 600px;
+  z-index: 9999;
+  padding: 10px;
+}
+@media (max-width: 1000px) {
+  #cuerpo {
+    left: 100px;
+  }
+}
+/*    */
+/****zona de menu de REGISTRO CONTACTOS   LINEA 1 *****/
+/*    */
+#mnu-registro-contacto {
+  padding: 0;
+  padding-right: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  align-items: center;
+  width: 100%;
+  height: 2rem;
+  background-color: red;
+}
+
+.cuadro-boton {
+  margin-right: 2%;
+  width: 8%;
+  background: radial-gradient(circle, red, rgb(204, 83, 83));
+  border-radius: 25%;
+}
+
+.cuadro-boton:hover {
+  background: radial-gradient(circle, red, rgb(66, 63, 63));
+
+  .user-linea1 {
+    color: rgb(216, 156, 156);
+  }
+}
+
+#contactos {
+  margin-right: 5%;
+}
+
+.user-linea1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 1.5rem;
+  font-family: vardana;
+  font-weight: bold;
+  font-size: 90%;
+  color: white;
+}
+
+/*    */
+/**** ZONA DE  MNU INTERNOS   LINEA 2 */
+/*    */
+#nav-interno {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  width: 100%;
+  height: 4rem;
+}
+
+#logotipo {
+  display: flex;
+  justify-content: center;
+  width: 100px;
+  height: 85%;
+  margin-top: 5px;
+  margin-left: 3%;
+  border-radius: 25px;
+}
+
+#logotipo img {
+  width: 100%;
+  height: auto;
+}
+/*
+
+/* COMIENZA EL MENU DE LA EMPRESA PARA ASUNTOS INTERNOS DE LA PAGINA
+
+
+             SUBMENU PRODUCTOS
+*/
+
+#mnu-producto {
+  width: 8rem;
+  margin-left: 30px;
+}
+
+#a-productos {
+  margin-top: 2rem;
+  display: flex;
+  width: 7rem;
+  font-size: 13px;
+  color: white;
+  font-family: vardana;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 60px;
+}
+#a-productos:hover {
+  color: rgb(241, 88, 88);
+}
+#ul-productos {
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+  width: 7rem;
+  position: absolute; 
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  display: none;
+}
+
+#ul-productos::before {
+  /* Estilos de la punta */
+  margin-top: 10px;
+  content: "";
+  position: absolute;
+  top: -20px; /* Ajusta la posición vertical de la punta */
+  left: 10%; /* Ajusta la posición horizontal de la punta */
+  border-left: 10px solid transparent; /* Ajusta el tamaño de la punta */
+  border-right: 10px solid transparent; /* Ajusta el tamaño de la punta */
+  border-bottom: 10px solid #ccc; /* Ajusta el tamaño y color de la punta */
+  transform: translateX(-50%); /* Centra la punta horizontalmente */
+}
+
+#mnu-producto:hover #ul-productos {
+  display: block; /* Muestra el menú cuando se pasa el mouse sobre el enlace */
+}
+
+
+#ul-productos li {
+  list-style: none;
+  height: 20px;
+  list-style-type: none;
+}
+
+#ul-productos li a {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+}
+
+#ul-productos li a:hover {
+  background-color: rgb(146, 123, 123);
+  color: white;
+}
+/*
+
+             SUBMENU NOSOTROS
+*/
+#a-nosotros {
+  display: flex;
+  margin-top: 2rem;
+  width: 11rem;
+  font-size: 13px;
+  color: white;
+  font-family: vardana;
+  font-weight: bold;
+  text-decoration: none;
+  margin-right: 25px;
+}
+#a-nosotros:hover {
+  color: rgb(241, 88, 88);
+}
+#ul-nosotros {
+  background-color: white;
+  border: 1px solid white;
+  padding: 10px;
+  width: 7rem;
+  position: absolute; 
+  list-style-type: none;
+  margin: 10px 0 0 0;
+  padding: 0;
+  display: none;
+}
+
+#mnu-nosotros:hover #ul-nosotros {
+  display: block; 
+}
+
+#ul-nosotros::before {
+  /* Estilos de la punta */
+  margin-top: 10px;
+  content: "";
+  position: absolute;
+  top: -20px; /* Ajusta la posición vertical de la punta */
+  left: 10%; /* Ajusta la posición horizontal de la punta */
+  border-left: 10px solid transparent; /* Ajusta el tamaño de la punta */
+  border-right: 10px solid transparent; /* Ajusta el tamaño de la punta */
+  border-bottom: 10px solid #ccc; /* Ajusta el tamaño y color de la punta */
+  transform: translateX(-50%); /* Centra la punta horizontalmente */
+}
+#ul-nosotros li {
+  list-style: none;
+  height: 20px;
+  list-style-type: none;
+}
+
+
+#ul-nosotros li a {
+  display: flex;
+  justify-content: start;
+  width: 100%;
+  color: rgb(5, 5, 5);
+  text-decoration: none;
+}
+
+#a-nosotros:hover #ul-nosotros {
+  display: block;
+}
+
+#ul-nosotros li a:hover {
+  background-color: rgb(122, 110, 110);
+  color: white;
+}
+
+#a-nosotros:hover #ul-nosotros{
+  display: block;
+}
+
+/*
+
+             
+*/
+#mnu-search {
+  display: flex;
+  width: 15%;
+  height: 45%;
+  padding-left: 3px;
+  border: 1px solid white;
+  margin-left: auto;
+  margin-right: 5%;
+  justify-content: left;
+  align-items: center;
+  color: rgb(224, 162, 162);
+  font-family: vardana;
+  font-weight: bold;
+  font-size: 100%;
+  margin-top: 1.3%;
+}
+
+#mnu-search img {
+  display: flex;
+  width: 13%;
+  height: auto;
+  margin-left: auto;
+}
+
+/*    */
+/**** ZONA DE  INFORMACION DE NAVEGACION LINEA 3    */
+/*    */
+#informacion-nav {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  width: 100%;
+  height: 2rem;
+  background-color: rgb(252, 249, 250);
+}
+
+.inicio {
+  margin-top: 0.7%;
+  display: flex;
+  margin-left: 2%;
+  align-items: center;
+  color: red;
+  text-decoration: none;
+  font-family: vardana;
+  font-weight: bold;
+}
+
+#slogan {
+  width: 40rem;
+  height: 100%;
+  margin-left: auto;
+  font-size: 1.2rem;
+  margin-right: 2%;
+  font-family: vardana;
+  margin-top: 0;
+  font-weight: bold;
+}
+
+@keyframes medicamentos {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+#medicamentos {
+  color: red;
+  animation: medicamentos 1s infinite;
+}
+/*    */
+/**** ZONA DE  INICIO PAGINA 1    */
+/*    */
+.slider {
+  display: flex;
+  width: 100%;
+  height: 670px;
+  overflow: hidden;
+}
+
+.slider img {
+  width: 100%;
+  height: auto;
+  display: none;
+}
+
+.slider img.active {
+  display: block;
+}
+
+button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+#slice-derecho {
+  margin-top: -20%;
+  margin-left: 1%;
+  width: 2.5%;
+  height: 5%;
+  position: absolute;
+  z-index: 2;
+}
+
+#slice-izquierdo {
+  margin-top: -20%;
+  margin-left: 93%;
+  width: 2.5%;
+  height: 5%;
+  position: absolute;
+  z-index: 2;
+}
+
+.img-slice {
+  width: 200%;
+  height: auto;
+}
+
+.fig-linea1 {
+  margin-top: 5.2%;
+  display: flex;
+  width: 10%;
+  height: 1px;
+  margin-left: 20%;
+  background-color: black;
+}
+
+.fig-linea2 {
+  margin-top: 5.2%;
+  display: flex;
+  width: 10%;
+  height: 1px;
+  margin-right: 20%;
+  background-color: black;
+}
+
+#figura {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  width: 90%;
+  height: 100px;
+  margin-left: 5%;
+  background-color: white;
+  border-radius: 20rem 20rem 0 0;
+  color: white;
+  position: absolute;
+  top: 670px;
+  transform: translateY(-70%);
+}
+
+#figura1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5%;
+  width: 50%;
+  height: 45%;
+  border: 2px solid rgb(5, 5, 5);
+  border-radius: 30px 30px 0 0;
+  color: RED;
+  transform: translateY(-70%);
+  box-shadow: inset 0 0 20px red;
+  font-size: 150%;
+  font-family: vardana;
+  font-weight: bold;
+}
+#figura1 img {
+  width: 3%;
+}
+/*    */
+/**** ZONA DE  PAGINA 2 BLOGS    */
+/*    */
+#blogs {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Crea cuatro columnas de tamaño igual */
+  grid-gap: 5px; /* Espacio entre las imágenes */
+  margin-top: 7%;
+  height: 830px;
+  border-radius: 0 0 25px 0;
+  z-index: 0;
+}
+
+.img-blogs {
+  margin-left: 10%;
+  width: 85%;
+  height: auto;
+  text-align: center;
+}
+/*    */
+/**** ZONA DE  footer    */
+/*    */
+#footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  z-index: 0;
+}
+
+#footer1 {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #343232;
+  border-radius: 80px 0 80px 0;
+}
+
+.footer1-hijo {
+  margin-left: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: center;
+  width: 30%;
+  color: white;
+  height: 300px;
+  margin-top: 50px;
+}
+.footer1-hijo p {
+  color: white;
+}
+#redesS {
+  width: 60%;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding-right: 100px;
+}

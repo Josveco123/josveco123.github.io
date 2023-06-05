@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="registro.css" />
+  </head>
+  <body>
+    <div id="cuerpo">
+      <div id="contenedor-contacto">
+        <div id="cont-registro">
+          <div id="tit1">
+            <h1>Ingresa tu cuenta</h1>
+          </div>
+
+          <form id="datos-captura" action="">
+            <div id="E-mail" class="datos-correo">
+              <p>Email Empresa o Persona</p>
+              <input
+                id="correo"
+                class="correo"
+                type="text"
+                placeholder="Correo electrónico"
+              />
+            </div>
+
+            <div id="contraseña" class="datos-correo">
+              <p>Contraseña de acceso</p>
+              <input
+                id="clave"
+                class="clave"
+                type="text"
+                placeholder="Contraseña"
+              />
+            </div>
+
+            <div id="razon-social" class="datos-correo">
+              <p>Razon Social de la empresa</p>
+              <input
+                id="razonSocial"
+                class="razonSocial"
+                type="text"
+                placeholder="Razon Social"
+              />
+            </div>
+
+            <div id="Ciudad" class="datos-correo">
+              <p>Ciudad de residencia</p>
+              <input
+                id="ciudad"
+                class="ciudad"
+                type="text"
+                placeholder="Donde Reside"
+              />
+            </div>
+          </form>
+          <div id="ejecutar">
+            <button id="boton-registro" onclick="POSTregistro()">
+              Registrarse
+            </button>
+            <br>
+            <a id="ocultar" href="/index.html">Exit</a>
+          </div>
+        </div>
+        <p id="bienvenida">
+          Bienvenido a Laboratorios del caribe. <br />Su Cuenta Fue creada con
+          exito. <br /><br />
+          <a href="index.html">Click Continuar</a>
+        </p>
+      </div>
+    </div>
+    <script src="/src/backend.js"></script>
+  </body>
+</html>

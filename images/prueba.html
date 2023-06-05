@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*    */
+:root {
+    --tipo-subtitulo: Verdana, sans-serif;
+    --estilo-letra: bold;
+    --tamano-letra: 0.8rem;
+    --letra-mnu: Anton, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+header {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    border: 1px solid rgb(208, 255, 0); 
+}
+
+/*    */
+/****zona de menu de REGISTRO CONTACTOS    *****/
+/*    */
+#mnu-registro-contacto {
+    padding: 0;
+    padding-right: 3rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+    height: 2rem;
+    background-color: red;
+}
+
+.cuadro-boton {
+    margin-right: 2%;
+    width: 8%;
+    background: radial-gradient(circle, red, rgb(204, 83, 83));
+    border-radius: 25%;
+}
+
+.cuadro-boton:hover {
+    background: radial-gradient(circle, red, rgb(66, 63, 63));
+
+    .user-linea1 {
+        color: rgb(216, 156, 156);
+    }
+}
+
+.user-linea1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1.5rem;
+    font-family: vardana;
+    font-weight: bold;
+    font-size: 90%;
+    color: white;
+}
+
+/*    */
+/**** ZONA DE  MNU INTERNOS    */
+/*    */
+#nav-interno {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    width: 100%;
+    height: 4rem;
+    border: 1px solid red; 
+    border: 2px solid white;
+}
+#logotipo {
+    display: flex;
+    justify-content: center;
+    width: 9%;
+    height:85%;
+    margin-top: 5px;
+    margin-left: 3%;   
+    border-radius: 25px;
+    padding-right: 3%;
+}
+#logotipo img{
+    width: 80%;
+    height: auto;
+}
+
+
+.clase-mnu-nosotros {
+width: 13%;
+height: 100%;
+
+}
+.clase-mnu-nosotros p{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16%;
+    color:white;
+    font-family: vardana;
+    font-weight: bold;
+    font-size: 90%;
+ }
+ #mnu-search {
+    width: 20%;
+    height: 100%;
+    border: 2px solid white;
+    margin-right: 10px;
+ }
+    </style>
+</head>
+<body>
+    <!DOCTYPE html>
+    <html lang="en">
+    
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="/estilos.css">
+    </head>
+    
+    <body>
+        <header>
+            <div id="mnu-registro-contacto">
+                <div id="Registrese" class="cuadro-boton"><a class="user-linea1">REGISTRESE</a></div>
+                <div id="contactos" class="cuadro-boton"><a class="user-linea1">CONTACTOS</a></div>
+            </div>
+            <div id="nav-interno">
+                <div id="logotipo"><img src="/images/logo.svg" alt=""></div>
+                <div id="mnu-empresa"  class="clase-mnu-nosotros"> <p> PRODUCTOS</p></div>
+                <div id="mnu-nosotros" class="clase-mnu-nosotros"> <p> ACERCA DE NOSOTROS</p></div>
+                <div id="mnu-search"class="clase-mnu-searrch">  search</div>
+            </div>
+            <div id="informacion-nav"></div>
+        </header>
+    </body>
+    
+    </html>  
+</body>
+</html>
