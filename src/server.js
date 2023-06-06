@@ -5,7 +5,7 @@ const conexionDb = require('./conexionDb.js');
 const { grabarDb }= require('./grabarDb.js');
 const { datosDb } = require('./datosDb.js');
 const app = express();
-const port = 4000;
+const port = 3000;
 
 conexionDb();
 // Middleware para analizar el cuerpo de las solicitudes HTTP
