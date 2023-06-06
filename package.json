@@ -2,7 +2,7 @@
   "name": "laboratorios-del-caribe",
   "version": "1.0.0",
   "description": "",
-  "main": "App.js",
+  "main": "server.js",
   "scripts": {
     "start": "node src/server.js"
   },
