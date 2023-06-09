@@ -5,7 +5,7 @@ const conexionDb = require('./conexionDb.js');
 const { grabarDb }= require('./grabarDb.js');
 const { datosDb } = require('./datosDb.js');
 const app = express();
-const port = 3000;
+app.set('port', process.env.PORT || 3000);
 
 conexionDb();
 // Middleware para analizar el cuerpo de las solicitudes HTTP
@@ -36,6 +36,6 @@ app.post('/grabar', async (req, res) => {
 });
 
 // Iniciar el servidor
-app.listen(port, () => {
-  console.log(`Servidor iniciado en http://localhost:${port}`);
+app.listen(app.get('port'), () => {
+  console.log(`Servidor iniciado en http://localhost:${app.get('port')}`);
 });

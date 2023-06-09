@@ -1,5 +1,7 @@
 var index = 0;
-var slides = document.getElementsByClassName("slider")[0].getElementsByTagName("img");
+var slides = document
+  .getElementsByClassName("slider")[0]
+  .getElementsByTagName("img");
 
 function mostrarSlide() {
   for (var i = 0; i < slides.length; i++) {
@@ -26,22 +28,22 @@ function anteriorSlide() {
 
 mostrarSlide();
 
-
-
 /*
 leer el area a copiar para remplazar
 */
+
+
 function registro() {
-  fetch('/registro.html')
-    .then(response => response.text())
-    .then(html => {
-      document.getElementById('cuerpo').innerHTML = html;
+  fetch("/registro.html")
+    .then((response) => response.text())
+    .then((html) => {
+      document.getElementById("cuerpo").innerHTML = html;
     });
 
   window.onload = function () {
-    var cuerpo = document.getElementById('cuerpo');
+    var cuerpo = document.getElementById("cuerpo");
     var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'registro.html', true);
+    xhr.open("GET", "registro.html", true);
     xhr.onreadystatechange = function () {
       if (xhr.readyState === 4 && xhr.status === 200) {
         cuerpo.innerHTML = xhr.responseText;
@@ -49,14 +51,23 @@ function registro() {
     };
     xhr.send();
   };
-};
+  document.getElementById("flecha").style.display="block";
+}
+
+
+/*
+
+gererar hoja de contactos
+
+*/
+
 
 function contactos() {
   // Obtener referencia al contenedor
-  var contacto = document.querySelector('#areacomun');
+  var contacto = document.querySelector("#areacomun");
 
   // Crear un elemento div para contener el fragmento HTML
-  var htmlFragment = document.createElement('div');
+  var htmlFragment = document.createElement("div");
   htmlFragment.innerHTML = `
   <section id="pagina4">
   <h2 class="tit-nos-pag4">CONTACTOS</h2>
@@ -208,5 +219,201 @@ function contactos() {
 
   // Insertar el fragmento HTML dentro del contenedor
   contacto.parentNode.replaceChild(htmlFragment, contacto);
+  document.getElementById("flecha").style.display="block";
 }
 
+/**
+ *
+ * // comienza importe de pagina NOSOTROS--------------------
+ *
+ */
+
+
+async function fNosotros() {
+  document.getElementById('areacomun').style.height = '1800px';
+  document.getElementById('cajon').style.height = '1800px';
+  await functionNosotros();
+  document.getElementById("flecha").style.display="block";
+}
+
+function functionNosotros() {
+  // Obtener referencia al contenedor
+  var nosotros = document.querySelector("#cajon");
+
+  // Asignar el nuevo fragmento HTML al contenido del contenedor
+  nosotros.innerHTML = `
+    <section id="pagina2">
+      <div id="mnu-nosotros">
+        <div id="nosotros-I" class="css-pag">
+          <h2 id="denosotros" class="tit-nos">ACERCA DE NOSOTROS</h2>
+          <br />
+          <p>
+            <span>
+              Laboratorio del Caribe S.A. inició labores en Sincelejo el 20 de
+              marzo de 1984. Se obtiene el primer Registro Sanitario para el
+              producto comercializado bajo la marca Artrixin iniciándose la
+              expansión y posicionamiento en todo el territorio Nacional.
+              <br /><br />
+              A través de los años Laboratorio del Caribe S.A. ha crecido de
+              manera importante en el mercado Nacional, manteniendo una posición
+              de liderazgo y prestigio ante el cuerpo médico por la calidad de sus
+              productos.
+            </span>
+            <br /><br />
+          </p>
+          <div id="cuadrado">
+            <span>
+              Laboratorio del Caribe S.A., fue certificado con Buenas Prácticas de
+              Manufactura en el año 2002, lo que le permitirá en el siglo XXI
+              continuar ofreciendo medicamentos de excelente calidad seguros y
+              confiables al sistema de salud.
+            </span>
+          </div>
+          <br />
+          <br />
+          <h2 id="politica-calidad" class="tit-nos">POLÍTICAS DE CALIDAD</h2>
+          <br />
+          <p>
+            <span>Laboratorio del Caribe S.A., es una empresa farmacéutica que está
+              en un mejoramiento continuo, ofreciendo productos y servicios
+              confiables que cumplan con las normas de Buenas Prácticas de
+              Manufactura, para contribuir de esta forma al bienestar de la
+              Sociedad.
+              <br />
+              <br />
+              Con ética y responsabilidad ofrecemos al mercado productos de
+              excelente calidad, seguros y efectivos, que satisfacen las
+              necesidades del cliente, cumpliendo con normas Nacionales e
+              Internacionales, y respetando el medio ambiente.
+              <br /><br />
+              A través de la gestión adecuada de los recursos y el compromiso
+              asumido por nuestros colaboradores, Laboratorio del Caribe S.A.,
+              genera el nivel de rentabilidad acorde a las expectativas de los
+              socios, permitiendo el desarrollo integral de los miembros de
+              nuestra organización.
+            </span>
+          </p>
+          <br />
+          <h2 id="politica-calidad" class="tit-nos">OBJETIVOS DE CALIDAD.</h2>
+          <br />
+          <p>
+            <span>
+              Lograr el cumplimiento de las expectativas del cliente, entregando
+              productos a tiempo, efectivos, seguros y confiables para el
+              bienestar Social. Optimizar los tiempos de respuesta al cliente.
+            </span>
+          </p>
+          <p>
+            <span>
+              >Lograr el compromiso de cada uno de nuestros Colaboradores a través
+              del mejoramiento Continuo de nuestros recursos.
+            </span>
+          </p>
+          <p>
+            <span>
+              >Generar excelente rentabilidad con el manejo efectivo de los
+              recursos.
+            </span>
+          </p>
+        </div>
+        <!-- Inicio segunda columna -->
+        <div id="nosotros-D" class="css-pag">
+          <h2 id="politica-calidad" class="tit-nos">MISIÓN.</h2>
+          <br />
+          <p>
+            <span>
+              Laboratorio del Caribe S.A., es una empresa farmacéutica que tiene
+              como misión, comercializar productos de excelente calidad,
+              cumpliendo con todas las Normas exigidas por las entidades que nos
+              vigilan, respetando el medio ambiente y generando de esta forma
+              bienestar a la comunidad.
+              <br /><br />
+              Laboratorio del Caribe propenderá por el desarrollo integral de sus
+              colaboradores al mismo tiempo que satisface las expectativas de sus
+              socios.
+              <br /><br />
+            </span>
+          </p>
+          <h2 id="politica-calidad" class="tit-nos">VISIÓN.</h2>
+          <br />
+          <p>
+            <span>
+              LABORATORIO DEL CARIBE S.A.S. para el año 2030 pretende ser uno de
+              los más reconocidos Laboratorios farmacéuticos de Colombia, y estar
+              presente en todo el territorio nacional, así como iniciar su
+              expansión a centro América ampliando su línea de productos cada año,
+              para hacer una contribución a la región, construyendo herramientas
+              para ser más competitivos y posicionarse como uno de los principales
+              laboratorios farmacéuticos en las regiones donde hace presencia.
+            </span>
+          </p>
+          <br />
+          <h2 id="politica-calidad" class="tit-nos">VALORES CORPORATIVOS</h2>
+          <br />
+          <p>
+            <span class="list-container">
+              <span><strong>RESPETO:</strong> Aceptamos las decisiones y acciones de
+                los clientes internos y externos siendo tolerantes.</span>
+              <span><strong>COMPROMISO:</strong> Damos lo máximo de cada uno de
+                nosotros con sentido de pertenencia hacia la empresa.</span>
+              <span><strong>HONESTIDAD:</strong> Actuamos conforme a los intereses
+                comunes y no particulares de acuerdo a la ley y las
+                costumbres.</span>
+              <span><strong>LEALTAD:</strong> Somos fieles frente a los compromisos y
+                objetivos de la empresa.</span>
+              <span><strong>RESPONSABILIDAD:</strong> Somos conscientes de nuestras
+                actuaciones, cumpliendo cabalmente de forma que se logren los
+                objetivos de la empresa.</span>
+            </span>
+          </p>
+          <div id="foto"><img src="/images/foto.png" alt="" /> </div>
+        </div>
+      </div>
+    </section>
+  `;
+}
+
+/**
+ *
+ *
+ *
+ *
+ */
+
+function productos() {
+  // Obtener referencia al contenedor
+  var productos = document.querySelector("#areacomun");
+
+  // Crear un elemento div para contener el fragmento HTML
+  var htmlFragment = document.createElement("div");
+  htmlFragment.innerHTML = ` 
+  <section id="productos">
+  <h1 style="margin-top: 220px; margin-left: 300px; color: red; font-size: 30px; animation: blink 1s infinite;">
+  En desarrollo para Productos
+  </h1>
+  </section>
+  `;
+
+  // Insertar el fragmento HTML dentro del contenedor
+  productos.parentNode.replaceChild(htmlFragment, productos);
+  document.getElementById("flecha").style.display="block";
+}
+
+function distribuidores() {
+  // Obtener referencia al contenedor
+  var distribuidores = document.querySelector("#areacomun");
+
+  // Crear un elemento div para contener el fragmento HTML
+  var htmlFragment = document.createElement("div");
+  htmlFragment.innerHTML = ` 
+    <section id="distribuidores">
+    <h1 style="margin-top: 220px; margin-left: 300px; color: red; font-size: 30px; animation: blink 1s infinite;">
+    En desarrollo para distribuidores
+    </h1>
+    </section>
+`;
+
+  // Insertar el fragmento HTML dentro del contenedor
+  distribuidores.parentNode.replaceChild(htmlFragment, distribuidores);
+  document.getElementById("flecha").style.display="block";
+}
