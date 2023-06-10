@@ -380,40 +380,49 @@ function functionNosotros() {
  *
  */
 
-function productos() {
-  // Obtener referencia al contenedor
-  var productos = document.querySelector("#areacomun");
+function producto() {
+  var producto = document.querySelector("#cuerpo");
+  producto.innerHTML = `
+  <div id="contenedor-producto">
+  <div id="cont-producto">
+    <div id="tit1">
+      <h1>Ingresa tu cuenta</h1>
+    </div>
 
-  // Crear un elemento div para contener el fragmento HTML
-  var htmlFragment = document.createElement("div");
-  htmlFragment.innerHTML = ` 
-  <section id="productos">
-  <h1 style="margin-top: 220px; margin-left: 300px; color: red; font-size: 30px; animation: blink 1s infinite;">
-  En desarrollo para Productos
-  </h1>
-  </section>
-  `;
+    <form id="datos-captura" action="">
+      <div id="E-mail" class="datos-correo">
+        <p>Email Empresa o Persona</p>
+        <input
+          id="correo"
+          class="correo"
+          type="text"
+          placeholder="Correo electrónico"
+        />
+      </div>
 
-  // Insertar el fragmento HTML dentro del contenedor
-  productos.parentNode.replaceChild(htmlFragment, productos);
-  document.getElementById("flecha").style.display="block";
-}
-
-function distribuidores() {
-  // Obtener referencia al contenedor
-  var distribuidores = document.querySelector("#areacomun");
-
-  // Crear un elemento div para contener el fragmento HTML
-  var htmlFragment = document.createElement("div");
-  htmlFragment.innerHTML = ` 
-    <section id="distribuidores">
-    <h1 style="margin-top: 220px; margin-left: 300px; color: red; font-size: 30px; animation: blink 1s infinite;">
-    En desarrollo para distribuidores
-    </h1>
-    </section>
+      <div id="contraseña" class="datos-correo">
+        <p>Contraseña de acceso</p>
+        <input
+          id="clave"
+          class="clave"
+          type="text"
+          placeholder="Contraseña"
+        />
+      </div>      
+    </form>
+    <div id="ejecutar">
+      <button id="boton-registro" onclick="GETregistro()">
+        Verificar
+      </button>
+      <br>
+      <a id="ocultar" href="/index.html">Exit</a>
+    </div>
+  </div>
+  <p id="bienvenida">
+    Bienvenido a Laboratorios del caribe. <br />Su Cuenta Fue creada con
+    exito. <br /><br />
+    <a href="index.html">Click Continuar</a>
+  </p>
+</div>
 `;
-
-  // Insertar el fragmento HTML dentro del contenedor
-  distribuidores.parentNode.replaceChild(htmlFragment, distribuidores);
-  document.getElementById("flecha").style.display="block";
 }

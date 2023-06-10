@@ -1,22 +1,27 @@
 const Datos = require('../modelos/db.Schema');
 
-async function grabarDb(datos) {
-  const email = datos.email;
+async function grabarDb(datosI) {
+  const datosUsuario = {
+    email: datosI.correo,
+    clave: datosI.clave,
+    razonSocial: datosI.razonSocial,
+    ciudad: datosI.ciudad,
+  }
 
   try {
-    const result = await Datos.findOne({ email }).exec();
+    let result = await Datos.findOne({ email: datosUsuario.email }).exec();
 
     if (result) {
-      const resultado=true;
-      return resultado;
+      return result;
     } else {
-      const nuevoDato = new Datos(datos);
-      const Resultado = await nuevoDato.save();
-      return Resultado;
+      const nuevoDato = new Datos(datosUsuario);
+      const resultado = await nuevoDato.save();
+      result = null
+      return result;
     }
   } catch (error) {
     return error;
   }
 }
 
-module.exports = grabarDb;
+module.exports = { grabarDb };

@@ -1,32 +1,33 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <style>
-    .flecha {
-      position: fixed;
-      width: 0;
-      height: 0;
-      border-top: 20px solid transparent;
-      border-bottom: 20px solid transparent;
-      border-right: 20px solid red;
-      animation: titilar 1s infinite;
-      z-index: 9999;
-    }
 
-    @keyframes titilar {
-      0% {
-        opacity: 1;
-      }
-      50% {
-        opacity: 0;
-      }
-      100% {
-        opacity: 1;
-      }
-    }
-  </style>
+<head>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+
 </head>
+
 <body>
-  <div class="flecha"></div>
+  <div class="alert alert-success" role="alert">
+    A simple success alert—check it out!
+  </div>
+  <script>
+     var body = document.body;
+      var mensajeP = document.createElement('p');
+      mensajeP.innerHTML = 'Ya existe este email en la base de datos. Use otro email';
+      mensajeP.id = 'mensaje';
+      mensajeP.style.width = '500px';
+      mensajeP.style.height = '100px';
+      mensajeP.style.position = 'fixed';
+      mensajeP.style.marginTop = '300px';
+      mensajeP.style.marginLeft = '300px';
+      mensajeP.style.fontSize = '30px';
+      mensajeP.style.border = '1px solid black';
+      mensajeP.style.marginLeft = '300px';
+      mensajeP.style.backgroundColor = 'green';
+      mensajeP.style.zIndex = '99999';
+      body.appendChild(mensajeP);
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
+
 </html>
