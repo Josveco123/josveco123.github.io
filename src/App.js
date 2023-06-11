@@ -495,8 +495,20 @@ function mostrar(mostrar, valor) {
 }
 
 function cerrarAlerta(parametro1, parametro2) {
-  if (parametro2 === 'GET') {window.open('cubo.html', "_blank");};
-  if (parametro2 === 'POST') {document.getElementById('cuerpo').style.display = "none";}
+  if (parametro2 === 'GET') {
+ alert(localStorage.getItem('correo'));
+// aui prueba
+    var body = document.querySelector("body");
+    var elemento = document.querySelector("#cuerpo");
+  
+    if (elemento) {
+      body.removeChild(elemento);
+    }
+    // termina prueba
+};
+  if (parametro2 === 'POST') {
+    location.reload()
+  }
   var alerta = document.querySelector('#cuerpo1');
    alerta.parentNode.removeChild(alerta);
 }

@@ -34,7 +34,7 @@ async function GETregistro() {
       const mensajeClave = data.mensaje?.clave ?? null;
 
       if (mensajeCorreo === null) {
-        alert("No se encontró ningún usuario con ese correo");
+        mostrar("No se registra ese correo", "NADA")
         return;
       }
       if (mensajeClave === null) {
@@ -42,9 +42,8 @@ async function GETregistro() {
         return;
       } else {
         localStorage.setItem("correo", mensajeCorreo);
-      mostrar(`Valido = ${mensajeCorreo}`, 'GET');
-      return;
-    }
+        mostrar(`Valido = ${mensajeCorreo}`, 'GET');
+      }
     })
     .catch(function (error) {
       console.error("Error:", error);
@@ -73,25 +72,25 @@ async function POSTregistro() {
   // validar correo
   const cadena = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const esValido = cadena.test(correo);
-   if (!esValido) {
+  if (!esValido) {
     alert("Correo no cumple Las condiciones");
     return;
   }
 
   // validar clave
-  
+
   if (clave.trim().length < 4) {
     alert("La clave tiene menos de 4 caracteres");
     return;
   }
 
   // validar razonSocial
-  if (razonSocial.trim().length  < 1) {
+  if (razonSocial.trim().length < 1) {
     alert("La Razon Social no se ha definido");
     return;
   }
   // validar ciudad
-  if (ciudad.trim().length  < 4) {
+  if (ciudad.trim().length < 4) {
     alert("La  ciudad no es valida");
     return;
   }
@@ -104,22 +103,22 @@ async function POSTregistro() {
     },
     body: JSON.stringify(datosI),
   })
-  .then(function (response) {
-    return response.json(); // Obtener los datos JSON de la respuesta
-  })
-  .then(function (data) {
-    if ((data.mensaje ?? null) !== null) {
-      const Correo = data.mensaje?.email ?? null;
-      const Clave = data.mensaje?.clave ?? null;
-      mostrar('Ya existe un email, trate con otro', 'NADA');
-    } else { 
-     mostrar('Proceso existoso, continue', 'POST');
-    }
+    .then(function (response) {
+      return response.json(); // Obtener los datos JSON de la respuesta
+    })
+    .then(function (data) {
+      if ((data.mensaje?.email ?? null) !== null) {
+        const Correo = data.mensaje?.email ?? null;
+        mostrar('Ya existe un email, trate con otro', 'NADA');
+      } else {
+        localStorage.setItem('correo', correo)
+        mostrar('Proceso existoso, continue', 'POST');
+      }
 
-  })
-  .catch(function (error) {
-    console.error("Error:", error);
-    alert(error);
-  });
+    })
+    .catch(function (error) {
+      console.error("Error:", error);
+      alert(error);
+    });
   return
 }
