@@ -980,3 +980,45 @@ align-items: center;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
   border-radius: 25px;
 }
+
+/*
+
+area de los mensaje ================================  alestas
+
+*/
+    #cuerpo1 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      display: none;
+      text-align: center;
+      z-index: 99999;
+    }
+
+    #cuerpo1.show {
+      display: block;
+      border: 2px solid red;
+    }
+
+    .cuerpo1-message {
+      margin-bottom: 10px;
+    }
+
+    #cuerpo1 button {
+      margin-top: 10px;
+      background-color: rgb(88, 84, 84);
+      border: none;
+      font-size: 14px;
+      color: #f3ecec;
+      cursor: pointer;
+      border: 1px solid red;
+      border-radius: 25px;
+    }

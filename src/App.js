@@ -29,33 +29,6 @@ function anteriorSlide() {
 mostrarSlide();
 
 /*
-leer el area a copiar para remplazar
-*/
-
-
-function registro() {
-  fetch("/registro.html")
-    .then((response) => response.text())
-    .then((html) => {
-      document.getElementById("cuerpo").innerHTML = html;
-    });
-
-  window.onload = function () {
-    var cuerpo = document.getElementById("cuerpo");
-    var xhr = new XMLHttpRequest();
-    xhr.open("GET", "registro.html", true);
-    xhr.onreadystatechange = function () {
-      if (xhr.readyState === 4 && xhr.status === 200) {
-        cuerpo.innerHTML = xhr.responseText;
-      }
-    };
-    xhr.send();
-  };
-  document.getElementById("flecha").style.display="block";
-}
-
-
-/*
 
 gererar hoja de contactos
 
@@ -425,4 +398,105 @@ function producto() {
   </p>
 </div>
 `;
+}
+
+function registro() {
+  var registro = document.querySelector("body");
+  registro.innerHTML += `
+    <div id="cuerpo">
+      <div id="contenedor-contacto">
+        <div id="cont-registro">
+          <div id="tit1">
+            <h1>Ingresa tu cuenta</h1>
+          </div>
+
+          <form id="datos-captura" action="">
+            <div id="E-mail" class="datos-correo">
+              <p>Email Empresa o Persona</p>
+              <input
+                id="correo"
+                class="correo"
+                type="text"
+                placeholder="Correo electrónico"
+              />
+            </div>
+
+            <div id="contraseña" class="datos-correo">
+              <p>Contraseña de acceso</p>
+              <input
+                id="clave"
+                class="clave"
+                type="text"
+                placeholder="Contraseña"
+              />
+            </div>
+
+            <div id="razon-social" class="datos-correo">
+              <p>Razon Social de la empresa</p>
+              <input
+                id="razonSocial"
+                class="razonSocial"
+                type="text"
+                placeholder="Razon Social"
+              />
+            </div>
+
+            <div id="Ciudad" class="datos-correo">
+              <p>Ciudad de residencia</p>
+              <input
+                id="ciudad"
+                class="ciudad"
+                type="text"
+                placeholder="Donde Reside"
+              />
+            </div>
+          </form>
+          <div id="ejecutar">
+            <button id="boton-registro" onclick="POSTregistro()">
+              Registrarse
+            </button>
+            <br>
+            <a id="ocultar" href="/index.html">Exit</a>
+          </div>
+        </div>
+        <p id="bienvenida">
+          Bienvenido a Laboratorios del Caribe. <br />Su cuenta ha sido creada
+          con éxito. <br /><br />
+          <a href="index.html">Continuar</a>
+        </p>
+      </div>
+    </div>
+  `;
+}
+/*
+area de programa de alertas
+*/
+
+function mostrar(mostrar, valor) {
+  var alerta = document.createElement('div');
+  alerta.id = 'cuerpo1';
+
+  var mensaje = document.createElement('div');
+  mensaje.className = 'cuerpo1-message';
+  mensaje.textContent = mostrar;
+
+  var botonCerrar = document.createElement('button');
+  botonCerrar.textContent = 'Continuar';
+  botonCerrar.onclick = cerrarAlerta.bind(null, mostrar, valor);
+
+  alerta.appendChild(mensaje);
+  alerta.appendChild(botonCerrar);
+
+  // Agrega la alerta al cuerpo del documento
+  document.body.appendChild(alerta);
+
+  // Muestra la alerta
+  alerta.classList.add('show');
+}
+
+function cerrarAlerta(parametro1, parametro2) {
+  if (parametro2 === 'GET') {window.open('cubo.html', "_blank");};
+  if (parametro2 === 'POST') {document.getElementById('cuerpo').style.display = "none";}
+  var alerta = document.querySelector('#cuerpo1');
+   alerta.parentNode.removeChild(alerta);
 }

@@ -2,32 +2,79 @@
 <html>
 
 <head>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+  <style>
+    /* Estilos personalizados para la alerta */
+    #cuerpo1 {
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 10px;
+      background-color: #f2f2f2;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      color: #333;
+      display: none;
+      text-align: center;
+      z-index: 99999;
+    }
 
+    #cuerpo1.show {
+      display: block;
+      border: 2px solid red;
+    }
+
+    .cuerpo1-message {
+      margin-bottom: 10px;
+    }
+
+    .cuerpo1 button {
+      margin-top: 10px;
+      background-color: transparent;
+      border: none;
+      font-size: 14px;
+      color: #888;
+      cursor: pointer;
+    }
+  </style>
 </head>
 
-<body>
-  <div class="alert alert-success" role="alert">
-    A simple success alert—check it out!
-  </div>
+<body onload="mostrar('prueba definitiva de mensaje', 'GET')">
+
   <script>
-     var body = document.body;
-      var mensajeP = document.createElement('p');
-      mensajeP.innerHTML = 'Ya existe este email en la base de datos. Use otro email';
-      mensajeP.id = 'mensaje';
-      mensajeP.style.width = '500px';
-      mensajeP.style.height = '100px';
-      mensajeP.style.position = 'fixed';
-      mensajeP.style.marginTop = '300px';
-      mensajeP.style.marginLeft = '300px';
-      mensajeP.style.fontSize = '30px';
-      mensajeP.style.border = '1px solid black';
-      mensajeP.style.marginLeft = '300px';
-      mensajeP.style.backgroundColor = 'green';
-      mensajeP.style.zIndex = '99999';
-      body.appendChild(mensajeP);
+    function mostrar(mostrar, valor) {
+      var alerta = document.createElement('div');
+      alerta.id = 'cuerpo1';
+
+      var mensaje = document.createElement('div');
+      mensaje.className = 'cuerpo1-message';
+      mensaje.textContent = mostrar;
+
+      var botonCerrar = document.createElement('button');
+      botonCerrar.textContent = 'Continuar';
+      botonCerrar.onclick = cerrarAlerta.bind(null, "parametro1", "parametro2");
+
+      alerta.appendChild(mensaje);
+      alerta.appendChild(botonCerrar);
+
+      // Agrega la alerta al cuerpo del documento
+      document.body.appendChild(alerta);
+
+      // Muestra la alerta
+      alerta.classList.add('show');
+    }
+
+    function cerrarAlerta(parametro1, parametro2) {
+      if (parametro2 = 'GET') {
+        window.open('/public/cubo.html', "_blank");
+      }
+      var alerta = document.querySelector('#cuerpo1');
+      alerta.parentNode.removeChild(alerta);
+
+    }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
 </body>
 
 </html>

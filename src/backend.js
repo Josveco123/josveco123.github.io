@@ -38,15 +38,13 @@ async function GETregistro() {
         return;
       }
       if (mensajeClave === null) {
-        alert("No se encontró ningún usuario con esa clave");
+        mostrar('la clave no es valida', 'NADA')
         return;
-      }
-      alert(`Valido = ${mensajeCorreo}`);
-      var producto = document.querySelector("#cuerpo");
-      producto.innerHTML = ``;
-      var url = "cubo.html";
-      window.open(url, "_blank");
+      } else {
+        localStorage.setItem("correo", mensajeCorreo);
+      mostrar(`Valido = ${mensajeCorreo}`, 'GET');
       return;
+    }
     })
     .catch(function (error) {
       console.error("Error:", error);
@@ -109,18 +107,19 @@ async function POSTregistro() {
   .then(function (response) {
     return response.json(); // Obtener los datos JSON de la respuesta
   })
-    .then(function (data) {
-      if ((data.mensaje ?? null) !== null) {
+  .then(function (data) {
+    if ((data.mensaje ?? null) !== null) {
       const Correo = data.mensaje?.email ?? null;
       const Clave = data.mensaje?.clave ?? null;
-      alert("Ya existe este email en la base de datos. Use otro email");
-      } else { 
-          var btnAceptar = document.getElementById("bienvenida");
-          btnAceptar.style.visibility = "visible";
-        } 
-    })
-    .catch(function (error) {
-      console.error("Error:", error);
-      alert(error);
-    });
+      mostrar('Ya existe un email, trate con otro', 'NADA');
+    } else { 
+     mostrar('Proceso existoso, continue', 'POST');
+    }
+
+  })
+  .catch(function (error) {
+    console.error("Error:", error);
+    alert(error);
+  });
+  return
 }
