@@ -494,9 +494,16 @@ function mostrar(mostrar, valor) {
   alerta.classList.add('show');
 }
 
+
 function cerrarAlerta(parametro1, parametro2) {
-  if (parametro2 === 'GET') {window.open('cubo.html', "_blank");};
-  if (parametro2 === 'POST') {document.getElementById('cuerpo').style.display = "none";}
+  if (parametro2 === 'GET') {
+// aui prueba
+location.reload(true); 
+    // termina prueba
+};
+  if (parametro2 === 'POST') {
+    location.reload()
+  }
   var alerta = document.querySelector('#cuerpo1');
    alerta.parentNode.removeChild(alerta);
 }
