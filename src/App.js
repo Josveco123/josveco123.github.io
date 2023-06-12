@@ -494,11 +494,10 @@ function mostrar(mostrar, valor) {
   alerta.classList.add('show');
 }
 
-
 function cerrarAlerta(parametro1, parametro2) {
   if (parametro2 === 'GET') {
-// aui prueba
-location.reload(true); 
+ 
+    location.reload(true);
     // termina prueba
 };
   if (parametro2 === 'POST') {

@@ -12,13 +12,13 @@ async function GETregistro() {
   const cadena = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const esValido = cadena.test(correo);
   if (!esValido) {
-    alert("Correo no cumple las condiciones");
+    mostrar("Correo no cumple las condiciones", "NADA");
     return;
   }
 
   // Validar clave
   if (clave.trim().length < 4) {
-    alert("La clave tiene menos de 4 caracteres");
+    mostrar("La clave tiene menos de 4 caracteres", "NADA");
     return;
   }
 
@@ -73,25 +73,25 @@ async function POSTregistro() {
   const cadena = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
   const esValido = cadena.test(correo);
   if (!esValido) {
-    alert("Correo no cumple Las condiciones");
+    mostrar("Correo no cumple Las condiciones", "NADA");
     return;
   }
 
   // validar clave
 
   if (clave.trim().length < 4) {
-    alert("La clave tiene menos de 4 caracteres");
+    mostrar("La clave tiene menos de 4 caracteres","NADA");
     return;
   }
 
   // validar razonSocial
   if (razonSocial.trim().length < 1) {
-    alert("La Razon Social no se ha definido");
+    mostrar("La Razon Social no se ha definido","NADA");
     return;
   }
   // validar ciudad
   if (ciudad.trim().length < 4) {
-    alert("La  ciudad no es valida");
+    mostrar("La  ciudad no es valida", "NADA");
     return;
   }
 
