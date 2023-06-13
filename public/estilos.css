@@ -42,27 +42,9 @@ header {
   align-items: center;
   width: 100%;
   height: 2rem;
-  background-color: red;
+  background: linear-gradient(to top, #696868, #969191, #ffffff);
 }
 
-.cuadro-boton {
-  margin-right: 2%;
-  width: 8%;
-  background: radial-gradient(circle, red, rgb(204, 83, 83));
-  border-radius: 25%;
-}
-
-.cuadro-boton:hover {
-  background: radial-gradient(circle, red, rgb(66, 63, 63));
-
-  .user-linea1 {
-    color: rgb(216, 156, 156);
-  }
-}
-
-#contactos {
-  margin-right: 5%;
-}
 
 .user-linea1 {
   display: flex;
@@ -81,33 +63,44 @@ header {
 #nav-interno {
   display: flex;
   flex-direction: row;
-  background-color: black;
+  background-color: rgb(114, 110, 110);
   width: 100%;
   height: 4rem;
 }
 
 #logotipo {
-  padding: 6px 6px 3px 6px;
+  padding: 5px 0 0 0;
+  position: fixed;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   width: 100px;
+  height: auto;
+  margin-left:10px;
   margin-top: 6px;
-  margin-left: 1%;
-  border: 1px solid rgb(248, 7, 7);
-  border-radius: 30px 30px 0 0;
+  border-radius: 25px;
   background-color: white;
-  border-bottom: 3px solid transparent;
-  border-image: linear-gradient(
-      to right,
-      rgb(128, 107, 107) 55%,
-      transparent 85%
-    )
-    2 0;
+  z-index: 9999;
 }
 
 #logotipo img {
   width: 100%;
   height: auto;
+}
+.inicio {
+  margin-top: 3px;
+  width: 100%;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  background-color: rgb(80, 76, 76);
+  background-image: linear-gradient(to top, rgba(78, 76, 76, 0), rgb(226, 220, 220));
+  border-radius: 0 0 25px 25px;
+  text-decoration: none;
+  font-family: vardana;
+  font-weight: bold;
 }
 /*
 
@@ -135,26 +128,29 @@ header {
 }
 
 #mnu-producto {
-  width: 8rem;
-  margin-left: 60px;
+  width: 7rem;
+  margin-left: 160px;
 }
 
 #a-productos {
-  margin-top: 2rem;
+  margin-top: 1.6rem;
   display: flex;
   justify-content: center;
   align-items: center;
   width: 7rem;
+  height: 25px;
   font-size: 13px;
   color: white;
   font-family: vardana;
   font-weight: bold;
   text-decoration: none;
   margin-right: 40px;
+  border-radius: 25px;
 }
+
 #a-productos:hover {
   color: rgb(241, 88, 88);
-  background-color: rgb(39, 38, 38);
+  background-color: rgb(77, 71, 71);
   border-radius: 25%;
 }
 #ul-productos {
@@ -210,10 +206,14 @@ header {
 */
 
 #mnu-nosotros {
+  margin-top: .5rem;
   display: flex;
+  justify-content: center;
+  align-items: center;
   flex-direction: row;
-  padding-top: 2rem;
-  height: 18px;
+  width: 11rem;
+  height: 3.8rem;
+  margin-left: 20px;
 }
 
 #a-nosotros {
@@ -221,28 +221,53 @@ header {
   justify-content: center;
   align-items: center;
   width: 11rem;
+  height: 1.5rem;
   font-size: 13px;
   color: white;
   font-family: vardana;
   font-weight: bold;
   text-decoration: none;
-  margin-right: 25px;
 }
 
 #a-nosotros:hover {
   color: rgb(241, 88, 88);
-  background-color: rgb(39, 38, 38);
+  background-color: rgb(80, 73, 73);
   border-radius: 25%;
 }
 /*
-
-             
+           
 */
+#contacto {
+  width: 240px;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  margin-left: 20%;
+  margin-right: 5%;
+}
+
+#contacto-a {
+margin-right: 20px;
+}
+
+.user-linea1 {
+  width: 110px;
+  text-decoration: none;
+  border-radius: 25px;
+}
+
+.user-linea1:hover {
+color:red;
+background-color: #494343;
+}
+
+  
 #mnu-search {
   display: flex;
   width: 20%;
   height: 50%;
-  border: 1px solid rgb(227, 36, 36);
   margin-left: auto;
   margin-right: 5%;
   justify-content: left;
@@ -284,20 +309,7 @@ header {
   background-color: rgb(241, 237, 238);
  }
 
- .inicio {
-  width: 116px;
-  display: flex;
-  margin-left: 13px;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: black;
-  background-image: linear-gradient(to top, rgba(255, 255, 255, 0), rgb(226, 220, 220));
-  border-radius: 0 0 25px 25px;
-  text-decoration: none;
-  font-family: vardana;
-  font-weight: bold;
-}
+
 .inicio:hover {
   color: black;
   background-color: rgb(240, 212, 212);
@@ -338,32 +350,43 @@ header {
 }
 
 #slogan {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 40rem;
   height: 100%;
-  margin-left: auto;
-  font-size: 1.2rem;
-  margin-right: 2%;
+  margin-left: 55%;
+  font-size: 1rem;
   font-family: vardana;
   margin-top: 0;
   font-weight: bold;
 }
 
+#medicamentos {
+  color: red;
+  margin: 0 6px 0 5px;
+  animation: medicamentos 3s infinite;
+}
+
 @keyframes medicamentos {
   0% {
     opacity: 1;
+    color:#ee0c0c;
   }
-  50% {
+  25% {
     opacity: 0;
+    color:#6b6565;
+  }
+  75% {
+ 
+    color:#2c2a2a;
   }
   100% {
-    opacity: 1;
+    color:#161515;
   }
 }
 
-#medicamentos {
-  color: red;
-  animation: medicamentos 1s infinite;
-}
+
 /*    */
 /**** ZONA DE  INICIO PAGINA 1    */
 /*    */
