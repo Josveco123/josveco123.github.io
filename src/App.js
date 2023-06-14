@@ -37,11 +37,10 @@ gererar hoja de contactos
 
 function contactos() {
   // Obtener referencia al contenedor
-  var contacto = document.querySelector("#areacomun");
+  var contacto = document.querySelector("#cajon");
 
   // Crear un elemento div para contener el fragmento HTML
-  var htmlFragment = document.createElement("div");
-  htmlFragment.innerHTML = `
+  contacto.innerHTML = `
   <section id="pagina4">
   <h2 class="tit-nos-pag4">CONTACTOS</h2>
   <div id="linea-horizontal4"></div>
@@ -191,7 +190,6 @@ function contactos() {
 `;
 
   // Insertar el fragmento HTML dentro del contenedor
-  contacto.parentNode.replaceChild(htmlFragment, contacto);
   document.getElementById("flecha").style.display="block";
 }
 
@@ -203,20 +201,16 @@ function contactos() {
 
 
 async function fNosotros() {
-  document.getElementById('areacomun').style.height = '1800px';
-  document.getElementById('cajon').style.height = '1800px';
   await functionNosotros();
   document.getElementById("flecha").style.display="block";
 }
 
 function functionNosotros() {
   // Obtener referencia al contenedor
-  var nosotros = document.querySelector("#cajon");
-
-  // Asignar el nuevo fragmento HTML al contenido del contenedor
+  var nosotros = document.getElementById("cajon");
   nosotros.innerHTML = `
     <section id="pagina2">
-      <div id="mnu-nosotros">
+      <div id="mnunos">
         <div id="nosotros-I" class="css-pag">
           <h2 id="denosotros" class="tit-nos">ACERCA DE NOSOTROS</h2>
           <br />
@@ -344,6 +338,11 @@ function functionNosotros() {
       </div>
     </section>
   `;
+  const mnunos = document.getElementById('mnunos');
+  mnunos.style.height = 'auto';
+  mnunos.style.display = 'flex';
+  mnunos.style.flexDirection = 'row';
+  mnunos.style.justifyContent = 'space-between';
 }
 
 /**
@@ -398,6 +397,7 @@ function producto() {
   </p>
 </div>
 `;
+document.getElementById("flecha").style.display="block";
 }
 
 function registro() {
@@ -467,6 +467,7 @@ function registro() {
       </div>
     </div>
   `;
+  document.getElementById("flecha").style.display="block";
 }
 /*
 area de programa de alertas
