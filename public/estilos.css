@@ -139,7 +139,7 @@ header {
   align-items: center;
   width: 7rem;
   height: 25px;
-  font-size: 13px;
+  font-size: 14px;
   color: white;
   font-family: vardana;
   font-weight: bold;
@@ -211,7 +211,7 @@ header {
   justify-content: center;
   align-items: center;
   flex-direction: row;
-  width: 100%;
+  width: 15%;
   height: 3.8rem;
   margin-left: 20px;
 }
@@ -220,9 +220,9 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 11rem;
+  width: 12rem;
   height: 1.5rem;
-  font-size: 13px;
+  font-size: 14px;
   color: white;
   font-family: vardana;
   font-weight: bold;
