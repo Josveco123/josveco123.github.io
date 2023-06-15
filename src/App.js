@@ -1,3 +1,25 @@
+/**
+ * 
+ * aqui va el codigo para ejecutar busqueda de lupa
+ */
+function handleKeyDown(event) {
+  if (event.keyCode === 13) {
+    event.preventDefault();
+  }
+}
+
+function submitForm() {
+  var input = document.getElementById('inputBuscar').value.trim();
+  if (input !== '') {
+    var searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(input);
+    window.open(searchUrl, '_blank');
+  }
+}
+/**
+ * 
+ * Este codigo ejecuta el avance de los slider de la primera pagina
+ */
+
 var index = 0;
 var slides = document
   .getElementsByClassName("slider")[0]
@@ -11,7 +33,7 @@ function mostrarSlide() {
 }
 
 function siguienteSlide() {
-  index++;
+  index++;zz
   if (index >= slides.length) {
     index = 0;
   }

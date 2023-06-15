@@ -18,31 +18,34 @@
       </div>
       <div id="nav-interno">
         <div id="logotipo">
-          <img src="/images/logo.png" alt="" />
+          <img src="/images/logo.svg" alt="">
           <a class="inicio" href="/index.html">INICIO</a>
         </div>
+        <div id="mnuI">
+          <div id="mnu-producto">
+            <a id="a-productos" href="" title="PRODUCTOS">PRODUCTOS</a>
+            <ul id="ul-productos">
+              <li>
+                <a href="#" onclick="producto()" title="Opcion 1">Productos</a>
+              </li>
+              <li>
+                <a href="#" onclick="cajon()" title="Opcion 1">Distribuidores</a>
+              </li>
+            </ul>
+          </div>
 
-        <div id="mnu-producto">
-          <a id="a-productos" href="" title="PRODUCTOS">PRODUCTOS</a>
-          <ul id="ul-productos">
-            <li>
-              <a href="#" onclick="producto()" title="Opcion 1">Productos</a>
-            </li>
-            <li>
-              <a href="#" onclick="cajon()" title="Opcion 1">Distribuidores</a>
-            </li>
-          </ul>
-        </div>
-
-        <div id="mnu-nosotros">
-          <a id="a-nosotros" onclick="fNosotros()" href="#">HACERCA DE NOSOTROS</a>
+          <div id="mnu-nosotros">
+            <a id="a-nosotros" onclick="fNosotros()" href="#">HACERCA DE NOSOTROS</a>
+          </div>
         </div>
         <div id="contacto">
           <a id="contacto-a" class="user-linea1" href="#" onclick="contactos()">CONTACTOS</a>
           <a class="user-linea1" href="#" onclick="registro()">REGISTRESE</a>
         </div>
-        <form id="mnu-search" action="https://www.google.com/search" method="GET" class="clase-mnu-searrch">
-          <input id="inputBuscar" class="clase-mnu-searrch" type="text" name="q" placeholder="BUSQUEDA" />
+        <form id="mnu-search" class="clase-mnu-searrch">
+          <input id="inputBuscar" class="clase-mnu-searrch" type="text" name="q" placeholder="BUSQUEDA"
+            onkeydown="handleKeyDown(event)"></input>
+          <div id="lupa-div"><img id="lupa" src="/images/lupa.svg" alt="" onclick="submitForm()"></img></div>
         </form>
       </div>
       <div id="informacion-nav">
@@ -51,7 +54,6 @@
           <span id="medicamentos"> medicamentos </span>para el consumo humano
         </p>
       </div>
-      <img id="flecha" src="/images/flechavolver.png" alt="volver">
     </header>
     <!--<div "
         
@@ -72,6 +74,7 @@
         <section id="pagina1">
           <div id="mosaico">
             <div class="slider">
+              <img src="/images/ima0.png" alt="Imagen 1" />
               <img src="/images/ima1.png" alt="Imagen 1" />
               <img src="/images/ima2.png" alt="Imagen 2" />
               <img src="/images/ima3.png" alt="Imagen 3" />
@@ -80,17 +83,9 @@
               <img src="/images/ima6.png" alt="Imagen 3" />
               <img src="/images/ima7.png" alt="Imagen 3" />
               <img src="/images/ima8.png" alt="Imagen 3" />
-              <img src="/images/ima9.png" alt="Imagen 3" />
+              <img src="/images/ima9.jpg" alt="Imagen 3" />
               <img src="/images/ima10.png" alt="Imagen 3" />
               <img src="/images/ima11.png" alt="Imagen 3" />
-              <img src="/images/ima12.png" alt="Imagen 3" />
-              <img src="/images/ima13.png" alt="Imagen 3" />
-              <img src="/images/ima14.png" alt="Imagen 3" />
-              <img src="/images/ima15.png" alt="Imagen 3" />
-              <img src="/images/ima16.png" alt="Imagen 3" />
-              <img src="/images/ima17.png" alt="Imagen 3" />
-              <img src="/images/ima18.png" alt="Imagen 3" />
-              <img src="/images/ima19.png" alt="Imagen 3" />
             </div>
             <button id="slice-derecho" onclick="anteriorSlide()">
               <img class="img-slice" src="/images/flechas-i.png" alt="" />
