@@ -4,6 +4,7 @@ async function grabarDb(datosI) {
   const datosUsuario = {
     email: datosI.correo,
     clave: datosI.clave,
+    whatsapp:datosI.whatsapp,
     razonSocial: datosI.razonSocial,
     ciudad: datosI.ciudad,
   }

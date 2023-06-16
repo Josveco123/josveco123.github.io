@@ -60,11 +60,13 @@ async function POSTregistro() {
 
   const correo = document.getElementById("correo").value;
   const clave = document.getElementById("clave").value;
+  const whatsapp = document.getElementById("whatsapp").value;
   const razonSocial = document.getElementById("razonSocial").value;
   const ciudad = document.getElementById("ciudad").value;
   const datosI = {
     correo: correo,
     clave: clave,
+    whatsapp: whatsapp,
     razonSocial: razonSocial,
     ciudad: ciudad,
   };
@@ -83,6 +85,10 @@ async function POSTregistro() {
     mostrar("La clave tiene menos de 4 caracteres","NADA");
     return;
   }
+   if (whatsapp.trim().length  < 9) {
+    mostrar("La clave tiene menos de 10 digito","NADA");
+    return;
+  }
 
   // validar razonSocial
   if (razonSocial.trim().length < 1) {
@@ -94,7 +100,6 @@ async function POSTregistro() {
     mostrar("La  ciudad no es valida", "NADA");
     return;
   }
-
   const url = "/grabar";
   await fetch(url, {
     method: "POST",

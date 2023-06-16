@@ -1,32 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/estilos.css">
     <title>Document</title>
-    <style>
-        /* Estilos modificados */
-        #logotipo img {
-            width: 20px;
-            height: auto;
-            margin-left: 200px;
-            margin-top: 200px;
-            transition: transform 0.5s;
-        }
-
-        #logotipo img:hover {
-            animation: spin 2s infinite linear;
-        }
-
-        @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
-        }
-    </style>
 </head>
+
 <body>
-    <div id="logotipo">
-        <img src="/images/lupa.svg" alt="">
+    <div id="cuerpo">
+        <div id="contenedor-contacto">
+            <div id="cont-registro">
+                <div id="tit1">
+                    <h1>Ingresa tu cuenta</h1>
+                </div>
+
+                <form id="datos-captura" action="">
+                    <div id="E-mail" class="datos-correo">
+                        <p class="pCaptura">Email Empresa o Persona</p>
+                        <input id="correo" class="correo" type="text" placeholder="Correo electrónico" />
+                    </div>
+
+                    <div id="contraseña" class="datos-correo">
+                        <p class="pCaptura">Contraseña de acceso</p>
+                        <input id="clave" class="clave" type="text" placeholder="Contraseña" />
+                    </div>
+
+                    <div id="razon-social" class="datos-correo">
+                        <p class="pCaptura">Razon Social de la empresa</p>
+                        <input id="razonSocial" class="razonSocial" type="text" placeholder="Razon Social" />
+                    </div>
+                    <div id="whatsapp-numero" class="datos-correo">
+                        <p class="pCaptura">Whatsapp Numero</p>
+                        <input id="whatsapp" class="razonSocial" type="number" placeholder="Whatsapp" />
+                    </div>
+                    <div id="Ciudad" class="datos-correo">
+                        <p class="pCaptura">Ciudad de residencia</p>
+                        <input id="ciudad" class="ciudad" type="text" placeholder="Donde Reside" />
+                    </div>
+                </form>
+                <div id="ejecutar">
+                    <button id="boton-registro" onclick="POSTregistro()">
+                        Registrarse
+                    </button>
+                    <br>
+                    <a id="ocultar" href="/index.html">Exit</a>
+                </div>
+            </div>
+            <p id="bienvenida">
+                Bienvenido a Laboratorios del Caribe. <br />Su cuenta ha sido creada
+                con éxito. <br /><br />
+                <a href="index.html">Continuar</a>
+            </p>
+        </div>
     </div>
 </body>
+
 </html>

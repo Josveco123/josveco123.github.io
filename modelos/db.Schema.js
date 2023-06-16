@@ -5,6 +5,7 @@ const Schema = mongoose.Schema;
 const datosSchema = new Schema({
   email: String,
   clave: String,
+  whatsapp: Number,
   razonSocial: String,
   ciudad: String,
 });

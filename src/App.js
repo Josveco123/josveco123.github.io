@@ -425,71 +425,53 @@ document.getElementById("flecha").style.display="block";
 function registro() {
   var registro = document.querySelector("body");
   registro.innerHTML += `
-    <div id="cuerpo">
-      <div id="contenedor-contacto">
-        <div id="cont-registro">
+  <div id="cuerpo">
+  <div id="contenedor-contacto">
+      <div id="cont-registro">
           <div id="tit1">
-            <h1>Ingresa tu cuenta</h1>
+              <h1>Ingresa tu cuenta</h1>
           </div>
 
           <form id="datos-captura" action="">
-            <div id="E-mail" class="datos-correo">
-              <p>Email Empresa o Persona</p>
-              <input
-                id="correo"
-                class="correo"
-                type="text"
-                placeholder="Correo electrónico"
-              />
-            </div>
+              <div id="E-mail" class="datos-correo">
+                  <p class="pCaptura">Email Empresa o Persona</p>
+                  <input id="correo" class="correo" type="text" placeholder="Correo electrónico" />
+              </div>
 
-            <div id="contraseña" class="datos-correo">
-              <p>Contraseña de acceso</p>
-              <input
-                id="clave"
-                class="clave"
-                type="text"
-                placeholder="Contraseña"
-              />
-            </div>
+              <div id="contraseña" class="datos-correo">
+                  <p class="pCaptura">Contraseña de acceso</p>
+                  <input id="clave" class="clave" type="text" placeholder="Contraseña" />
+              </div>
 
-            <div id="razon-social" class="datos-correo">
-              <p>Razon Social de la empresa</p>
-              <input
-                id="razonSocial"
-                class="razonSocial"
-                type="text"
-                placeholder="Razon Social"
-              />
-            </div>
-
-            <div id="Ciudad" class="datos-correo">
-              <p>Ciudad de residencia</p>
-              <input
-                id="ciudad"
-                class="ciudad"
-                type="text"
-                placeholder="Donde Reside"
-              />
-            </div>
+              <div id="razon-social" class="datos-correo">
+                  <p class="pCaptura">Razon Social de la empresa</p>
+                  <input id="razonSocial" class="razonSocial" type="text" placeholder="Razon Social" />
+              </div>
+              <div id="whatsapp-numero" class="datos-correo">
+                  <p class="pCaptura">Whatsapp Numero</p>
+                  <input id="whatsapp" class="whatsapp" type="number" placeholder="Whatsapp" />
+              </div>
+              <div id="Ciudad" class="datos-correo">
+                  <p class="pCaptura">Ciudad de residencia</p>
+                  <input id="ciudad" class="ciudad" type="text" placeholder="Donde Reside" />
+              </div>
           </form>
           <div id="ejecutar">
-            <button id="boton-registro" onclick="POSTregistro()">
-              Registrarse
-            </button>
-            <br>
-            <a id="ocultar" href="/index.html">Exit</a>
+              <button id="boton-registro" onclick="POSTregistro()">
+                  Registrarse
+              </button>
+              <br>
+              <a id="ocultar" href="/index.html">Exit</a>
           </div>
-        </div>
-        <p id="bienvenida">
+      </div>
+      <p id="bienvenida">
           Bienvenido a Laboratorios del Caribe. <br />Su cuenta ha sido creada
           con éxito. <br /><br />
           <a href="index.html">Continuar</a>
-        </p>
-      </div>
-    </div>
+      </p>
+  </div>
+</div>
   `;
-  document.getElementById("flecha").style.display="block";
 }
 /*
 area de programa de alertas
