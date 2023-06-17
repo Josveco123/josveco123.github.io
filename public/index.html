@@ -13,40 +13,43 @@
 <body>
   <div id="home">
     <header>
-      <div id="mnu-registro-contacto">
-
+      <!--
+     <div id="mnu-registro-contacto">
       </div>
+        >-->
       <div id="nav-interno">
         <div id="logotipo">
-          <img src="/images/logo.svg" alt="">
-          <a class="inicio" href="/index.html">INICIO</a>
+          <a href="/public/index.html"><img src="/images/logo.svg" alt=""></a>
         </div>
-        <div id="mnuI">
-          <div id="mnu-producto">
-            <a id="a-productos" href="" title="PRODUCTOS">PRODUCTOS</a>
-            <ul id="ul-productos">
-              <li>
-                <a href="#" onclick="producto()" title="Opcion 1">Productos</a>
-              </li>
-              <li>
-                <a href="#" onclick="cajon()" title="Opcion 1">Distribuidores</a>
-              </li>
-            </ul>
+        <div id="menus-casa">
+          <div id="mnuI">
+            <div id="mnu-producto">
+              <a id="a-productos" class="opciones-a" href="" title="PRODUCTOS">PRODUCTOS</a>
+              <ul id="ul-productos">
+                <li>
+                  <a class="li-producto" href="#" onclick="producto()" title="Opcion 1">Productos</a>
+                </li>
+                <li>
+                  <a href="#" onclick="cajon()" title="Opcion 1">Distribuidores</a>
+                </li>
+              </ul>
+            </div>
+            <div id="mnu-nosotros" class="opciones-class">
+              <a id="nosotros-a" class="opciones-a" onclick="fNosotros()" href="#">HACERCA DE <br> NOSOTROS</a>
+            </div>
+            <div id="contacto" class="opciones-class">
+              <a id="contacto-a" class="opciones-a" href="#" onclick="contactos()">CONTACTOS</a>
+            </div>
+            <div class="opciones-class">
+              <a class="opciones-a" href="#" onclick="registro()">REGISTRESE</a>
+            </div>
           </div>
-
-          <div id="mnu-nosotros">
-            <a id="a-nosotros" onclick="fNosotros()" href="#">HACERCA DE NOSOTROS</a>
-          </div>
+          <form id="mnu-search" class="clase-mnu-searrch collapsed" onmouseover="expandir()" onmouseout="recojer()">
+            <input id="inputBuscar" class="clase-mnu-searrch" type="text" name="q" placeholder="BUSQUEDA"
+              onkeydown="handleKeyDown(event)"></input>
+            <img id="lupa" src="/images/lupa.svg" alt="" onclick="submitForm()"></img>
+          </form>
         </div>
-        <div id="contacto">
-          <a id="contacto-a" class="user-linea1" href="#" onclick="contactos()">CONTACTOS</a>
-          <a class="user-linea1" href="#" onclick="registro()">REGISTRESE</a>
-        </div>
-        <form id="mnu-search" class="clase-mnu-searrch">
-          <input id="inputBuscar" class="clase-mnu-searrch" type="text" name="q" placeholder="BUSQUEDA"
-            onkeydown="handleKeyDown(event)"></input>
-          <div id="lupa-div"><img id="lupa" src="/images/lupa.svg" alt="" onclick="submitForm()"></img></div>
-        </form>
       </div>
       <div id="informacion-nav">
         <p id="slogan">
@@ -56,11 +59,7 @@
       </div>
     </header>
     <!--<div "
-        
-        
-        
-        
-        
+     
         >-->
     <div id="areacomun">
       <!--<div 
@@ -74,18 +73,16 @@
         <section id="pagina1">
           <div id="mosaico">
             <div class="slider">
-              <img src="/images/ima0.png" alt="Imagen 1" />
-              <img src="/images/ima1.png" alt="Imagen 1" />
-              <img src="/images/ima2.png" alt="Imagen 2" />
-              <img src="/images/ima3.png" alt="Imagen 3" />
-              <img src="/images/ima4.png" alt="Imagen 3" />
-              <img src="/images/ima5.png" alt="Imagen 3" />
-              <img src="/images/ima6.png" alt="Imagen 3" />
-              <img src="/images/ima7.png" alt="Imagen 3" />
-              <img src="/images/ima8.png" alt="Imagen 3" />
-              <img src="/images/ima9.jpg" alt="Imagen 3" />
-              <img src="/images/ima10.png" alt="Imagen 3" />
-              <img src="/images/ima11.png" alt="Imagen 3" />
+              <p id="sloganPortada">Tu salud, nuestra prioridad. <br> Juntos hacia el bienestar</p>
+              <img src="/images/portada1.png" alt="Imagen 1" />
+              <img src="/images/portada2.png" alt="Imagen 1" />
+              <img src="/images/portada3.png" alt="Imagen 1" />
+              <img src="/images/portada4.png" alt="Imagen 1" />
+              <img src="/images/portada5.png" alt="Imagen 1" />
+              <img src="/images/portada6.png" alt="Imagen 1" />
+              <img src="/images/portada7.png" alt="Imagen 1" />
+              <img src="/images/portada8.png" alt="Imagen 1" />
+              <img src="/images/portada9.png" alt="Imagen 1" />
             </div>
             <button id="slice-derecho" onclick="anteriorSlide()">
               <img class="img-slice" src="/images/flechas-i.png" alt="" />

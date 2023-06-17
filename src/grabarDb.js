@@ -1,21 +1,21 @@
-const Datos = require('../modelos/db.Schema');
+const Users = require('../modelos/db.Schema');
 
-async function grabarDb(datosI) {
-  const datosUsuario = {
-    email: datosI.correo,
-    clave: datosI.clave,
-    whatsapp:datosI.whatsapp,
-    razonSocial: datosI.razonSocial,
-    ciudad: datosI.ciudad,
+async function grabarDb(UsersI) {
+  const UsersUsuario = {
+    email: UsersI.correo,
+    clave: UsersI.clave,
+    whatsapp:UsersI.whatsapp,
+    razonSocial: UsersI.razonSocial,
+    ciudad: UsersI.ciudad,
   }
 
   try {
-    let result = await Datos.findOne({ email: datosUsuario.email }).exec();
+    let result = await Users.findOne({ email: UsersUsuario.email }).exec();
 
     if (result) {
       return result;
     } else {
-      const nuevoDato = new Datos(datosUsuario);
+      const nuevoDato = new Users(UsersUsuario);
       const resultado = await nuevoDato.save();
       result = null
       return result;

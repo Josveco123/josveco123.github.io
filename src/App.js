@@ -2,18 +2,22 @@
  * 
  * aqui va el codigo para ejecutar busqueda de lupa
  */
-function handleKeyDown(event) {
-  if (event.keyCode === 13) {
-    event.preventDefault();
-  }
-}
-
 function submitForm() {
   var input = document.getElementById('inputBuscar').value.trim();
   if (input !== '') {
     var searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(input);
     window.open(searchUrl, '_blank');
   }
+}
+
+function expandir() {
+  var searchForm = document.getElementById('mnu-search');
+  searchForm.classList.remove('collapsed'); // Quitamos la clase 'collapsed'
+}
+
+function recojer() {
+  var searchForm = document.getElementById('mnu-search');
+  searchForm.classList.add('collapsed'); // Agregamos la clase 'collapsed'
 }
 /**
  * 
@@ -33,7 +37,7 @@ function mostrarSlide() {
 }
 
 function siguienteSlide() {
-  index++;zz
+  index++;
   if (index >= slides.length) {
     index = 0;
   }
@@ -49,6 +53,16 @@ function anteriorSlide() {
 }
 
 mostrarSlide();
+
+/*
+
+desplegar o contraer busqueda
+
+*/
+
+
+
+
 
 /*
 

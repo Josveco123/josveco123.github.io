@@ -34,19 +34,6 @@ header {
 /*    */
 /****zona de menu de REGISTRO CONTACTOS   LINEA 1 *****/
 /*    */
-#mnu-registro-contacto {
-  padding: 0;
-  padding-right: 2.5rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
-  align-items: center;
-  width: 100%;
-  height: 2rem;
-  background: linear-gradient(to top, #696868, #969191, #ffffff);
-}
-
-
 .user-linea1 {
   display: flex;
   justify-content: center;
@@ -56,6 +43,7 @@ header {
   font-weight: bold;
   font-size: 90%;
   color: white;
+
 }
 
 /*    */
@@ -64,23 +52,21 @@ header {
 #nav-interno {
   display: flex;
   flex-direction: row;
-  background-color: rgb(114, 110, 110);
+  background-color: rgb(247, 243, 243);
   width: 100%;
-  height: 4rem;
+  height: 4.5rem;
 }
 
 #logotipo {
-  padding: 5px 0 0 0;
+  padding: 2px;
   position: fixed;
   display: flex;
   justify-content: center;
   flex-direction: column;
-  width: 100px;
+  width: 130px;
   height: auto;
-  margin-left: 10px;
-  margin-top: 6px;
+  margin-left: 40px;
   border-radius: 25px;
-  background-color: white;
   z-index: 9999;
 }
 
@@ -89,36 +75,20 @@ header {
   height: auto;
 }
 
-.inicio {
-  margin-top: 3px;
-  width: 100%;
-  height: 35px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  background-color: rgb(80, 76, 76);
-  background-image: linear-gradient(to top, rgba(78, 76, 76, 0), rgb(226, 220, 220));
-  border-radius: 0 0 25px 25px;
-  text-decoration: none;
-  font-family: vardana;
-  font-weight: bold;
+#logotipo a:hover {
+  margin-top: 10%;
+  width: 80%;
+  background-color: white;
+  border-radius: 25px;
 }
 
-/*
 
-/* COMIENZA EL MENU DE LA EMPRESA PARA ASUNTOS INTERNOS DE LA PAGINA
-
-
-             SUBMENU PRODUCTOS
-*/
 #areacomun {
-  margin-top: 130px;
+  margin-top: 90px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
   width: 100%;
-  border: 2px solid black;
 }
 
 #cajon {
@@ -134,52 +104,41 @@ header {
   margin-top: 15px;
   display: flex;
   flex-direction: row;
-  margin-left: 130px;
+  margin-left: auto;
   width: auto;
   height: 60%;
   padding: 5px;
 }
 
 #mnu-producto {
-  width: 7rem;
+  padding-top: 10px;
+  margin-right: 2px;
+  width: 6rem;
+  height: auto;
   display: flex;
-  flex-direction: row;
-  justify-content: start;
+  flex-direction: column;
   align-items: center;
+  text-align: center;
 }
 
-#a-productos {
-  width: 7rem;
-  height: 15px;
-  padding: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 12px;
-  color: white;
-  font-family: vardana;
-  font-weight: bold;
-  text-decoration: none;
-  margin-right: 30px;
-  border-radius: 25px;
-}
 
 #a-productos:hover {
-  font-size: 14px;
-  background-color: rgb(170, 161, 161);
+  font-size: 13px;
   border-radius: 25%;
-  color:red;
- }
+  color: #ec5252;
+}
 
 #ul-productos {
-  background-color: white;
-  border: 1px solid white;
-  padding: 10px;
+  background-color: rgb(247, 240, 240);
+  border: 1px solid rgb(240, 105, 105);
+  border-radius: 25px 0 0 0;
   width: 7rem;
+  height: 5rem;
+  margin-top: 30px;
+  margin-left: 10px;
+  padding: 10px 5px;
   position: absolute;
   list-style-type: none;
-  margin: 80px 0 0 0;
-  padding: 0;
   display: none;
 }
 
@@ -203,6 +162,8 @@ header {
 #ul-productos li {
   list-style: none;
   height: 20px;
+  font-size: 18px;
+  margin-top: 10px;
   list-style-type: none;
 }
 
@@ -223,76 +184,54 @@ header {
 
              SUBMENU NOSOTROS
 */
-
-#mnu-nosotros {
+#menus-casa {
   display: flex;
+  width: 100%;
   flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  margin-left: 0px;
+  justify-content: flex-end;
+  margin-left: auto;
 }
 
-#a-nosotros {
+.opciones-a {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 12rem;
+  width: 6rem;
   height: 1.4rem;
-  font-size: 12px;
-  color: white;
+  font-size: 10px;
+  color: black;
   font-family: vardana;
   font-weight: bold;
   text-decoration: none;
   border-radius: 25px;
 }
 
-#a-nosotros:hover {
-  font-size: 14px;
-  background-color: rgb(170, 161, 161);
+.opciones-a:hover {
+  font-size: 13px;
   border-radius: 25%;
-  color:red;
+  color: rgb(240, 77, 77);
+
 }
-  /*
+
+/*
            
 */
-#contacto {
-  padding-top: 10px;
-  width: 240px;
+.opciones-class {
+  margin-left: 2px;
+  width: 100px;
   height: auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  text-align: center;
   flex-direction: row;
-  margin-left: 25%;
 }
-
-#contacto-a {
-  margin-right: 20px;
-}
-
-@media (max-width: 1200px) {
-  #contacto { 
-    margin-left: 15%;
-  }
-}
-
-.user-linea1 {
-  width: 110px;
-  text-decoration: none;
-  border-radius: 25px;
-}
-
-.user-linea1:hover {
-  color: red;
-  background-color: #494343;
-}
-
 
 #mnu-search {
+  margin-left: 20px;
   display: flex;
   width: 20%;
-  height: 50%;
-  margin-left: auto;
+  height: 25px;
   margin-right: 5%;
   justify-content: left;
   align-items: center;
@@ -300,24 +239,16 @@ header {
   font-family: vardana;
   font-weight: bold;
   font-size: 80%;
-  margin-top: 1.3%;
-  border: 1px solid white;
+  margin-top: 30px;
+  border: 1px solid rgb(77, 73, 73);
+  transition: width 0.3s ease-in-out;
+  /* Agregamos una transición suave */
 }
 
-@media (max-width: 1000px) {
-  #mnu-search { 
-    display: none;
-  }
-  #contacto { 
-    margin-left: 10%;
-  }
-}
-
-#lupa-div {
-  margin-left: -1px;
-  width: 24px;
-  height: 80%;
-  background-color: white;
+#mnu-search.collapsed {
+  /* Nueva clase para cuando se recoja la búsqueda */
+  width: 5%;
+  /* Cambiamos el ancho a uno más pequeño */
 }
 
 #lupa {
@@ -327,38 +258,8 @@ header {
 }
 
 #lupa:hover {
-
-  animation: spin 3s infinite linear;
+  width: 21px;
 }
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-    width: 15px;
-  }
-
-  25% {
-    transform: rotate(90deg);
-    width: 15px;
-  }
-
-  50% {
-    transform: rotate(180deg);
-    width: 10px;
-  }
-
-  75% {
-    transform: rotate(90deg);
-    width: 15px;
-    border-radius: 50%;
-  }
-
-  100% {
-    transform: rotate(0deg);
-    width: 19px;
-  }
-}
-
 
 #inputBuscar {
   width: 100%;
@@ -374,15 +275,8 @@ header {
   justify-content: flex-start;
   flex-direction: row;
   width: 100%;
-  height: 2rem;
-  background-color: rgb(241, 237, 238);
-}
-
-
-.inicio:hover {
-  color: black;
-  background-color: rgb(240, 212, 212);
-  border-radius: 25%;
+  height: 20px;
+  background-color: red;
 }
 
 /* ====================================flech de INICIO*/
@@ -395,7 +289,7 @@ header {
   25% {
     opacity: 0;
     content: url("/images/flecha-roja.png");
-    background-color: rgb(241, 237, 238);
+    background-color: rgb(194, 174, 181);
   }
 
   50% {
@@ -404,7 +298,7 @@ header {
 
   75% {
     content: url("/images/flecha-roja.png");
-    background-color: rgb(241, 237, 238);
+    background-color: rgb(110, 101, 103);
     opacity: 0;
   }
 
@@ -417,6 +311,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
+  color: white;
   width: 40rem;
   height: 100%;
   margin-left: 55%;
@@ -431,6 +326,7 @@ header {
     margin-left: 35%;
   }
 }
+
 @media (max-width: 1000px) {
   #slogan {
     margin-left: 25%;
@@ -439,35 +335,48 @@ header {
 
 
 #medicamentos {
-  color: red;
+  color: rgb(250, 243, 243);
   margin: 0 6px 0 5px;
-  animation: medicamentos 3s infinite;
+  animation: medicamentos 8s infinite;
 }
 
 @keyframes medicamentos {
   0% {
-    opacity: 1;
-    color: #ee0c0c;
+
+    color: rgb(245, 237, 237);
   }
 
-  25% {
-    opacity: 0;
-    color: #6b6565;
-  }
 
-  75% {
+  50% {
+    color: rgb(168, 160, 160);
 
-    color: #2c2a2a;
   }
 
   100% {
-    color: #161515;
+    color: rgb(247, 240, 240);
   }
 }
 
 
 /*    */
 /**** ZONA DE  INICIO PAGINA 1    */
+#sloganPortada {
+  position: absolute;
+  z-index: 11;
+  color: red;
+  font-size: 50px;
+  font-weight: bold;
+  width: auto;
+  height: auto;
+  top: 30%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  text-shadow: 2px 2px 6px rgba(14, 13, 13, 0.8);
+  background: transparent;
+  border-radius: 25px;
+  box-shadow: inset 0 0 0 2000px rgba(141, 131, 131, 0), 0 0 20px rgba(0, 0, 0, 0.3);
+}
+
 /*    */
 .slider {
   display: flex;
@@ -770,6 +679,7 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
 .pCaptura {
   margin-top: 0%;
 }
+
 #correos {
   margin-top: 20px;
   display: flex;
@@ -1151,7 +1061,7 @@ area de los mensaje ================================  alestas
   flex-direction: row;
   justify-content: space-between;
   background-color: #8d8888;
-  border-radius:0 0 80px 80px;
+  border-radius: 0 0 80px 80px;
 }
 
 .footer1-hijo {
@@ -1198,11 +1108,13 @@ area de los mensaje ================================  alestas
   width: 100%;
   margin-bottom: 5px;
   font-size: 12px;
-  color:rgb(59, 54, 54);
+  color: rgb(59, 54, 54);
 }
+
 #autorD {
-margin-left: 100px;
+  margin-left: 100px;
 }
+
 #autorI {
   margin-right: 100px;
-  }
+}

@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
-const datosSchema = new Schema({
+const usersSchema = new Schema({
   email: String,
   clave: String,
   whatsapp: Number,
@@ -10,6 +10,14 @@ const datosSchema = new Schema({
   ciudad: String,
 });
 
+const datosSchema = new Schema({
+  email: String,
+  producto: Number,
+  fecha: { type: Date, default: Date.now },
+});
+
+
+const Users = mongoose.model('Users', usersSchema);
 const Datos = mongoose.model('Datos', datosSchema);
 
-module.exports = Datos;
+module.exports = { Users, Datos };
