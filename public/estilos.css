@@ -84,7 +84,7 @@ header {
 
 
 #areacomun {
-  margin-top: 90px;
+  margin-top: 92px;
   display: flex;
   justify-content: space-between;
   flex-direction: column;
@@ -238,23 +238,23 @@ header {
   color: rgb(224, 162, 162);
   font-family: vardana;
   font-weight: bold;
-  font-size: 80%;
   margin-top: 30px;
-  border: 1px solid rgb(77, 73, 73);
+ 
   transition: width 0.3s ease-in-out;
   /* Agregamos una transición suave */
 }
 
 #mnu-search.collapsed {
   /* Nueva clase para cuando se recoja la búsqueda */
-  width: 5%;
+  width: 5.5%;
   /* Cambiamos el ancho a uno más pequeño */
 }
 
 #lupa {
   width: 19px;
-  height: auto;
+  height: 21px;
   padding: 3px;
+  border:1px solid rgb(207, 202, 202);
 }
 
 #lupa:hover {
@@ -265,6 +265,14 @@ header {
   width: 100%;
   height: auto;
   background-color: white;
+  border: none; 
+  border: 1px solid rgb(202, 184, 184);
+}
+
+input::placeholder {
+  color: rgb(187, 172, 172); 
+  font-size: 11px; 
+  font-style: italic; 
 }
 
 /*    */
@@ -279,7 +287,7 @@ header {
   background-color: red;
 }
 
-/* ====================================flech de INICIO*/
+/* ====================================flech de INICIO
 
 @keyframes titilar {
   0% {
@@ -306,7 +314,7 @@ header {
     opacity: 1;
   }
 }
-
+*/
 #slogan {
   display: flex;
   justify-content: center;
@@ -363,13 +371,13 @@ header {
 #sloganPortada {
   position: absolute;
   z-index: 11;
-  color: red;
+  color: white;
   font-size: 50px;
   font-weight: bold;
   width: auto;
   height: auto;
-  top: 30%;
-  left: 30%;
+  top: 48%;
+  left: 50%;
   transform: translate(-50%, -50%);
   text-shadow: 2px 2px 6px rgba(14, 13, 13, 0.8);
   background: transparent;
@@ -454,7 +462,7 @@ button {
   border-radius: 20rem 20rem 0 0;
   color: white;
   position: absolute;
-  top: 692px;
+  top: 643px;
   transform: translateY(-70%);
 }
 
@@ -486,9 +494,9 @@ button {
 /*    */
 #blogs {
   margin-left: 50px;
-  margin-bottom: 30px;
-  margin-top: 5%;
-  width: 90%;
+  margin-bottom: 10px;
+  margin-top: 8%;
+  width: 95%;
   height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
