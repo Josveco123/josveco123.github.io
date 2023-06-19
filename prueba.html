@@ -4,381 +4,195 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/public/estilos.css">
   <title>Document</title>
   <style>
-.user-linea1 {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 1.5rem;
-  font-family: vardana;
-  font-weight: bold;
-  font-size: 90%;
-  color: white;
+    #footer {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 100%;
+      height: auto;
+      background-color: #9c9797;
+      padding-bottom: 15px;
+      border: 1px solid white;
+    }
 
-}
+    #footerBase {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      background-color: #8d8888;
+      border-radius: 0 0 80px 80px;
+      border: 1px solid black;
+    }
 
-/*    */
-/**** ZONA DE  MNU INTERNOS   LINEA 2 */
-/*    */
-#nav-interno {
-  display: flex;
-  flex-direction: row;
-  background-color: rgb(247, 243, 243);
-  width: 100%;
-  height: 4.5rem;
+    #footer-empresa {
+      margin: 20px 20px 20px 100px;
+      width: 400px;
+      height: 350px;
+      border-right: 1px solid rgb(184, 184, 182);
+    }
 
-}
+    #footer-empresa h1 {
+      font-size: 30px;
+      color: rgb(36, 34, 34);
+      font-size: 25px;
+    }
 
-#logotipo {
-  padding: 2px;
-  position: fixed;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  width: 130px;
-  height: auto;
-  margin-left: 40px;
-  border-radius: 25px;
-  z-index: 9999;
-}
-
-#logotipo img {
-  width: 100%;
-  height: auto;
-}
+    #footer-empresa p {
+      width: 400px;
+      line-height: 2;
+    }
 
 
+    #footer-link {
+      padding-left: 30px;
+      margin: 20px;
+      display: flex;
+      flex-direction: column;
+      justify-content: left;
+      align-items: start;
+      width: 400px;
+      height: 350px;
+      border-right: 1px solid rgb(209, 209, 208);
+    }
 
-#areacomun {
-  margin-top: 90px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  width: 100%;
-}
+    #footer-link h1 {
+      width: 300px;
+      color: rgb(54, 52, 52);
+      font-size: 25px;
+    }
 
-#cajon {
-  width: 100%;
-  height: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  margin-bottom: 2px;
-}
+    #footer-link a {
+      text-decoration: none;
+      list-style-type: none;
+      padding-left: 10px;
+      font-size: 20px;
+      color: rgb(54, 52, 52);
+    }
 
-#mnuI {
-   margin-top: 15px;
-  display: flex;
-  flex-direction: row;
-  margin-left: auto;
-  width: auto;
-  height: 60%;
-  padding: 5px;
-}
+    #footer-link a:hover {
+      background-color: rgb(187, 187, 185);
+      color: rgb(95, 74, 74);
+    }
 
-#mnu-producto {
-  margin-right: 2px;
-  width: 6rem;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-}
+    #footer-link a:before {
+      content: "\2022";
+      margin-right: 5px;
+      color: black;
+      width: 30px;
+    }
 
-#a-productos:hover {
-  font-size: 13px;
-  border-radius: 25%;
-  color: #ec5252;
- }
+    #footer-redes-sociales {
+      display: flex;
+      flex-direction: column;
+      margin: 20px;
+      width: 400px;
+    }
 
-#ul-productos {
-  background-color: white;
-  border: 1px solid white;
-  padding: 10px;
+    #footer-redes-sociales h1 {
+      width: 500px;
+      color: rgb(54, 52, 52);
+      font-size: 25px;
 
-  position: absolute;
-  font-size: 12px;
-  list-style-type: none;
-  margin: 80px 0 0 0;
-  padding: 0;
-  display: none;
-}
+    }
 
-#ul-productos::before {
-  margin-top: 10px;
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 20%;
-  border-left: 10px solid transparent;
-  border-right: 10px solid transparent;
-  border-bottom: 10px solid #ccc;
-  transform: translateX(-50%);
-}
+    #redesS {
+      display: flex;
+      margin-left: 30px;
+      flex-direction: row;
+      width: 200px;
 
-#mnu-producto:hover #ul-productos {
-  display: block;
-  /* Muestra el menú cuando se pasa el mouse sobre el enlace */
-}
+    }
 
-#ul-productos li {
-  list-style: none;
-  height: 20px;
-  list-style-type: none;
-}
+    #redesS a img {
+      width: 40px;
+      height: auto;
+    }
 
-#ul-productos li a {
-  display: flex;
-  justify-content: start;
-  width: 100%;
-  color: rgb(5, 5, 5);
-  text-decoration: none;
-}
+    #footer-redes-sociales p {
+      width: 500px;
+      line-height: 2;
+    }
 
-#ul-productos li a:hover {
-  background-color: rgb(146, 123, 123);
-  color: white;
-}
-
-/*
-
-             SUBMENU NOSOTROS
-*/
-
-#mnu-nosotros {
-  margin-left: 4px;
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  margin-left: 0px;
-}
-
-.opciones-a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 12rem;
-  height: 1.4rem;
-  font-size: 10px;
-  color: black;
-  font-family: vardana;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 25px;
-}
-
-.opciones-a:hover {
-  font-size: 13px;
-  border-radius: 25%;
-  color:rgb(240, 77, 77);
-}
-  /*
-           
-*/
-.opciones-class {
-  margin-left: 2px;
-  width: 140px;
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-#mnu-search {
-  display: flex;
-  width: 20%;
-  height: 25px;
-  margin-left: auto;
-  margin-right: 5%;
-  justify-content: left;
-  align-items: center;
-  color: rgb(224, 162, 162);
-  font-family: vardana;
-  font-weight: bold;
-  font-size: 80%;
-  margin-top: 1.3%;
-  border: 1px solid rgb(77, 73, 73);
-  transition: width 0.3s ease-in-out; /* Agregamos una transición suave */
-}
-
-#mnu-search.collapsed { /* Nueva clase para cuando se recoja la búsqueda */
-  width: 5%; /* Cambiamos el ancho a uno más pequeño */
-}
-
-#lupa {
-  width: 19px;
-  height: auto;
-  padding: 3px;
-}
-
-#inputBuscar {
-  width: 100%;
-  height: auto;
-  background-color: white;
-}
-/*    */
-/**** ZONA DE  INFORMACION DE NAVEGACION LINEA 3    */
-/*    */
-#informacion-nav {
-  display: flex;
-  justify-content: flex-start;
-  flex-direction: row;
-  width: 100%;
-  height: 20px;
-  background-color:red;
-}
-
-/* ====================================flech de INICIO*/
-
-@keyframes titilar {
-  0% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-    content: url("/images/flecha-roja.png");
-    background-color: rgb(194, 174, 181);
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  75% {
-    content: url("/images/flecha-roja.png");
-    background-color: rgb(110, 101, 103);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
-
-#slogan {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color:white;
-  width: 40rem;
-  height: 100%;
-  margin-left: 55%;
-  font-size: 1rem;
-  font-family: vardana;
-  margin-top: 0;
-  font-weight: bold;
-}
-
-@media (max-width: 1200px) {
-  #slogan {
-    margin-left: 35%;
-  }
-}
-@media (max-width: 1000px) {
-  #slogan {
-    margin-left: 25%;
-  }
-}
+    #footer-redes-sociales p :before {
+      content: "\2022";
+      margin-right: 5px;
+      color: black;
+      width: 30px;
+    }
 
 
-#medicamentos {
-  color: rgb(250, 243, 243);
-  margin: 0 6px 0 5px;
-  animation: medicamentos 5s infinite;
-}
+    #autor {
+      margin-top: 5px;
+      display: flex;
+      flex-direction: row;
+      justify-content: start;
+      width: 100%;
+       font-size: 12px;
+       color: white;
+    }
 
-@keyframes medicamentos {
-  0% {
-    opacity: 1;
-    color: #0a0909;
-  }
+    #autorD {
+      margin-left: 200px;
+    }
 
-  25% {
-    opacity: 0;
-    color: #b3a4a4;
-  }
-
-  75% {
-
-    color: #c2b9b9;
-  }
-
-  100% {
-    color: #faf4f4;
-  }
-}
-
+    #autorI {
+      margin-left: auto;
+      margin-right: 200px;
+    }
   </style>
 </head>
 
 <body>
-  <div id="logotipo">
-    <img src="/images/logo.svg" alt="">
-    <!--
-   <a class="inicio" href="/index.html">INICIO</a>
-  >-->
+  <div id="footer">
+    <div id="footerBase">
+      <div id="footer-empresa">
+        <h1>Laboratorio del Caribe S.A.S.</h1>
+        <p>
+          Dirección: <br>
+          Calle 38 No. 4A-184 Lt-1 Manz A <br>
+          Parque Industrial y Comercial -Sincelejo (Sucre)- <br>
+          Telefax: 605 2805941 - 605 2806160 <br>
+          Móvil: (+57) 312 686 9891 <br>
+          Correo Electronico: ventas@laboratoriodelcaribe.com <br>
+          Banco de Colombia (50604761202) <br>
+          Banco Davivienda
+        </p>
+      </div>
+      <div id="footer-link">
+        <h1>Link internos</h1>
+        <a href="#" onclick="recargarHome()">Home</a>
+        <br>
+        <a href="#" onclick="fNosotros()">Nosotros</a>
+        <br>
+        <a href="#" onclick="contactos()">Contacto</a>
+        <br>
+        <a href="#" onclick="registro()">Registrese</a>
+      </div>
+
+      <div id="footer-redes-sociales">
+        <h1>Siguenos</h1>
+        <div id="redesS">
+          <a href="http://"><img src="/images/facebook.svg" alt="" srcset=""></a>
+          <a href="http://"><img src="/images/instagram.svg" alt="" srcset=""></a>
+          <a href="http://"><img src="/images/twiter.svg" alt="" srcset=""></a>
+          <a href="http://"><img src="/images/whatsapp.svg" alt="" srcset=""></a>
+        </div>
+        <p>
+          <span>ventas@laboratoriodelcaribe.com </span><br>
+          <span> comercial@laboratoriodelcaribe.com</span> <br>
+          <span> sincelejo1@laboratoriodelcaribe.com</span> <br>
+          <span> sincelejo@laboratoriodelcaribe.com</span> <br>
+          <span> monteria@laboratoriodelcaribe.com </span><br>
+          <span> administrativo@laboratoriodelcatibe.com </span><br>
+        </p>
+      </div>
+    </div>
+    <div id="autor">
+      <span id="autorD">@Diseños: JVC - cel: 321 8374037</span><span id="autorI">@Prohibida su reproduccion</span>
+    </div>
   </div>
-  <div id="mnuI">
-    <div id="mnu-producto">
-      <a id="a-productos" class="opciones-a" href="" title="PRODUCTOS">PRODUCTOS</a>
-      <ul id="ul-productos">
-        <li>
-          <a href="#" onclick="producto()" title="Opcion 1">Productos</a>
-        </li>
-        <li>
-          <a href="#" onclick="cajon()" title="Opcion 1">Distribuidores</a>
-        </li>
-      </ul>
-    </div>
-    <div id="mnu-nosotros" class="opciones-class">
-      <a id="nosotros-a" class="opciones-a" onclick="fNosotros()" href="#">HACERCA DE <br> NOSOTROS</a>
-    </div>
-    <div id="contacto" class="opciones-class">
-      <a id="contacto-a" class="opciones-a" href="#" onclick="contactos()">CONTACTOS</a>
-    </div>
-    <div class="opciones-class">
-      <a class="opciones-a" href="#" onclick="registro()">REGISTRESE</a>
-    </div>
-
-    <form id="mnu-search" class="clase-mnu-searrch collapsed" onmouseover="expandir()" onmouseout="recojer()">
-      <input id="inputBuscar" class="clase-mnu-searrch" type="text" name="q" placeholder="BUSQUEDA"
-        onkeydown="handleKeyDown(event)"></input>
-      <img id="lupa" src="/images/lupa.svg" alt="" onclick="submitForm()"></img>
-    </form>
-
-  </div>
-
-</div>
-<div id="informacion-nav">
-  <p id="slogan">
-    Fabricamos y comercializamos
-    <span id="medicamentos"> medicamentos </span>para el consumo humano
-  </p>
-</div>
-  <script>
-    function submitForm() {
-      var input = document.getElementById('inputBuscar').value.trim();
-      if (input !== '') {
-        var searchUrl = 'https://www.google.com/search?q=' + encodeURIComponent(input);
-        window.open(searchUrl, '_blank');
-      }
-    }
-
-    function expandir() {
-      var searchForm = document.getElementById('mnu-search');
-      searchForm.classList.remove('collapsed'); // Quitamos la clase 'collapsed'
-    }
-
-    function recojer() {
-      var searchForm = document.getElementById('mnu-search');
-      searchForm.classList.add('collapsed'); // Agregamos la clase 'collapsed'
-    }
-  </script>
 </body>
 
 </html>

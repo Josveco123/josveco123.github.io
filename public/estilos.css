@@ -239,7 +239,7 @@ header {
   font-family: vardana;
   font-weight: bold;
   margin-top: 30px;
- 
+
   transition: width 0.3s ease-in-out;
   /* Agregamos una transición suave */
 }
@@ -254,7 +254,7 @@ header {
   width: 19px;
   height: 21px;
   padding: 3px;
-  border:1px solid rgb(207, 202, 202);
+  border: 1px solid rgb(207, 202, 202);
 }
 
 #lupa:hover {
@@ -265,14 +265,14 @@ header {
   width: 100%;
   height: auto;
   background-color: white;
-  border: none; 
+  border: none;
   border: 1px solid rgb(202, 184, 184);
 }
 
 input::placeholder {
-  color: rgb(187, 172, 172); 
-  font-size: 11px; 
-  font-style: italic; 
+  color: rgb(187, 172, 172);
+  font-size: 11px;
+  font-style: italic;
 }
 
 /*    */
@@ -500,36 +500,75 @@ button {
   height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
+  grid-gap: 60px;
   border-radius: 0 0 25px 0;
   z-index: 0;
 }
 
 .div-blogs {
   display: flex;
-  gap: 40px;
+  flex-direction: column;
+  gap: 10px;
   border-radius: 20% 0 20% 0;
-  box-shadow: 0px 0px 5px 10px rgba(139, 136, 136, 0.3);
+  box-shadow: 0px 0px 5px 10px rgba(221, 216, 216, 0.3);
 }
 
 .blogimg {
   margin-left: -20px;
-  margin-top: -20px;
+  margin-top: -16px;
   width: 200px;
   height: auto;
-  border-radius: 45% 0 50% 0;
+  border-radius: 45% 0 0 0;
   box-shadow: 0px 0px 5px 5px rgba(136, 130, 130, 0.3);
   float: left;
   /* Posiciona la imagen a la izquierda */
-  margin-right: 30px;
+  margin-right: 15px;
+  margin-bottom: 10px;
   /* Ajusta el margen derecho para separar la imagen del texto */
 }
 
 .p-blogs {
-  margin: 20px;
-  text-align: justify;
+  margin: 15px 15px 0 20px;
+  text-align:justify;
   /* Justifica el texto para que se ajuste alrededor de la imagen */
-  font-size: 20px;
+  font-size:12px;
+  line-height: 2;
+  font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.titBlogs {
+  font-size: 10px;
+  font-weight: bold;
+  color: red;
+  display: flex;
+  justify-content: start;
+  align-items: start;
+  text-align: center;
+  text-transform: uppercase;
+  border-bottom: 1px solid rgb(245, 6, 6);
+}
+
+
+.blogImgFinal {
+  margin-left: 80px;
+  margin-bottom: 10px;
+  display: flex;
+  flex-direction: row;
+}
+
+.blogImgFinal img {
+  width: 70px;
+  height: auto;
+  border: 1px solid red;
+  border-radius: 50%;
+}
+
+.blogImgFinal p {
+  margin-left: 30px;
+  margin-top: 30px;
+  color: rgb(116, 101, 101);
+  font-size: 13px;
+  font-family: fantasy;
 }
 
 /*
@@ -1055,74 +1094,137 @@ area de los mensaje ================================  alestas
 /**** ZONA DE ========================================= footer    */
 /*    */
 #footer {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   height: auto;
-  background-color: #9c9797;
+  background-color: #747171;
   padding-bottom: 15px;
 }
 
-#footer1 {
+#footerBase {
+
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #8d8888;
+  background-color: #e2dbdb;
   border-radius: 0 0 80px 80px;
 }
 
-.footer1-hijo {
-  margin-left: 10%;
+#footer-empresa {
+  margin: 20px 20px 20px 100px;
+  width: 400px;
+  height: 350px;
+  border-right: 1px solid rgb(184, 184, 182);
+}
+
+#footer-empresa h1 {
+  font-size: 30px;
+  color: rgb(36, 34, 34);
+  font-size: 25px;
+}
+
+#footer-empresa p {
+  width: 400px;
+  line-height: 2;
+}
+
+
+#footer-link {
+  padding-left: 30px;
+  margin: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
-  justify-content: center;
-  width: 30%;
-  color: white;
-  height: 300px;
-  margin-top: 50px;
+  justify-content: left;
+  align-items: start;
+  width: 400px;
+  height: 350px;
+  border-right: 1px solid rgb(209, 209, 208);
 }
 
-.footer1-hijo p {
-  color: white;
+#footer-link h1 {
+  width: 300px;
+  color: rgb(54, 52, 52);
+  font-size: 25px;
 }
 
-#footer2 {
+#footer-link a {
+  text-decoration: none;
+  list-style-type: none;
+  padding-left: 10px;
+  font-size: 20px;
+  color: rgb(54, 52, 52);
+}
+
+#footer-link a:hover {
+  background-color: rgb(187, 187, 185);
+  color: rgb(95, 74, 74);
+}
+
+#footer-link a:before {
+  content: "\2022";
+  margin-right: 5px;
+  color: black;
+  width: 30px;
+}
+
+#footer-redes-sociales {
   display: flex;
+  flex-direction: column;
+  margin: 20px;
+  width: 400px;
+}
+
+#footer-redes-sociales h1 {
+  width: 500px;
+  color: rgb(54, 52, 52);
+  font-size: 25px;
+
+}
+
+#redesS {
+  display: flex;
+  margin-left: 30px;
   flex-direction: row;
-  justify-content: space-between;
-  width: 100%;
-  height: 70px;
-  background-color: #343232;
+  width: 200px;
+
 }
 
-#footer2 p {
-  display: flex;
-  color: white;
-  width: 40%;
-  align-items: center;
+#redesS a img {
+  width: 40px;
+  height: auto;
 }
 
-#footer2-hijo2 {
-  display: flex;
-  justify-content: end;
+#footer-redes-sociales p {
+  width: 500px;
+  line-height: 2;
 }
+
+#footer-redes-sociales p :before {
+  content: "\2022";
+  margin-right: 5px;
+  color: black;
+  width: 30px;
+}
+
 
 #autor {
+  margin-top: 5px;
   display: flex;
   flex-direction: row;
-  justify-content: space-between;
+  justify-content: start;
   width: 100%;
-  margin-bottom: 5px;
-  font-size: 12px;
-  color: rgb(59, 54, 54);
+   font-size: 12px;
+   color: white;
 }
 
 #autorD {
-  margin-left: 100px;
+  margin-left: 200px;
 }
 
 #autorI {
-  margin-right: 100px;
+  margin-left: auto;
+  margin-right: 200px;
 }

@@ -1,5 +1,13 @@
 /**
  * 
+ * Recargar pagina inical
+ */
+
+function recargarHome() {
+  location.reload();
+}
+/**
+ * 
  * aqui va el codigo para ejecutar busqueda de lupa
  */
 function submitForm() {
