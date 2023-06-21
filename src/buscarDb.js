@@ -1,4 +1,4 @@
-const Users = require('../modelos/db.Schema');
+const { Users } = require('../modelos/db.Schema');
 
 async function buscarDb(correo, clave) {
   try {

@@ -343,22 +343,21 @@ function producto() {
             />
           </div>      
         </form>
-           <div id="ejecutar">
-          <button id="boton-registro" onclick="GETregistro()">
-          Verificar
-          </button>
-          <a id="ocultar" href="/index.html">Exit</a>
-          <a id="olvido" href="#>Olvide mi Contraseña</a>
-        </div>
+        <a id="olvido-clave" href="/index.html">Olvide la contraseña</a>
+        <div id="ejecutar">
+              <button id="boton-registro" onclick="GETregistro()">
+                Verificar
+              </button>
+              <a id="ocultar" href="/index.html">Exit</a>
+            </div>
      </div>
-     <p id="bienvenida">
-     Bienvenido a Laboratorios del caribe. <br />Su Cuenta Fue creada con
-      exito. <br /><br />
-      <a href="index.html">Click Continuar</a>
-      </p>
+     <div id="bienvenida">
+          Bienvenido a Laboratorios del caribe. <br />Su Cuenta Fue creada con
+          exito. <br /><br />
+          <a href="index.html">Click Continuar</a>
+      </div>
     </div>
   `;
-  document.getElementById("flecha").style.display = "block";
 }
 
 function registro() {

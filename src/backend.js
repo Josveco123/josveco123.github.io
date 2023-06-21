@@ -86,7 +86,7 @@ async function POSTregistro() {
     return;
   }
    if (whatsapp.trim().length  < 9) {
-    mostrar("La clave tiene menos de 10 digito","NADA");
+    mostrar("El numero tiene menos de 10 digito","NADA");
     return;
   }
 
