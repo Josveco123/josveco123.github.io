@@ -288,32 +288,6 @@ input::placeholder {
 }
 
 /* ====================================flech de INICIO
-
-@keyframes titilar {
-  0% {
-    opacity: 1;
-  }
-
-  25% {
-    opacity: 0;
-    content: url("/images/flecha-roja.png");
-    background-color: rgb(194, 174, 181);
-  }
-
-  50% {
-    opacity: 1;
-  }
-
-  75% {
-    content: url("/images/flecha-roja.png");
-    background-color: rgb(110, 101, 103);
-    opacity: 0;
-  }
-
-  100% {
-    opacity: 1;
-  }
-}
 */
 #slogan {
   display: flex;
@@ -491,7 +465,7 @@ button {
 
 /*    */
 /**** ZONA DE  PAGINA 2 BLOGS    */
-/*    */
+/*    */s
 #paginablog {
   display: flex;
   flex-direction: column;
@@ -596,7 +570,6 @@ button {
 ***
 Insercio de pagina NOSOTROS inicio ====================================== NOSOTROS
 ****
-*/
 #pagina2 {
   width: 100%;
   display: flex;
@@ -644,21 +617,17 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
 
 .list-container {
   margin-left: 20px;
-  /* Ajusta el margen izquierdo de la lista */
 }
 
 .list-container span {
   display: block;
   margin-bottom: 10px;
-  /* Agrega espacio entre los elementos */
   position: relative;
   padding-left: 15px;
-  /* Ajusta el espacio para la viñeta */
 }
 
 .list-container span::before {
   content: "\2022";
-  /* Agrega el símbolo de viñeta */
   position: absolute;
   left: 0;
 }
@@ -673,6 +642,144 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
   width: 100%;
   height: 100%;
 }
+*/
+#pag-nosotros {
+  width: 100%;
+  background-color: rgb(250, 240, 240);
+}
+
+#figuraN {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+  height: 100px;
+  margin-left: 15%;
+  background-image: linear-gradient(to top, rgb(252, 250, 250), rgb(156, 148, 148));
+  border-radius: 20rem 20rem 0 0;
+  color: white;
+}
+
+#figura1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 5.6%;
+  width: 50%;
+  height: 50%;
+  background-color: #ddd9d9;
+  border: 2px solid rgb(168, 161, 161);
+  border-radius: 30px 30px 0 0;
+  color: RED;
+  box-shadow: inset 0 0 20px rgb(88, 81, 81);
+  font-size: 150%;
+  font-family: vardana;
+  font-weight: bold;
+}
+
+.fig-linea1 {
+  margin-top: 10%;
+  width: 10%;
+  height: 1px;
+  background-color: rgb(165, 160, 160);
+}
+
+
+.fig-linea2 {
+  margin-top: 10%;
+  width: 10%;
+  height: 1px;
+  background-color: rgb(187, 180, 180);
+}
+
+#nosotros {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#nos-distribucion {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 100px 60px;
+}
+
+.nos {
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  border: 2px solid rgb(241, 223, 223);
+  margin-left: 50px;
+  background: linear-gradient(to right, rgb(167, 165, 165), rgba(155, 154, 154, 0));
+  box-shadow: inset 0 0 10px 0 rgb(241, 224, 224);
+}
+
+.nosT {
+  margin-right: 10px;
+  width: 40%;
+  height: 300px;
+
+}
+
+.nosC {
+  display: flex;
+  flex-direction: column;
+
+  width: 60%;
+  height: 300px;
+  font-size: 20px;
+  margin-right: 40px;
+  text-align: justify;
+  justify-content: center;
+}
+
+#nos11 {
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos1.png");
+  background-size: cover;
+}
+
+#bpm {
+  color: rgb(107, 46, 46);
+  font-style: italic;
+}
+
+#nos21 {
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos21.png");
+  background-size: cover;
+}
+
+#nos31 {
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos31.png");
+  background-size: cover;
+}
+
+#nos41 {
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos41.png");
+  background-size: cover;
+}
+
+#nos51 {
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos51.png");
+  background-size: cover;
+}
+
+#nos61 {
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos61.png");
+  background-size: cover;
+}
+
+.tit-nos {
+  color: rgb(250, 244, 244);
+  align-items: end;
+  text-align: end;
+  margin-right: 10px;
+  font-size: 40px;
+}
+
 
 /*
 Inicia pagina de contactos ================================contacto
