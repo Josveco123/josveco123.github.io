@@ -66,92 +66,78 @@ mostrarSlide();
 
 function contactos() {
   // Obtener referencia al contenedor
-  var contacto = document.querySelector("#cajon");
-
-  // Crear un elemento div para contener el fragmento HTML
+  var contacto = document.getElementById("cajon");
   contacto.innerHTML = `
-  <section id="pagina4">
-  <h2 class="tit-nos-pag4">CONTACTOS
-  </h2>
-  <div id="linea-horizontal4"></div>
-  <br />
-  <div id="contactoPag">
-    <div id="direcciones">
-      <h2 class="tit-pag4">INFORMACIÓN POR ZONAS</h2>
-      <div id="ContactoCorreos">
-        <p>
+  <section id="pag-contactos">
+  <div class="figura">
+  CONTACTOS
+</div>
+<div class="figura0"></div>
+<div class="figura1">
+  <div id="contactos-p">
+      <p>
           <span><strong>SINCELEJO, SUCRE</strong></span><br />
           <span>CELULAR: (+57) 3135120781</span><br />
           <span>E-mail: sincelejo@laboratoriodelcaribe.com</span>
-        </p>
-        <p>
+      </p>
+      <p>
           <span><strong>BARRANQUILLA, ATLÁNTICO</strong></span><br />
           <span>CELULAR: (+57) 3126873831</span><br />
           <span>E-mail:</span><br />
           <span>barranquilla@laboratoriodelcaribe.com</span><br />
           <span>barranquilla1@laboratoriodelcaribe.com</span>
-        </p>
-        <p>
+      </p>
+      <p>
           <span><strong>MONTERÍA, CÓRDOBA</strong></span><br />
           <span>CELULAR: (+57) 3126874903</span><br />
           <span>E-mail: monteria@laboratoriodelcaribe.com</span>
-        </p>
-        <p>
+      </p>
+      <p>
           <span><strong>BUCARAMANGA, SANTANDER</strong></span><br />
           <span>CELULAR: (+57) 3126874922</span><br />
           <span>Email: bucaramanga@laboratoriodelcaribe.com</span>
-        </p>
-        <p>
+      </p>
+      <p>
           <span><strong>CARTAGENA, BOLIVAR</strong></span><br />
           <span>CELULAR: (+57) 3216987967</span><br />
           <span>E-mail: cartagena@laboratoriodelcaribe.com</span>
-        </p>
-        <p>
+      </p>
+      <p>
           <span><strong>VALLEDUPAR, CESAR</strong></span><br />
           <span>CELULAR: (+57) 3126703794</span><br />
           <span>E-mail: valledupar@laboratoriodelcaribe.com</span>
-        </p>
-        <p>
+      </p>
+      <p>
           <span><strong>CÚCUTA, NORTE DE SANTANDER</strong></span><br />
           <span>CELULAR: (+57) 3145247471</span><br />
           <span>E-mail: cucuta@laboratoriodelcaribe.com</span>
-        </p>
-      </div>
-    </div>
-    <div id="correos">
-      <h2 class="tit-pag4D">Queremos escucharte!</h2>
-      <div id="correosPag">
-        <form id="formulario-correo" action="procesar_formulario.php" method="POST">
-          <label class="label-correo" for="nombre">Nombre:</label>
-          <input type="text" id="nombre" name="nombre" required />
-
-          <label class="label-correo" for="correo">Correo:</label>
-          <input type="email" id="correo" name="correo" required />
-
-          <label class="label-correo" for="telefono">Teléfono:</label>
-          <input type="tel" id="telefono" name="telefono" required />
-
-          <label class="label-correo" for="mensaje">Mensaje:</label>
-          <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br /><br />
-
-          <input type="submit" value="Enviar" />
-        </form>
-      </div>
-    </div>
+      </p>
   </div>
+  <div id="form-correo">
+      <div id="correos">
+          <h2 class="tit-pag4D">Queremos escucharte!</h2>
+          <div id="correosPag">
+              <form id="formulario-correo" action="procesar_formulario.php" method="POST">
+                  <label class="label-correo" for="nombre">Nombre:</label>
+                  <input type="text" id="nombre" name="nombre" required />
 
-  <div id="gogle-map">
-    <h2 id="tit-map">laboratorio del Caribe</h2>
-    <iframe id="mapa-map"
-      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1968.8334407712973!2d-75.41080065071586!3d9.274028265514518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8e5914ed96a19587%3A0x476cf87d89af0f53!2sLABORATORIO%20DEL%20CARIBE!5e0!3m2!1sen!2sco!4v1684946281250!5m2!1sen!2sco"
-      width="100%" height="450" style="border: 0" allowfullscreen="" loading="lazy"
-      referrerpolicy="no-referrer-when-downgrade"></iframe>
+                  <label class="label-correo" for="correo">Correo:</label>
+                  <input type="email" id="correo" name="correo" required />
+
+                  <label class="label-correo" for="telefono">Teléfono:</label>
+                  <input type="tel" id="telefono" name="telefono" required />
+
+                  <label class="label-correo" for="mensaje">Mensaje:</label>
+                  <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br /><br />
+
+                  <input type="submit" value="Enviar" />
+              </form>
+          </div>
+      </div>
   </div>
+</div>
 </section>
 `;
-
-  // Insertar el fragmento HTML dentro del contenedor
-  document.getElementById("flecha").style.display = "block";
 }
 
 /**
