@@ -32,37 +32,6 @@ function recojer() {
  * Este codigo ejecuta el avance de los slider de la primera pagina
  */
 
-var index = 0;
-var slides = document
-  .getElementsByClassName("slider")[0]
-  .getElementsByTagName("img");
-
-function mostrarSlide() {
-  for (var i = 0; i < slides.length; i++) {
-    slides[i].classList.remove("active");
-  }
-  slides[index].classList.add("active");
-}
-
-function siguienteSlide() {
-  index++;
-  if (index >= slides.length) {
-    index = 0;
-  }
-  mostrarSlide();
-}
-
-function anteriorSlide() {
-  index--;
-  if (index < 0) {
-    index = slides.length - 1;
-  }
-  mostrarSlide();
-}
-
-mostrarSlide();
-
-
 
 function contactos() {
   // Obtener referencia al contenedor
@@ -157,17 +126,16 @@ function functionNosotros() {
   nosotros.innerHTML = `
   <section id="pag-nosotros">
   <div id="figuraN">
-    <div class="fig-linea1"></div>
     <div id="figura1">
       <span> ACERCA DE NOSOTROS </span>
     </div>
-    <div class="fig-linea2"></div>
+    <div id="linea1nosotros"></div>
   </div>
 
   <div id="nosotros">
     <div class="nos">
       <div id="nos11" class="nosT">
-        <h2 id="denosotros" class="tit-nos">Laboratorios del Caribe S.A.S.</h2>
+        <h2 id="denosotros" class="tit-nos">Reseña historica</h2>
         <br />
       </div>
       <div id="nos12" class="nosC">
@@ -182,14 +150,12 @@ function functionNosotros() {
             manera importante en el mercado Nacional, manteniendo una posición
             de liderazgo y prestigio ante el cuerpo médico por la calidad de sus
             productos.
-          </span>
-          <br />
-        </p>
-        <p id="bpm">
+            <br />  <br />
           Laboratorio del Caribe S.A.S., fue certificado con Buenas Prácticas de
           Manufactura en el año 2002, lo que le permitirá en el siglo XXI
           continuar ofreciendo medicamentos de excelente calidad seguros y
           confiables al sistema de salud.
+          </span>
         </p>
       </div>
     </div>
@@ -294,14 +260,14 @@ function functionNosotros() {
         <p>
           <span class="list-container">
             <span><strong>Respeto:</strong> Aceptamos las decisiones y acciones de
-              los clientes internos y externos siendo tolerantes.</span> <br>
+              los clientes internos y externos siendo tolerantes.</span>         <br />        <br />
             <span><strong>Compromiso:</strong> Damos lo máximo de cada uno de
-              nosotros con sentido de pertenencia hacia la empresa.</span> <br>
+              nosotros con sentido de pertenencia hacia la empresa.</span> <br>        <br />
             <span><strong>Honestidad:</strong> Actuamos conforme a los intereses
               comunes y no particulares de acuerdo a la ley y las
-              costumbres.</span> <br>
+              costumbres.</span>         <br />        <br />
             <span><strong>Lealtad:</strong> Somos fieles frente a los compromisos y
-              objetivos de la empresa.</span> <br>
+              objetivos de la empresa.</span>         <br />        <br />
             <span><strong>Responsabilidad:</strong> Somos conscientes de nuestras
               actuaciones, cumpliendo cabalmente de forma que se logren los
               objetivos de la empresa.</span>
