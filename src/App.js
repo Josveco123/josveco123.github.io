@@ -38,9 +38,7 @@ function contactos() {
   var contacto = document.getElementById("cajon");
   contacto.innerHTML = `
   <section id="pag-contactos">
-  <div class="figura">
-  CONTACTOS
-</div>
+  <div id="nombre-contacto"> CONTACTOS</div>
 <div class="figura0"></div>
 <div class="figura1">
   <div id="contactos-p">
@@ -121,6 +119,7 @@ async function fNosotros() {
 }
 
 function functionNosotros() {
+
   // Obtener referencia al contenedor
   var nosotros = document.getElementById("cajon");
   nosotros.innerHTML = `
@@ -141,7 +140,7 @@ function functionNosotros() {
       <div id="nos12" class="nosC">
         <p>
           <span>
-            Inició labores en Sincelejo el 20 de
+            Laboratorio del caribe S.A.S. inició labores en Sincelejo el 20 de
             marzo de 1984. Se obtiene el primer Registro Sanitario para el
             producto comercializado bajo la marca Artrixin iniciándose la
             expansión y posicionamiento en todo el territorio Nacional.
@@ -289,7 +288,10 @@ function functionNosotros() {
  */
 
 function producto() {
+  var valorCorreo = sessionStorage.getItem("correo");
+  if (valorCorreo === null) {
   var producto = document.querySelector("#cuerpo");
+producto.style.display="block"
   producto.innerHTML = `
     <div id="contenedor-producto">
       <div id="cont-producto">
@@ -326,13 +328,10 @@ function producto() {
               <a id="ocultar" href="/index.html">Exit</a>
             </div>
      </div>
-     <div id="bienvenida">
-          Bienvenido a Laboratorios del caribe. <br />Su Cuenta Fue creada con
-          exito. <br /><br />
-          <a href="index.html">Click Continuar</a>
-      </div>
     </div>
   `;
+  } else {
+  return pagProductos()}
 }
 
 function registro() {
@@ -383,6 +382,42 @@ function registro() {
     </div>
   `;
 }
+/**
+ * 
+ * area programa pagina productos
+ * 
+ * 
+ */
+function  pagProductos() {
+  document.getElementById("cuerpo").innerHTML =""
+  // Obtener referencia al contenedor
+  var pProductos = document.getElementById("cajon");
+  pProductos.innerHTML = `
+  <section id="pagProductos">
+  <div id="figuraProducto">
+      <div id="nombrePagina">
+          <span> Nuestros Producto </span>
+      </div>
+      <div id="linea1nosotros"></div>
+  </div>
+
+  <div id="cajonProductos">
+      <div class="cajonDetalle">
+          <div class="fotoProductos"><img src="/images/pro1.jpg" alt=""></div>
+      </div>
+      <div class="cajonDetalle">
+          <div class="fotoProductos"><img src="/images/pro2.jpg" alt=""></div>
+      </div>
+      <div class="cajonDetalle">
+          <div class="fotoProductos"><img src="/images/pro3.jpg" alt=""></div>
+      </div>
+      <div class="cajonDetalle">
+          <div class="fotoProductos"><img src="/images/pro4.jpg" alt=""></div>
+      </div>
+  </div>
+  `;
+}
+
 /*
 area de programa de alertas
 */
@@ -411,12 +446,10 @@ function mostrar(mostrar, valor) {
 
 function cerrarAlerta(parametro1, parametro2) {
   if (parametro2 === 'GET') {
-
-    location.reload(true);
     // termina prueba
   };
   if (parametro2 === 'POST') {
-    location.reload()
+    location.reload(true)
   }
   var alerta = document.querySelector('#cuerpo1');
   alerta.parentNode.removeChild(alerta);

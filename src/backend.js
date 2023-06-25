@@ -41,9 +41,9 @@ async function GETregistro() {
         mostrar('la clave no es valida', 'NADA')
         return;
       } else {
-        localStorage.setItem("correo", mensajeCorreo);
-        mostrar(`Valido = ${mensajeCorreo}`, 'GET');
-      }
+        sessionStorage.setItem("correo", mensajeCorreo);
+        return pagProductos()
+       }
     })
     .catch(function (error) {
       console.error("Error:", error);
@@ -116,7 +116,7 @@ async function POSTregistro() {
         const Correo = data.mensaje?.email ?? null;
         mostrar('Ya existe un email, trate con otro', 'NADA');
       } else {
-        localStorage.setItem('correo', correo)
+        sessionStorage.setItem('correo', correo)
         mostrar('Proceso existoso, continue', 'POST');
       }
 
