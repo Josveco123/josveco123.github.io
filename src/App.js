@@ -475,7 +475,7 @@ function pagProductos() {
             <span class="presentacion">Disponible en Presentacion de:</span>
           </div>
           <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Clacorbalamine" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
+          <button id="Balamine" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 

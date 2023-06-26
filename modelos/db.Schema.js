@@ -13,7 +13,7 @@ const usersSchema = new Schema({
 const datosSchema = new Schema({
   email: String,
   producto: String,
-  fecha: { type: Date, default: Date.now },
+  fecha: String,
 });
 
 const Users = mongoose.model('Users', usersSchema);

@@ -43,7 +43,7 @@ async function GETregistro() {
       } else {
         sessionStorage.setItem("correo", mensajeCorreo);
         return pagProductos()
-       }
+      }
     })
     .catch(function (error) {
       console.error("Error:", error);
@@ -82,17 +82,17 @@ async function POSTregistro() {
   // validar clave
 
   if (clave.trim().length < 4) {
-    mostrar("La clave tiene menos de 4 caracteres","NADA");
+    mostrar("La clave tiene menos de 4 caracteres", "NADA");
     return;
   }
-   if (whatsapp.trim().length  < 9) {
-    mostrar("El numero tiene menos de 10 digito","NADA");
+  if (whatsapp.trim().length < 9) {
+    mostrar("El numero tiene menos de 10 digito", "NADA");
     return;
   }
 
   // validar razonSocial
   if (razonSocial.trim().length < 1) {
-    mostrar("La Razon Social no se ha definido","NADA");
+    mostrar("La Razon Social no se ha definido", "NADA");
     return;
   }
   // validar ciudad
@@ -128,20 +128,30 @@ async function POSTregistro() {
   return
 }
 
-
-async function fichaTecnica(event) {
-  var correoU = sessionStorage.getItem("correo");
-  var fechaActual = new Date();
+function fichaTecnica(event) {
   var productoC = event.target.id
-  var hora = fechaActual.getHours();
-  var dia = fechaActual.getDate();
-  var mes = fechaActual.getMonth() + 1; // Los meses se representan del 0 al 11, por lo que se suma 1.
-  var año = fechaActual.getFullYear();
- const datosConsulta = {
-  correoC : correoU,
-  productoC: productoC,
-  fechaC : fechaActual,
+POSTfichaTecnica(productoC);
+verFichaTecnica(productoC);
 }
+
+async function POSTfichaTecnica(productoC) {
+  var correoU = sessionStorage.getItem("correo");
+  // para tomar fecha y hora colombiana
+  var options = {
+    timeZone: 'America/Bogota',
+    year: 'numeric',
+    month: '2-digit',
+    day: '2-digit',
+    hour: '2-digit',
+    minute: '2-digit',
+    second: '2-digit'
+  };
+  var fechaActual = new Date().toLocaleString('es-CO', options);
+  const datosConsulta = {
+    correoC: correoU,
+    productoC: productoC,
+    fechaC: fechaActual,
+  }
   const url = "/datos";
   await fetch(url, {
     method: "POST",
@@ -155,15 +165,18 @@ async function fichaTecnica(event) {
     })
     .then(function (data) {
       if ((data.mensaje?.email ?? null) !== null) {
-       //mostrar('Grabacion exitosa', 'NADA');
+        //mostrar('Grabacion exitosa', 'NADA');
       } else {
-     //  mostrar('Error al grabar', 'POST');
+        //  mostrar('Error al grabar', 'POST');
       }
-
     })
     .catch(function (error) {
       console.error("Error:", error);
       alert(error);
     });
-  return
+  return 
+}
+
+async function verFichaTecnica(productoC) {
+alert(`ficha tecnica producto : ${productoC}`)
 }
