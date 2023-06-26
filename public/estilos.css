@@ -98,7 +98,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-bottom: 2px;
+  padding-bottom: 2px;
 }
 
 #mnuI {
@@ -580,7 +580,6 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
 }
 
 #figuraN {
-  margin-top: 2%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -722,84 +721,115 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
   font-size: 25px;
   font-family: Verdana;
 }
+
 /*
 pagina de productos mostrario
 */
 
-#pagProducto {
-  width: 100%;
+#cabezaProducto {
+  padding: 10px 30px 0px 40px;
+  width: 95%;
   background-color: rgb(250, 240, 240);
 }
 
-#figuraProducto {
-  margin-top: 2%;
+#cabeza {
+  padding-top: 30px;
   display: flex;
-  justify-content: center;
   flex-direction: column;
   align-items: center;
+  font-size: 40px;
+  font-weight: bolder;
+  color: red;
+  width: 97%;
+  height: 60px;
+  background-color: rgb(229, 222, 222);
+  border-radius: 100% 100% 0 0;
+}
+
+.cajonProducto {
+  padding: 10px;
+  width: 97%;
+  padding-top: 10px;
+  padding-bottom: 20px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  background-color: rgb(230, 227, 227);
+}
+
+.itemProducto {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
   text-align: center;
-  width: 70%;
-  height: 100px;
-  margin-left: 15%;
-  background-image: linear-gradient(to top, rgb(252, 250, 250), rgb(156, 148, 148));
-  border-radius: 20rem 20rem 0 0;
+  padding: 10px;
+  background-color: white;
+  border-radius: 25px;
+}
+
+.tituloProducto {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tituloProducto img {
+  width: 50px;
+}
+#imgProducto1 {
+  width: 50px;
+  height: auto;
+}
+#imgProducto2 {
+  width: 20px;
+  height: 20px;
+}
+
+.label {
+  margin-left: auto;
+  margin-right: 10px;
+  color: red;
+  width: 60px;
+}
+
+.imageProducto img {
+  width: 100%;
+}
+
+.descripcionPorducto {
+  font-size: 20px;
+  width: 80%;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-bottom: 10px;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+
+.fichaTecnica {
+  margin-top: 20px;
+  font-size: 15px;
+  border: 2px solid rgb(210, 201, 201);
+  background-color: red;
+  border-radius: 25px;
   color: white;
 }
 
-#nombrePagina {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 5.6%;
-  width: 50%;
-  height: 50%;
-  background-color: #ddd9d9;
-  border: 2px solid rgb(168, 161, 161);
-  border-radius: 30px 30px 0 0;
-  color: RED;
-  box-shadow: inset 0 0 20px rgb(88, 81, 81);
-  font-size: 150%;
-  font-family: vardana;
-  font-weight: bold;
+.fichaTecnica:hover {
+  transform: scale(1, 2);
 }
 
-#linea1nosotros {
-  width: 90%;
-  border: 3px solid;
-  border-image: radial-gradient(circle at center, rgb(253, 6, 6), rgb(252, 250, 250)) 1;
-}
-
-#cajonProductos {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 60px 60px;
-  padding: 30px 40px 20px 70px;
-}
-
-.cajonDetalle {
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  width: 100%;
-  height: auto;
-
-}
-
-.cajonDetalle img {
-  width: 100%;
-}
-
-.fotoProductos {
-  width: 100%;
-  height: auto;
-}
-
-
-
-/*
-Inicia pagina de contactos ================================contacto
-
-*/
 
 #pagina4 {
   width: 100%;
@@ -819,7 +849,7 @@ Inicia pagina de contactos ================================contacto
 }
 
 #nombre-contacto {
-  color:red;
+  color: red;
   padding-left: 300px;
   font-size: 50px;
   font-weight: bold;

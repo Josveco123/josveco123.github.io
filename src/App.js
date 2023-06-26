@@ -290,9 +290,9 @@ function functionNosotros() {
 function producto() {
   var valorCorreo = sessionStorage.getItem("correo");
   if (valorCorreo === null) {
-  var producto = document.querySelector("#cuerpo");
-producto.style.display="block"
-  producto.innerHTML = `
+    var producto = document.querySelector("#cuerpo");
+    producto.style.display = "block"
+    producto.innerHTML = `
     <div id="contenedor-producto">
       <div id="cont-producto">
         <div id="tit1">
@@ -331,8 +331,12 @@ producto.style.display="block"
     </div>
   `;
   } else {
-  return pagProductos()}
+    return pagProductos()
+  }
 }
+
+
+
 
 function registro() {
   var registro = document.querySelector("body");
@@ -388,34 +392,135 @@ function registro() {
  * 
  * 
  */
-function  pagProductos() {
-  document.getElementById("cuerpo").innerHTML =""
+function pagProductos() {
+  document.getElementById("cuerpo").innerHTML = ""
   // Obtener referencia al contenedor
   var pProductos = document.getElementById("cajon");
   pProductos.innerHTML = `
-  <section id="pagProductos">
-  <div id="figuraProducto">
-      <div id="nombrePagina">
-          <span> Nuestros Producto </span>
+  <div id="cabezaProducto">
+    <div id="cabeza">PRODUCTOS</div>
+    <div class="cajonProducto">
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/medicina1.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            Apronax liquid gel 275 mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Apronaz" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
       </div>
-      <div id="linea1nosotros"></div>
-  </div>
 
-  <div id="cajonProductos">
-      <div class="cajonDetalle">
-          <div class="fotoProductos"><img src="/images/pro1.jpg" alt=""></div>
+      <!-- 
+              <span style="opacity:0.2">100 - 0 - 0</span> 
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+        <img id="imgProducto1" src="/images/medicina.png" alt="" />
+        <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/medicina2.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            InmuFort Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Inmufort" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
+        </div>
       </div>
-      <div class="cajonDetalle">
-          <div class="fotoProductos"><img src="/images/pro2.jpg" alt=""></div>
+      <!-- 
+              <span style="opacity:0.2">100 - 0 - 0</span> 
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+        <img id="imgProducto1" src="/images/medicina.png" alt="" />
+        <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/medicina3.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            Ankermann Clacorbalamine Enguento de Amplio Expectro
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Clacorbalamine" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
+        </div>
       </div>
-      <div class="cajonDetalle">
-          <div class="fotoProductos"><img src="/images/pro3.jpg" alt=""></div>
+      <!-- 
+              <span style="opacity:0.2">100 - 0 - 0</span> 
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+        <img id="imgProducto1" src="/images/medicina.png" alt="" />
+        <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/medicina4.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            Lafrimas Artificiales Presentacion liquida
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Lagrimas" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
       </div>
-      <div class="cajonDetalle">
-          <div class="fotoProductos"><img src="/images/pro4.jpg" alt=""></div>
-      </div>
+      <!-- 
+              <span style="opacity:0.2">100 - 0 - 0</span> 
+            -->
+    </div>
   </div>
   `;
+}
+function fichaTecnica(event) {
+  var correoU = sessionStorage.getItem("correo");
+  var fechaActual = new Date();
+  var hora = fechaActual.getHours();
+  var dia = fechaActual.getDate();
+  var mes = fechaActual.getMonth() + 1; // Los meses se representan del 0 al 11, por lo que se suma 1.
+  var año = fechaActual.getFullYear();
+  
+  alert(`En fecha : Hora:${hora}, dia : ${dia}, mes : ${mes}, año : ${año}  el cliente con  Correo : ${correoU}, esta viendo el Producto : ${event.target.id}`);
 }
 
 /*
