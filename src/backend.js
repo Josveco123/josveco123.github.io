@@ -127,12 +127,21 @@ async function POSTregistro() {
     });
   return
 }
-
+/**
+ *funcion llamr proceso de consulta consumidor de pagina 
+ *
+ */
 function fichaTecnica(event) {
   var productoC = event.target.id
-POSTfichaTecnica(productoC);
-verFichaTecnica(productoC);
+  POSTfichaTecnica(productoC);
+  verFichaTecnica(productoC);
 }
+
+/**
+ * grabar consulta de visita
+ * 
+ */
+
 
 async function POSTfichaTecnica(productoC) {
   var correoU = sessionStorage.getItem("correo");
@@ -146,6 +155,7 @@ async function POSTfichaTecnica(productoC) {
     minute: '2-digit',
     second: '2-digit'
   };
+
   var fechaActual = new Date().toLocaleString('es-CO', options);
   const datosConsulta = {
     correoC: correoU,
@@ -174,9 +184,16 @@ async function POSTfichaTecnica(productoC) {
       console.error("Error:", error);
       alert(error);
     });
-  return 
+  return
 }
 
+/*
+
+ficha tecnica impresion
+*/
+
 async function verFichaTecnica(productoC) {
-alert(`ficha tecnica producto : ${productoC}`)
+  const archivoPDF = productoC + ".pdf";
+  const url = "./src/print/printPDF.html?archivoPDF=" + encodeURIComponent(archivoPDF);
+  window.open(url);
 }
