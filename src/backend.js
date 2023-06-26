@@ -127,3 +127,43 @@ async function POSTregistro() {
     });
   return
 }
+
+
+async function fichaTecnica(event) {
+  var correoU = sessionStorage.getItem("correo");
+  var fechaActual = new Date();
+  var productoC = event.target.id
+  var hora = fechaActual.getHours();
+  var dia = fechaActual.getDate();
+  var mes = fechaActual.getMonth() + 1; // Los meses se representan del 0 al 11, por lo que se suma 1.
+  var año = fechaActual.getFullYear();
+ const datosConsulta = {
+  correoC : correoU,
+  productoC: productoC,
+  fechaC : fechaActual,
+}
+  const url = "/datos";
+  await fetch(url, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(datosConsulta),
+  })
+    .then(function (response) {
+      return response.json(); // Obtener los datos JSON de la respuesta
+    })
+    .then(function (data) {
+      if ((data.mensaje?.email ?? null) !== null) {
+       //mostrar('Grabacion exitosa', 'NADA');
+      } else {
+     //  mostrar('Error al grabar', 'POST');
+      }
+
+    })
+    .catch(function (error) {
+      console.error("Error:", error);
+      alert(error);
+    });
+  return
+}

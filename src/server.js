@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
 const conexionDb = require('./conexionDb.js');
-const { grabarDb }= require('./grabarDb.js');
+const { grabarDb, grabarHistorico }= require('./grabarDb.js');
 const { buscarDb }= require('./buscarDb.js');
 const app = express();
 app.set('port', process.env.PORT || 3000);
@@ -55,7 +55,17 @@ app.get('/buscar', async (req, res) => {
 }
   });
 
-
+  app.post('/datos', async (req, res) => {
+    const datosC = req.body; 
+    try {
+      const resultado = await grabarHistorico(datosC);
+      console.log('resultados = ' + (resultado ?? 'null') + ' - hora: ' + new Date().toLocaleTimeString());
+      res.json({ mensaje: resultado });
+    } catch (error) {
+      console.error('Error al ejecutar grabarDb:', error);
+      res.status(500).json({ mensaje: 'Error al ejecutar datosDb' });
+    }
+  });
 
 // Iniciar el servidor
 app.listen(app.get('port'), () => {

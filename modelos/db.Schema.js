@@ -12,10 +12,9 @@ const usersSchema = new Schema({
 
 const datosSchema = new Schema({
   email: String,
-  producto: Number,
+  producto: String,
   fecha: { type: Date, default: Date.now },
 });
-
 
 const Users = mongoose.model('Users', usersSchema);
 const Datos = mongoose.model('Datos', datosSchema);

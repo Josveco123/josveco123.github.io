@@ -1,4 +1,4 @@
-const { Users } = require('../modelos/db.Schema');
+const { Users, Datos } = require('../modelos/db.Schema');
 
 async function grabarDb(UsersI) {
   const UsersUsuario = {
@@ -25,4 +25,27 @@ async function grabarDb(UsersI) {
   }
 }
 
-module.exports = { grabarDb };
+
+async function grabarHistorico(datosH) {
+  const  historico = {
+    email:datosH.correoC,
+    producto: datosH.productoC,
+    fecha: datosH.fechaC,
+  }
+
+  try {
+     if (historico) {
+      const nuevoDato = new Datos(historico);
+      const resultado = await nuevoDato.save();
+      return resultado;
+    } else {
+      const resultado="null"
+      return resultado;
+    }
+  } catch (error) {
+    return error;
+  }
+}
+
+
+module.exports = { grabarDb, grabarHistorico };

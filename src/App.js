@@ -512,16 +512,6 @@ function pagProductos() {
   </div>
   `;
 }
-function fichaTecnica(event) {
-  var correoU = sessionStorage.getItem("correo");
-  var fechaActual = new Date();
-  var hora = fechaActual.getHours();
-  var dia = fechaActual.getDate();
-  var mes = fechaActual.getMonth() + 1; // Los meses se representan del 0 al 11, por lo que se suma 1.
-  var año = fechaActual.getFullYear();
-  
-  alert(`En fecha : Hora:${hora}, dia : ${dia}, mes : ${mes}, año : ${año}  el cliente con  Correo : ${correoU}, esta viendo el Producto : ${event.target.id}`);
-}
 
 /*
 area de programa de alertas
