@@ -413,14 +413,14 @@ function pagProductos() {
         <!-- imagen  -->
         <div class="info">
           <div class="descripcionPorducto">
-            Apronax liquid gel 275 mg x 8 capsulas liquidas
+            ARTRIXIN liquid gel 275 mg x 8 capsulas liquidas
           </div>
           <!-- nombre producto  -->
           <div>
             <span class="presentacion">Disponible en Presentacion de:</span>
           </div>
           <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Apronaz" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <button id="Artrixin" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
 
@@ -441,14 +441,14 @@ function pagProductos() {
         <!-- imagen  -->
         <div class="info">
           <div class="descripcionPorducto">
-            InmuFort Probiotico mg x 8 capsulas liquidas
+            iNFIBU Probiotico mg x 8 capsulas liquidas
           </div>
           <!-- nombre producto  -->
           <div>
             <span class="presentacion">Disponible en Presentacion de:</span>
           </div>
           <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Inmufort" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
+          <button id="Infibu" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -468,14 +468,14 @@ function pagProductos() {
         <!-- imagen  -->
         <div class="info">
           <div class="descripcionPorducto">
-            Ankermann Clacorbalamine Enguento de Amplio Expectro
+            NOMANTE Enguento de Amplio Expectro
           </div>
           <!-- nombre producto  -->
           <div>
             <span class="presentacion">Disponible en Presentacion de:</span>
           </div>
           <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Balamine" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
+          <button id="Nomante" onClick="fichaTecnica(event)"  class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -495,14 +495,14 @@ function pagProductos() {
         <!-- imagen  -->
         <div class="info">
           <div class="descripcionPorducto">
-            Lafrimas Artificiales Presentacion liquida
+            SINTOMAX Presentacion liquida
           </div>
           <!-- nombre producto  -->
           <div>
             <span class="presentacion">Disponible en Presentacion de:</span>
           </div>
           <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Lagrimas" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <button id="Sintomax" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -512,6 +512,51 @@ function pagProductos() {
   </div>
   `;
 }
+/**
+ * 
+ * parte para distribuidores
+ */
+function distribuidores() {
+  // Obtener referencia al contenedor
+  var contacto = document.getElementById("cajon");
+  contacto.innerHTML = `
+  <div id="contenedor-distr">
+    <div id="dist-titulo">
+      <h1 id="titulo">DISTRIBUIDORES</h1>
+    </div>
+    <DIV class="dist-contenido">
+      <h1 id="oficinas-distri"><Span>Oficinas</Span> en Colombia</h1>
+      <div class="dist-nombre">
+        <h1>Sincelejo</h1>
+        <img src="images/cruzverde.png" alt="">
+      </div>
+      <div class="dist-nombre">
+        <h1>Monteria</h1>
+        <img src="images/farmavital.png" alt="">
+      </div>
+      <div class="dist-nombre">
+        <h1>Sahagun</h1>
+        <img src="images/olimpica.png" alt="">
+      </div>
+      <div class="dist-nombre">
+        <h1>Caucacia</h1>
+        <img src="images/pharfacy.png" alt="">
+      </div>
+      <div class="dist-nombre">
+        <h1>Corozal</h1>
+        <img src="images/paz.png" alt="">
+      </div>
+      <div class="dist-nombre">
+        <h1>Barranquilla</h1>
+        <img src="images/drog.png" alt="">
+      </div>
+    </DIV>
+  </div>
+  `;
+}
+
+
+
 
 /*
 area de programa de alertas
