@@ -1,121 +1,477 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-  <title>Mostrar PDF</title>
-  <style>
-    #contenedor-distr {
-      width: 100%;
-      height: auto;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      text-align: center;
-      background-color: rgb(224, 216, 216);
-      padding-bottom: 40px;
-    }
-
-    #dist-titulo {
-      display: flex;
-      flex-direction: column;
-      background-image: url('linea-distribuidores.png');
-
-      padding-top: 30px;
-      width: 100%;
-      height: 200px;
-      background-color: rgb(129, 125, 125);
-
-    }
-
-    #titulo {
-      text-align: center;
-      justify-content: center;
-      align-items: center;
-      font-size: 40px;
-      font-weight: bold;
-      color: red;
-      text-shadow: 2px 4px 4px rgb(7, 7, 7);
-    }
-
-    .dist-contenido {
-      margin-top: -80px;
-      width: 80%;
-      height: auto;
-      padding: 50px;
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      grid-gap: 30px;
-      background-color: white;
-      border-radius: 30px;
-    }
-
-    .dist-nombre {
-      margin-top: 80px;
-      width: 100%;
-      height: 200px;
-      background-color: rgb(233, 229, 229);
-      border-radius: 25px;
-    }
-
-    .dist-nombre h1 {
-      margin-left: 20px;
-      text-align: start;
-      font-size: 20px;
-      font-weight: bold;
-      color: red;
-    }
-
-    .dist-contenido img {
-      margin-top: -40px;
-      margin-left: 40px;
-      width: 50%;
-    }
-
-    #oficinas-distri {
-      margin-top: -30px;
-      position: absolute;
-      color: red;
-    }
-
-    #oficinas-distri span {
-      color: rgb(196, 195, 194);
-    }
-  </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="public/estilos.css">
+  <title>Document</title>
 </head>
 
 <body>
-  <div id="contenedor-distr">
-    <div id="dist-titulo">
-      <h1 id="titulo">DISTRIBUIDORES</h1>
+  <div id="cabezaProducto">
+    <div id="cabeza">PRODUCTOS</div>
+    <div class="cajonProducto">
+      <!-- 
+            1  titulos> 
+             -->
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <div class="imageProducto">
+          <img src="/images/productos/aceite_de_almendras.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            ARTRIXIN liquid gel 275 mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Artrixin" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+      <!--        
+          2
+      -->
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/aceite_de_comer.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+      <!-- 
+           3 
+            -->
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/acido_borico.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+      <!-- 
+            4
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/acido_salicilico.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+      <!-- 
+            5
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/alcanfor.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+      <!-- 
+            6
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/alumbre.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+
+      <!-- 
+            7
+            -->
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/artrixin_gel_display.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+
+      <!-- 
+            8
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/artrixin_gel_tubo.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+
+      <!-- 
+            9
+            -->
+
+      <div class="itemProducto">
+        <div class="tituloProducto">
+          <img id="imgProducto1" src="/images/medicina.png" alt="" />
+          <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+          <img id="imgProducto2" src="/images/favorite.png" alt="" />
+        </div>
+        <!-- titulos>  -->
+        <div class="imageProducto">
+          <img src="/images/productos/azucardeleche.png" alt="" />
+        </div>
+        <!-- imagen  -->
+        <div class="info">
+          <div class="descripcionPorducto">
+            iNFIBU Probiotico mg x 8 capsulas liquidas
+          </div>
+          <!-- nombre producto  -->
+          <div>
+            <span class="presentacion">Disponible en Presentacion de:</span>
+          </div>
+          <div class="contenido">500 MILIGRAMOS</div>
+          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+        </div>
+      </div>
+      <!-- 
+            10
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/bicarbonatodesodio-1.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+      <!-- 
+            11
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/bicarbonatodesodio.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+      <!-- 
+            12
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/glicerina.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+      <!-- 
+            13
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/nomantepastillas.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+      <!-- 
+            14
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/saldeepson.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+      <!-- 
+            15
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/salgrauber.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+                  <!-- 
+            16
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/vaselinapuraX100g.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+             <!-- 
+            17
+            -->
+
+            <div class="itemProducto">
+              <div class="tituloProducto">
+                <img id="imgProducto1" src="/images/medicina.png" alt="" />
+                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                <img id="imgProducto2" src="/images/favorite.png" alt="" />
+              </div>
+              <!-- titulos>  -->
+              <div class="imageProducto">
+                <img src="/images/productos/vaselinapuraX20g.png" alt="" />
+              </div>
+              <!-- imagen  -->
+              <div class="info">
+                <div class="descripcionPorducto">
+                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                </div>
+                <!-- nombre producto  -->
+                <div>
+                  <span class="presentacion">Disponible en Presentacion de:</span>
+                </div>
+                <div class="contenido">500 MILIGRAMOS</div>
+                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+              </div>
+            </div>
+
     </div>
-    <DIV class="dist-contenido">
-      <h1 id="oficinas-distri"><Span>Oficinas</Span> en Colombia</h1>
-      <div class="dist-nombre">
-        <h1>Sincelejo</h1>
-        <img src="images/cruzverde.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <h1>Monteria</h1>
-        <img src="images/farmavital.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <h1>Sahagun</h1>
-        <img src="images/olimpica.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <h1>Caucacia</h1>
-        <img src="images/pharfacy.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <h1>Corozal</h1>
-        <img src="images/paz.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <h1>Barranquilla</h1>
-        <img src="images/drog.png" alt="">
-      </div>
-    </DIV>
   </div>
 </body>
+
 </html>

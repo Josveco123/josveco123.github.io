@@ -769,11 +769,12 @@ pagina de productos mostrario
 .cajonProducto {
   padding: 10px;
   width: 95.5%;
+  height: auto;
   padding-top: 10px;
   padding-bottom: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 10px;
+  grid-gap: 20px 20px;
   background-color: rgb(230, 227, 227);
 }
 
@@ -786,6 +787,7 @@ pagina de productos mostrario
   padding: 10px;
   background-color: white;
   border-radius: 25px;
+  height: 500px;
 }
 
 .tituloProducto {
