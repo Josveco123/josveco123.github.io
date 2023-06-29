@@ -34,6 +34,7 @@ function recojer() {
 
 
 function contactos() {
+  document.getElementById('inicio').style.display="block";
   // Obtener referencia al contenedor
   var contacto = document.getElementById("cajon");
   contacto.innerHTML = `
@@ -119,7 +120,7 @@ async function fNosotros() {
 }
 
 function functionNosotros() {
-
+  document.getElementById('inicio').style.display="block";
   // Obtener referencia al contenedor
   var nosotros = document.getElementById("cajon");
   nosotros.innerHTML = `
@@ -288,6 +289,7 @@ function functionNosotros() {
  */
 
 function producto() {
+  document.getElementById('inicio').style.display="block";
   var valorCorreo = sessionStorage.getItem("correo");
   if (valorCorreo === null) {
     var producto = document.querySelector("#cuerpo");
@@ -320,7 +322,7 @@ function producto() {
             />
           </div>      
         </form>
-        <a id="olvido-clave" href="/index.html">Olvide la contraseña</a>
+        <a id="olvido-clave" onClick="buscarClave()" href="#">Olvide la contraseña</a>
         <div id="ejecutar">
               <button id="boton-registro" onclick="GETregistro()">
                 Verificar
@@ -334,11 +336,19 @@ function producto() {
     return pagProductos()
   }
 }
+/**
+ * Buscar clave Olvidada con el correo 
+ * 
+ */
 
+function buscarClave() {
+  alert("estamos buscando clave")
+}
 
 
 
 function registro() {
+  document.getElementById('inicio').style.display="block";
   var registro = document.querySelector("body");
   registro.innerHTML += `
     <div id="cuerpo">
@@ -393,6 +403,7 @@ function registro() {
  * 
  */
 function pagProductos() {
+  document.getElementById('inicio').style.display="block";
   document.getElementById("cuerpo").innerHTML = ""
   // Obtener referencia al contenedor
   var pProductos = document.getElementById("cajon");
@@ -517,6 +528,7 @@ function pagProductos() {
  * parte para distribuidores
  */
 function distribuidores() {
+  document.getElementById('inicio').style.display="block";
   // Obtener referencia al contenedor
   var contacto = document.getElementById("cajon");
   contacto.innerHTML = `

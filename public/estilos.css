@@ -98,7 +98,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-bottom: 2px;
+  padding-bottom: 1px;
 }
 
 #mnuI {
@@ -315,10 +315,29 @@ input::placeholder {
   }
 }
 
+#inicio {
+  text-decoration: none;
+  margin-left: 70px;
+  font-size: 13px;
+  color: white;
+  font-weight: bold;
+  padding: 3px;
+  border: 1px solid white;
+  border-radius: 25px;
+  display:none;
+  background-color: rgb(243, 82, 82);
+}
 
+#inicio:hover {
+background-color: white;
+color: red;
+transform: scale(0.8);
+cursor: pointer;
+}
 #medicamentos {
   color: rgb(250, 243, 243);
   margin: 0 6px 0 5px;
+  padding: 2px;
   animation: medicamentos 8s infinite;
 }
 
@@ -359,18 +378,15 @@ input::placeholder {
   box-shadow: inset 0 0 0 2000px rgba(141, 131, 131, 0), 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
-/*    */
-.slider {
-  display: flex;
-  width: 100%;
-  height: 570px;
 
+.mosaico {
+  display: flex;
+  height: 87vh
 }
 
-.slider img {
+.mosaico img {
   width: 100%;
   height: 100%;
-
 }
 
 button {
@@ -380,6 +396,7 @@ button {
   font-size: 20px;
 }
 
+/*
 #slice-derecho {
   margin-top: -20%;
   margin-left: 1%;
@@ -420,7 +437,7 @@ button {
   margin-right: 20%;
   background-color: rgb(187, 180, 180);
 }
-
+*/
 #figura {
   display: flex;
   justify-content: center;
@@ -433,7 +450,7 @@ button {
   border-radius: 25rem 25rem 0 0;
   color: white;
   position: absolute;
-  top: 648px;
+  top: 97.5vh;
   transform: translateY(-70%);
 }
 
@@ -616,6 +633,7 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
   border-image: radial-gradient(circle at center, rgb(253, 6, 6), rgb(252, 250, 250)) 1;
 }
 
+/*
 .fig-linea1 {
   margin-top: 10.5%;
   width: 10%;
@@ -630,7 +648,7 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
   height: 1px;
   background-color: rgb(187, 180, 180);
 }
-
+*/
 #nosotros {
   display: flex;
   flex-direction: column;
@@ -780,10 +798,12 @@ pagina de productos mostrario
 .tituloProducto img {
   width: 50px;
 }
+
 #imgProducto1 {
   width: 50px;
   height: auto;
 }
+
 #imgProducto2 {
   width: 20px;
   height: 20px;
@@ -1061,6 +1081,7 @@ fin pagina contactos ===============================================
 #oficinas-distri span {
   color: rgb(196, 195, 194);
 }
+
 /*
 
 ============================================registro
