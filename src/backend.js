@@ -197,3 +197,6 @@ async function verFichaTecnica(productoC) {
   const url = "./src/print/printPDF.html?archivoPDF=" + encodeURIComponent(archivoPDF);
   window.open(url);
 }
+
+// envio del formulario de email-web ===============================================
+

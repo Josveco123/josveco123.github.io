@@ -34,7 +34,7 @@ function recojer() {
 
 
 function contactos() {
-  document.getElementById('inicio').style.display="block";
+  document.getElementById('inicio').style.display = "block";
   // Obtener referencia al contenedor
   var contacto = document.getElementById("cajon");
   contacto.innerHTML = `
@@ -85,20 +85,19 @@ function contactos() {
       <div id="correos">
           <h2 class="tit-pag4D">Queremos escucharte!</h2>
           <div id="correosPag">
-              <form id="formulario-correo" action="procesar_formulario.php" method="POST">
+              <form id="formulario-correo">
                   <label class="label-correo" for="nombre">Nombre:</label>
-                  <input type="text" id="nombre" name="nombre" required />
+                  <input type="text" id="nombre" name="name" required />
 
                   <label class="label-correo" for="correo">Correo:</label>
-                  <input type="email" id="correo" name="correo" required />
+                  <input type="email" id="correo" name="email" required />
 
                   <label class="label-correo" for="telefono">Teléfono:</label>
-                  <input type="tel" id="telefono" name="telefono" required />
+                  <input type="text" id="telefono" name="phone" required />
 
                   <label class="label-correo" for="mensaje">Mensaje:</label>
-                  <textarea id="mensaje" name="mensaje" rows="4" required></textarea><br /><br />
-
-                  <input type="submit" value="Enviar" />
+                  <textarea id="mensaje" name="message" rows="4" required></textarea><br />
+                  <button id="enviar-btn" class="enviar" name="submit" type="submit">Enviar</button><br />
               </form>
           </div>
       </div>
@@ -106,6 +105,36 @@ function contactos() {
 </div>
 </section>
 `;
+  const form = document.getElementById('formulario-correo');
+
+  form.addEventListener('submit', function (e) {
+    e.preventDefault();
+
+    const formData = {
+      name: form.name.value,
+      email: form.email.value,
+      phone: form.phone.value,
+      message: form.message.value
+    };
+
+    fetch('/email-web', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(formData)
+    })
+      .then(function (response) {
+        return response.json();
+      })
+      .then(function (data) {
+        form.reset();
+        mostrar('Su mensaje fue enviado con exito. Gracias.', 'NADA');
+      })
+      .catch(function (error) {
+        console.error(error);
+      });
+  });
 }
 
 /**
@@ -120,7 +149,7 @@ async function fNosotros() {
 }
 
 function functionNosotros() {
-  document.getElementById('inicio').style.display="block";
+  document.getElementById('inicio').style.display = "block";
   // Obtener referencia al contenedor
   var nosotros = document.getElementById("cajon");
   nosotros.innerHTML = `
@@ -284,12 +313,12 @@ function functionNosotros() {
 /**
  *
  *
- *
+ * funcion producto oermite registrarte si no estas registrado
  *
  */
 
 function producto() {
-  document.getElementById('inicio').style.display="block";
+  document.getElementById('inicio').style.display = "block";
   var valorCorreo = sessionStorage.getItem("correo");
   if (valorCorreo === null) {
     var producto = document.querySelector("#cuerpo");
@@ -320,7 +349,7 @@ function producto() {
             type="text"
              placeholder="Contraseña"
             />
-          </div>      
+          </div>    
         </form>
         <a id="olvido-clave" onClick="buscarClave()" href="#">Olvide la contraseña</a>
         <div id="ejecutar">
@@ -332,7 +361,7 @@ function producto() {
      </div>
     </div>
   `;
-  } else {
+   } else {
     return pagProductos()
   }
 }
@@ -342,13 +371,94 @@ function producto() {
  */
 
 function buscarClave() {
-  alert("estamos buscando clave")
+  document.getElementById('contraseña').style.display = 'none';
+
+  const olvido = document.getElementById('boton-registro');
+  olvido.innerText = "Enviar Email";
+  olvido.onclick= enviarCorreo;
+
+  const clave = document.getElementById('olvido-clave');
+  clave.style.marginLeft = '32px';
+  clave.style.marginTop = '-80px';
+  clave.style.width = '83%';
+  clave.style.height = '80px';
+  clave.innerText = "Verifica que el email registrado este en el recuadro y procede a enviar email para que te llegue la calve registrada al correo registrado";
+}
+
+// fun cion para enviar correo olvidado
+//
+async function enviarCorreo() {
+  const correoEntrada = document.getElementById('correo');
+  const correo = correoEntrada.value;
+  const Data = {
+    email: correo,
+    clave: "",
+  };
+
+  try {
+    const response = await fetch('/email_clave', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(Data)
+    });
+
+    const data = await response.json();
+    mostrar('Su clave fue enviada al correo. Revíselo e intente de nuevo', 'NADA')
+  } catch (error) {
+    console.error(error);
+  }
+  var producto = document.querySelector("#cuerpo");
+  producto.style.display = "block"
+  producto.innerHTML = `
+  <div id="contenedor-producto">
+    <div id="cont-producto">
+      <div id="tit1">
+        <h1>Ingresa tu cuenta</h1>
+      </div>
+
+      <form id="datos-captura" action="">
+        <div id="E-mail" class="datos-correo">
+          <p>Email Empresa o Persona</p>
+          <input
+          id="correo"
+          class="correo"
+          type="text"
+          placeholder="Correo electrónico"
+          />
+        </div>
+
+        <div id="contraseña" class="datos-correo">
+          <p>Contraseña de acceso</p>
+          <input
+          id="clave"
+          class="clave"
+          type="text"
+           placeholder="Contraseña"
+          />
+        </div>    
+      </form>
+      <a id="olvido-clave" onClick="buscarClave()" href="#">Olvide la contraseña</a>
+      <div id="ejecutar">
+            <button id="boton-registro" onclick="GETregistro()">
+              Verificar
+            </button>
+            <a id="ocultar" href="/index.html">Exit</a>
+          </div>
+   </div>
+  </div>
+`;
 }
 
 
 
+/*
+area de creacion de usuarios registrarse
+*/
+
 function registro() {
-  document.getElementById('inicio').style.display="block";
+  document.getElementById('inicio').style.display = "block";
   var registro = document.querySelector("body");
   registro.innerHTML += `
     <div id="cuerpo">
@@ -403,7 +513,7 @@ function registro() {
  * 
  */
 function pagProductos() {
-  document.getElementById('inicio').style.display="block";
+  document.getElementById('inicio').style.display = "block";
   document.getElementById("cuerpo").innerHTML = ""
   // Obtener referencia al contenedor
   var pProductos = document.getElementById("cajon");
@@ -664,7 +774,7 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/bicarbonatodesodio-1.png" alt="" />
+                <img src="/images/productos/bicarbonatodesodio.png" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
@@ -691,7 +801,7 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/bicarbonatodesodio.png" alt="" />
+                <img src="/images/productos/glicerina.png" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
@@ -718,7 +828,7 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/glicerina.png" alt="" />
+                <img src="/images/productos/nomantepastillas.png" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
@@ -745,7 +855,7 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/nomantepastillas.png" alt="" />
+                <img src="/images/productos/saldeepson.png" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
@@ -772,33 +882,6 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/saldeepson.png" alt="" />
-              </div>
-              <!-- imagen  -->
-              <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
-            </div>
-      <!-- 
-            15
-            -->
-
-            <div class="itemProducto">
-              <div class="tituloProducto">
-                <img id="imgProducto1" src="/images/medicina.png" alt="" />
-                <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-                <img id="imgProducto2" src="/images/favorite.png" alt="" />
-              </div>
-              <!-- titulos>  -->
-              <div class="imageProducto">
                 <img src="/images/productos/salgrauber.png" alt="" />
               </div>
               <!-- imagen  -->
@@ -815,7 +898,7 @@ function pagProductos() {
               </div>
             </div>
                   <!-- 
-            16
+            15
             -->
 
             <div class="itemProducto">
@@ -842,7 +925,7 @@ function pagProductos() {
               </div>
             </div>
              <!-- 
-            17
+            16
             -->
 
             <div class="itemProducto">
@@ -877,7 +960,7 @@ function pagProductos() {
  * parte para distribuidores
  */
 function distribuidores() {
-  document.getElementById('inicio').style.display="block";
+  document.getElementById('inicio').style.display = "block";
   // Obtener referencia al contenedor
   var contacto = document.getElementById("cajon");
   contacto.innerHTML = `
@@ -955,3 +1038,4 @@ function cerrarAlerta(parametro1, parametro2) {
   var alerta = document.querySelector('#cuerpo1');
   alerta.parentNode.removeChild(alerta);
 }
+
