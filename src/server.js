@@ -3,14 +3,13 @@ const bodyParser = require('body-parser');
 const path = require('path');
 const conexionDb = require('./conexionDb.js');
 const app = express();
-
+require('dotenv').config();
 // modulo de correo
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
 //////////////////////
-app.set('port', process.env.PORT || 3000);
-
+app.set('port', process.env.PORT || 4000);
 
 conexionDb();
 // Middleware para analizar el cuerpo de las solicitudes HTTP

@@ -92,7 +92,7 @@ router.post('/email-web', async (req, res) => {
       service: "gmail",
       auth: {
         user: "laboratoriodelcaribeweb@gmail.com",
-        pass: "rswbdkmdnlkrnyjx",
+        pass: process.env.CLAVECORREO,
       },
       tls: {
           rejectUnauthorized: false
@@ -135,7 +135,7 @@ router.post('/email_clave', async (req, res) => {
       service: "gmail",
       auth: {
         user: "laboratoriodelcaribeweb@gmail.com",
-        pass: "rswbdkmdnlkrnyjx",
+        pass: process.env.CLAVECORREO,
       },
       tls: {
           rejectUnauthorized: false
@@ -148,7 +148,7 @@ router.post('/email_clave', async (req, res) => {
 
       html: contentHTML
   })
-  res.json({ message: 'ok' });
+  res.json({ message: claveU });
 });
 
 

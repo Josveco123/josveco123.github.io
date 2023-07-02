@@ -1,9 +1,9 @@
 const mongoose = require('mongoose');
 
-async function  conexionDb() {
-  await mongoose.connect('mongodb+srv://Jvergara123:1234@cluster0.iukzc4w.mongodb.net/', {
+async function conexionDb() {
+  await mongoose.connect(`mongodb+srv://${process.env.USERMONGO}:${process.env.CLAVEMONGO}@cluster0.iukzc4w.mongodb.net/`, {
     useNewUrlParser: true,
-    useUnifiedTopology: true // Asegúrate de proporcionar un valor válido aquí
+    useUnifiedTopology: true
   })
   .then(() => {
     console.log('Conexión exitosa a la base de Users');

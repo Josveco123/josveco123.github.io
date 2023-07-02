@@ -361,7 +361,7 @@ function producto() {
      </div>
     </div>
   `;
-   } else {
+  } else {
     return pagProductos()
   }
 }
@@ -375,7 +375,7 @@ function buscarClave() {
 
   const olvido = document.getElementById('boton-registro');
   olvido.innerText = "Enviar Email";
-  olvido.onclick= enviarCorreo;
+  olvido.onclick = enviarCorreo;
 
   const clave = document.getElementById('olvido-clave');
   clave.style.marginLeft = '32px';
@@ -405,9 +405,15 @@ async function enviarCorreo() {
     });
 
     const data = await response.json();
-    mostrar('Su clave fue enviada al correo. Revíselo e intente de nuevo', 'NADA')
+    if (data.message === null) {
+      mostrar('Correo no registra en la base de datos', 'NADA')
+      return
+    } else {
+      mostrar('Su clave fue enviada al correo. Revíselo e intente de nuevo', 'NADA')
+    }
   } catch (error) {
     console.error(error);
+    return
   }
   var producto = document.querySelector("#cuerpo");
   producto.style.display = "block"
@@ -969,32 +975,33 @@ function distribuidores() {
       <h1 id="titulo">DISTRIBUIDORES</h1>
     </div>
     <DIV class="dist-contenido">
-      <h1 id="oficinas-distri"><Span>Oficinas</Span> en Colombia</h1>
+      <h1 id="oficinas-distri"><Span>Distribuidores</Span> en Colombia</h1>
       <div class="dist-nombre">
-        <h1>Sincelejo</h1>
-        <img src="images/cruzverde.png" alt="">
+      <img src="images/distribuidor0.png" alt="">
       </div>
       <div class="dist-nombre">
-        <h1>Monteria</h1>
-        <img src="images/farmavital.png" alt="">
+      <img src="images/distribuidor1.png" alt="">
       </div>
       <div class="dist-nombre">
-        <h1>Sahagun</h1>
-        <img src="images/olimpica.png" alt="">
+        <img src="images/distribuidor2.png" alt="">
       </div>
       <div class="dist-nombre">
-        <h1>Caucacia</h1>
-        <img src="images/pharfacy.png" alt="">
+        <img src="images/distribuidor3.png" alt="">
       </div>
       <div class="dist-nombre">
-        <h1>Corozal</h1>
-        <img src="images/paz.png" alt="">
+        <img src="images/distribuidor4.png" alt="">
       </div>
       <div class="dist-nombre">
-        <h1>Barranquilla</h1>
-        <img src="images/drog.png" alt="">
+        <img src="images/distribuidor5.png" alt="">
       </div>
-    </DIV>
+      <div class="dist-nombre">
+        <img src="images/distribuidor6.png" alt="">
+      </div>
+      <div class="dist-nombre">
+      <img src="images/distribuidor7.png" alt="">
+      </div>
+
+    </div>
   </div>
   `;
 }
