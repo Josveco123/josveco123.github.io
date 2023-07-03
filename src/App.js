@@ -682,7 +682,7 @@ function pagProductos() {
             <span class="presentacion">Disponible en Presentacion de:</span>
           </div>
           <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <button id="artrixinGel" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
 
@@ -702,7 +702,7 @@ function pagProductos() {
         <!-- imagen  -->
         <div class="info">
           <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
+            Artrixin Gel. <br/> "Para inflamación y dolor <strong>ARTRIXIN GEL</strong> es lo mejor"
           </div>
           <!-- nombre producto  -->
           <div>
@@ -838,8 +838,8 @@ function pagProductos() {
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
+                <div class="descripcionPorducto">Nomanté pastilla <br/>
+                "Garganta fresca y despejada <strong> NOMANTÉ </strong>es la indicada"
                 </div>
                 <!-- nombre producto  -->
                 <div>

@@ -131,6 +131,7 @@ async function POSTregistro() {
  *funcion llamr proceso de consulta consumidor de pagina 
  *
  */
+
 function fichaTecnica(event) {
   var productoC = event.target.id
   POSTfichaTecnica(productoC);

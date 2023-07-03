@@ -101,8 +101,8 @@ router.post('/email-web', async (req, res) => {
 
   let info = await transporter.sendMail({
     from: `${name} <${email}>`,
-    to: `${email}`,
-    subject: 'Servicio de clave',
+    to: `comercial@laboratoriodelcaribe.com`,
+    subject: 'Solicitud Cliente Web',
     html: contentHTML
 })
  
