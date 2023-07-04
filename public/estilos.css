@@ -7,9 +7,12 @@
 }
 
 body {
-  margin: 0;
+  max-width: 100vw;
+  margin: 0 auto;
+  /* Para centrar el contenido en la pantalla */
   padding: 0;
 }
+
 /*
 relo de espera
 */
@@ -24,8 +27,13 @@ relo de espera
 }
 
 @keyframes spin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 /*
@@ -344,16 +352,17 @@ input::placeholder {
   padding: 3px;
   border: 1px solid white;
   border-radius: 25px;
-  display:none;
+  display: none;
   background-color: rgb(243, 82, 82);
 }
 
 #inicio:hover {
-background-color: white;
-color: red;
-transform: scale(0.8);
-cursor: pointer;
+  background-color: white;
+  color: red;
+  transform: scale(0.8);
+  cursor: pointer;
 }
+
 #medicamentos {
   color: rgb(250, 243, 243);
   margin: 0 6px 0 5px;
@@ -385,7 +394,7 @@ cursor: pointer;
   position: absolute;
   z-index: 11;
   color: rgb(243, 9, 9);
-  font-size: 50px;
+  font-size: 40px;
   font-weight: bold;
   width: auto;
   height: auto;
@@ -1036,26 +1045,24 @@ fin pagina contactos ===============================================
   align-items: center;
   text-align: center;
   background-color: rgb(224, 216, 216);
-  padding-bottom: 40px;
+  padding-bottom: 20px;
 }
 
 #dist-titulo {
   display: flex;
   flex-direction: column;
   background-image: url('linea-distribuidores.png');
-
   padding-top: 30px;
   width: 100%;
   height: 200px;
   background-color: rgb(129, 125, 125);
-
 }
 
 #titulo {
   text-align: center;
   justify-content: center;
   align-items: center;
-  font-size: 40px;
+  font-size: 3vw;
   font-weight: bold;
   color: red;
   text-shadow: 2px 4px 4px rgb(7, 7, 7);
@@ -1063,12 +1070,12 @@ fin pagina contactos ===============================================
 
 .dist-contenido {
   margin-top: -80px;
-  width: 80%;
+  width: 90%;
   height: auto;
-  padding: 50px;
+  padding: 4% 3% 6% 3%;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-gap: 30px;
+  grid-gap: 5%;
   background-color: white;
   border-radius: 30px;
 }
@@ -1079,7 +1086,7 @@ fin pagina contactos ===============================================
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 80px;
+  margin-top: 30px;
   width: 100%;
   height: 200px;
   background-color: rgb(233, 229, 229);
@@ -1087,15 +1094,14 @@ fin pagina contactos ===============================================
 }
 
 .dist-contenido img {
-  width: 200px;
-height: auto;
+  width: 80%;
+  height: auto;
 }
 
 #oficinas-distri {
-  margin-top: -30px;
+  margin-top: -20px;
   position: absolute;
   color: red;
-  border: 1px solid rgb(243, 13, 44);
 }
 
 #oficinas-distri span {
@@ -1423,127 +1429,109 @@ area de los mensaje ================================  alestas
 /**** ZONA DE ========================================= footer    */
 /*    */
 #footer {
-  margin-top: 10px;
+  margin: 10px 0 2% 0;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
   height: auto;
-  background-color: #747171;
-  padding-bottom: 15px;
+  background-color: #c5bfbf;
 }
 
 #footerBase {
-
+  margin: 0 20px 20px 43px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  background-color: #e2dbdb;
+  background-color: #f3ecec;
   border-radius: 0 0 80px 80px;
+
 }
 
 #footer-empresa {
-  margin: 20px 20px 20px 100px;
-  width: 400px;
-  height: 350px;
-  border-right: 1px solid rgb(133, 133, 130);
+  margin: 2% 0 2% 2%;
+  width: 30%;
+  height: 100%;
 }
 
 #footer-empresa h1 {
-  font-size: 30px;
   color: rgb(36, 34, 34);
-  font-size: 25px;
+  font-size: 1.8vw;
+  margin-left: 2%;
 }
 
-#footer-empresa p {
-  width: 400px;
+#footer-empresa ul {
+  width: 80%;
+  font-size: 1.1vw;
   line-height: 1.5;
 }
 
 #footer-link {
-  padding-left: 30px;
-  margin: 20px;
+  margin: 2% 0 2% 0;
   display: flex;
   flex-direction: column;
-  justify-content: left;
-  align-items: start;
-  width: 300px;
-  height: 350px;
+  width: 30%;
+  height: 100%;
   border-right: 1px solid rgb(141, 141, 138);
+  border-left: 1px solid rgb(133, 133, 130);
 }
 
 #footer-link h1 {
-  width: 300px;
+  align-items: center;
+  text-align: center;
+  width: 100%;
   color: rgb(54, 52, 52);
-  font-size: 25px;
+  font-size: 1.8vw;
 }
 
 #footer-link a {
+  align-items: center;
+  text-align: center;
   text-decoration: none;
   list-style-type: none;
-  padding-left: 10px;
-  font-size: 20px;
+  font-size: 1.2vw;
   color: rgb(54, 52, 52);
 }
 
 #footer-link a:hover {
   background-color: rgb(187, 187, 185);
-  color: rgb(95, 74, 74);
+  color: white;
   border-radius: 25px;
 }
 
-#footer-link a:before {
-  content: "\2022";
-  margin-right: 5px;
-  color: black;
-  width: 30px;
-}
-
 #footer-redes-sociales {
+  margin: 2% 3% 2% 0;
   display: flex;
   flex-direction: column;
-  margin: 20px;
-  width: 400px;
-
+  width: 30%;
 }
 
 #footer-redes-sociales h1 {
-  width: 300px;
+  width: 100%;
   color: rgb(54, 52, 52);
-  font-size: 25px;
-
+  font-size: 1.8vw;
 }
 
 #redesS {
   display: flex;
-  margin-left: 30px;
+  margin-left: 2vw;
   flex-direction: row;
-  width: 200px;
-
+  width: 10vw;
 }
 
 #redesS a img {
-  width: 40px;
+  width: 3vw;
   height: auto;
 
 }
 
-#footer-redes-sociales p {
-  width: 350px;
-  line-height: 2;
-
+#footer-redes-sociales ul {
+  width: 80%;
+  font-size: 1.1vw;
+  line-height: 1.5;
 }
-
-#footer-redes-sociales p :before {
-  content: "\2022";
-  margin-right: 5px;
-  color: black;
-  width: 30px;
-}
-
 
 #autor {
-  margin-top: 5px;
   display: flex;
   flex-direction: row;
   justify-content: start;

@@ -971,38 +971,37 @@ function distribuidores() {
   var contacto = document.getElementById("cajon");
   contacto.innerHTML = `
   <div id="contenedor-distr">
-    <div id="dist-titulo">
-      <h1 id="titulo">DISTRIBUIDORES</h1>
+  <div id="dist-titulo">
+    <h1 id="titulo">DISTRIBUIDORES</h1>
+  </div>
+  <DIV class="dist-contenido">
+    <h1 id="oficinas-distri"><Span>Distribuidores</Span> en Colombia</h1>
+    <div class="dist-nombre">
+    <img src="images/distribuidor0.png" alt="">
     </div>
-    <DIV class="dist-contenido">
-      <h1 id="oficinas-distri"><Span>Distribuidores</Span> en Colombia</h1>
-      <div class="dist-nombre">
-      <img src="images/distribuidor0.png" alt="">
-      </div>
-      <div class="dist-nombre">
-      <img src="images/distribuidor1.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <img src="images/distribuidor2.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <img src="images/distribuidor3.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <img src="images/distribuidor4.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <img src="images/distribuidor5.png" alt="">
-      </div>
-      <div class="dist-nombre">
-        <img src="images/distribuidor6.png" alt="">
-      </div>
-      <div class="dist-nombre">
-      <img src="images/distribuidor7.png" alt="">
-      </div>
-
+    <div class="dist-nombre">
+    <img src="images/distribuidor1.png" alt="">
+    </div>
+    <div class="dist-nombre">
+      <img src="images/distribuidor2.png" alt="">
+    </div>
+    <div class="dist-nombre">
+      <img src="images/distribuidor3.png" alt="">
+    </div>
+    <div class="dist-nombre">
+      <img src="images/distribuidor4.png" alt="">
+    </div>
+    <div class="dist-nombre">
+      <img src="images/distribuidor5.png" alt="">
+    </div>
+    <div class="dist-nombre">
+      <img src="images/distribuidor6.png" alt="">
+    </div>
+    <div class="dist-nombre">
+    <img src="images/distribuidor7.png" alt="">
     </div>
   </div>
+</div>
   `;
 }
 
