@@ -414,8 +414,8 @@ input::placeholder {
 }
 
 .mosaico img {
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: auto;
 }
 
 button {
@@ -520,35 +520,37 @@ s #paginablog {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  margin-bottom: 30px;
+  margin-bottom: 2vw;
   background-color: #f1efef;
-  padding-bottom: 80px;
+  padding-bottom: 4vw;
 }
 
 #textIni {
   width: 95%;
-  height: 20px;
-  margin-top: 80px;
-  margin-left: 50px;
+  height: auto;
+  margin-top: 4vw;
+  margin-left: 3.2vw;
   border-bottom: red;
 }
 
+#textIni span{
+color:red;
+}
+
 #blogs {
-  margin-left: 50px;
-  margin-bottom: 10px;
-  margin-top: 50px;
-  width: 95%;
+  width: 93.5%;
+  margin: 3vw 0 1vw 3.8vw;
   height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-gap: 100px 60px;
+  grid-gap: 4vw 3vw;
   z-index: 0;
 }
 
 .div-blogs {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 1vw;
   background-color: white;
   box-shadow: 0px 0px 12px rgb(214, 213, 213);
 }
@@ -557,8 +559,7 @@ s #paginablog {
   width: 100%;
   height: 250px;
   float: left;
-  margin-right: 15px;
-  margin-bottom: 10px;
+  margin: 0 1vw .5vw 0;
 }
 
 .blogCategoria {
@@ -577,27 +578,27 @@ s #paginablog {
   justify-content: center;
   align-items: center;
   text-align: center;
-  font-size: 20px;
+  font-size: 1.2vw;
   font-weight: bold;
   color: black;
-  margin-bottom: 5px;
 }
 
 .p-blogs {
-  margin: 0px 15px 0 20px;
+  margin: 0 1vw 0 1vw;
   text-align: justify;
-  font-size: 15px;
-  line-height: 2;
+  font-size: 1vw;
+  line-height: 1.7;
   font-family: Tahoma;
   color: black;
 }
 
 .blogImgFinal {
-  margin-top: 20px;
-  margin-left: 80px;
-  margin-bottom: 10px;
+  margin: 1.5vw 1vw 1vw 1vw;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 
@@ -1439,7 +1440,7 @@ area de los mensaje ================================  alestas
 }
 
 #footerBase {
-  margin: 0 20px 20px 43px;
+  margin: 0 20px 20px 3.3vw;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
