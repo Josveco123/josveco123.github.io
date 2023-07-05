@@ -14,8 +14,6 @@ router.get('/buscar', async (req, res) => {
     const usuarioClave = await Users.findOne({ clave: clave }).select('clave').exec();
 
     const UsersS = { correo: usuarioCorreo ? usuarioCorreo.email : null, clave: usuarioClave ? usuarioClave.clave : null };
-    console.log(usuarioCorreo ? usuarioCorreo.email : null);
-    console.log(usuarioClave ? usuarioClave.clave : null);
      res.json({ mensaje: UsersS});
   } catch (error) {
     console.error('Error al consultar el usuario:', error);
@@ -62,8 +60,7 @@ router.post('/datos', async (req, res) => {
      if (historico) {
       const nuevoDato = new Datos(historico);
       const result = await nuevoDato.save();
-      console.log('resultados = ' + (resultado ?? 'null') + ' - hora: ' + new Date().toLocaleTimeString());
-      res.json({ mensaje: resultado });
+     res.json({ mensaje: resultado });
 
     } else {
       const resultado="null"

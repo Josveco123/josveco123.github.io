@@ -9,7 +9,7 @@ async function GETregistro() {
   const clave = document.getElementById("clave").value;
 
   // Validar correo
-  const cadena = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  const cadena = /^[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}$/;
   const esValido = cadena.test(correo);
   if (!esValido) {
     mostrar("Correo no cumple las condiciones", "NADA");
