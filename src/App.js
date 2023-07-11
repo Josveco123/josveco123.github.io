@@ -164,7 +164,7 @@ function functionNosotros() {
   <div id="nosotros">
     <div class="nos">
       <div id="nos11" class="nosT">
-        <h2 id="denosotros" class="tit-nos">Reseña historica</h2>
+        <h2 id="denosotros" class="tit-nos">Reseña historica.</h2>
         <br />
       </div>
       <div id="nos12" class="nosC">
@@ -190,7 +190,7 @@ function functionNosotros() {
     </div>
     <div class="nos">
       <div id="nos21" class="nosT">
-        <h2 id="politica-calidad" class="tit-nos">Politícas de la calidad</h2>
+        <h2 id="politica-calidad" class="tit-nos">Politícas de la calidad.</h2>
         <br />
       </div>
       <div id="nos22" class="nosC">
@@ -282,7 +282,7 @@ function functionNosotros() {
     </div>
     <div class="nos">
       <div id="nos61" class="nosT">
-        <h2 id="politica-calidad" class="tit-nos">Valores corporativos</h2>
+        <h2 id="politica-calidad" class="tit-nos">Valores corporativos.</h2>
         <br />
       </div>
       <div id="nos62" class="nosC">
@@ -527,17 +527,19 @@ function pagProductos() {
   <div id="cabezaProducto">
     <div id="cabeza">PRODUCTOS</div>
     <div class="cajonProducto">
+
       <!-- 
             1  titulos> 
-             -->
-      <div class="itemProducto">
+     -->
+    
+             <div class="itemProducto">
         <div class="tituloProducto">
           <img id="imgProducto1" src="/images/medicina.png" alt="" />
           <div class="label">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
           <img id="imgProducto2" src="/images/favorite.png" alt="" />
         </div>
         <div class="imageProducto">
-          <img src="/images/productos/producto1.jpg" alt="" />
+          <img src="/images/productos/producto1.png" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
