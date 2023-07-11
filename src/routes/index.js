@@ -12,7 +12,6 @@ router.get('/buscar', async (req, res) => {
   try {
     const usuarioCorreo = await Users.findOne({ email: correo }).select('email').exec();
     const usuarioClave = await Users.findOne({ clave: clave }).select('clave').exec();
-
     const UsersS = { correo: usuarioCorreo ? usuarioCorreo.email : null, clave: usuarioClave ? usuarioClave.clave : null };
      res.json({ mensaje: UsersS});
   } catch (error) {

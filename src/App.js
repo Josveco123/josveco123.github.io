@@ -537,19 +537,20 @@ function pagProductos() {
           <img id="imgProducto2" src="/images/favorite.png" alt="" />
         </div>
         <div class="imageProducto">
-          <img src="/images/productos/aceite_de_almendras.png" alt="" />
+          <img src="/images/productos/producto1.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            ARTRIXIN liquid gel 275 mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Artrixin" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                  Artrixin gel 
+          </span>
+          <span class="presentacion">
+                  Display x 25 sobres x 12g
+          </span>
+          <span class="contenido">
+                  “Para inflamación y dolor Artrixin gel es lo mejor”
+          </span>
+          <button id="artrixin25" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!--        
@@ -563,19 +564,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/aceite_de_comer.png" alt="" />
+          <img src="/images/productos/producto2.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Artrixin gel 
+          </span>
+          <span class="presentacion">
+                Tubo x 30g  
+          </span>
+          <span class="contenido">
+                “Para inflamación y dolor Artrixin gel es lo mejor”
+          </span>
+          <button id="artrixin30" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -589,19 +591,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/acido_borico.png" alt="" />
+          <img src="/images/productos/producto3.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Nomante pastillas  
+          </span>
+          <span class="presentacion">
+                Caja x 24 sobres x 4 pastillas 
+          </span>
+          <span class="contenido">
+                “Garganta fresca y despejada Nomante es la indicada”
+          </span>
+          <button id="nomante" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -616,19 +619,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/acido_salicilico.png" alt="" />
+          <img src="/images/productos/producto4.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Aceite de Almendra 
+          </span>
+          <span class="presentacion">
+                Frasco x 30ml  
+          </span>
+          <span class="contenido">
+                “Excelente producto de almendra”
+          </span>
+          <button id="aceiteAlmendra" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -643,19 +647,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/alcanfor.png" alt="" />
+          <img src="/images/productos/producto5.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Aceite de Coco
+          </span>
+          <span class="presentacion">
+                Frasco x 30ml  
+          </span>
+          <span class="contenido">
+                “Excelente producto de coco”
+          </span>
+          <button id="aceiteCoco" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -670,19 +675,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/alumbre.png" alt="" />
+          <img src="/images/productos/producto6.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="artrixinGel" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Aceite de Comer
+          </span>
+          <span class="presentacion">
+                Frasco x 30ml  
+          </span>
+          <span class="contenido">
+                “Excelente producto de para la alimentacion”
+          </span>
+          <button id="aceiteComer" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
 
@@ -697,19 +703,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/artrixin_gel_display.png" alt="" />
+          <img src="/images/productos/producto7.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            Artrixin Gel. <br/> "Para inflamación y dolor <strong>ARTRIXIN GEL</strong> es lo mejor"
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Acido Borico 
+          </span>
+          <span class="presentacion">
+                Caja x 25 sobres x 10g
+          </span>
+          <span class="contenido">
+                “Excelente producto”
+          </span>
+          <button id="acidoBorico" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
 
@@ -725,19 +732,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/artrixin_gel_tubo.png" alt="" />
+          <img src="/images/productos/producto8.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Acido Salicilico
+          </span>
+          <span class="presentacion">
+                Caja x 25 sobres x 7g
+          </span>
+          <span class="contenido">
+                “Excelente producto”
+          </span>
+          <button id="aceiteSalicilico" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
 
@@ -753,19 +761,20 @@ function pagProductos() {
         </div>
         <!-- titulos>  -->
         <div class="imageProducto">
-          <img src="/images/productos/azucardeleche.png" alt="" />
+          <img src="/images/productos/producto9.jpg" alt="" />
         </div>
         <!-- imagen  -->
         <div class="info">
-          <div class="descripcionPorducto">
-            iNFIBU Probiotico mg x 8 capsulas liquidas
-          </div>
-          <!-- nombre producto  -->
-          <div>
-            <span class="presentacion">Disponible en Presentacion de:</span>
-          </div>
-          <div class="contenido">500 MILIGRAMOS</div>
-          <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+          <span class="descripcionPorducto">
+                Alcanfor 
+          </span>
+          <span class="presentacion">
+                Caja x 25 sobres x 7g  
+          </span>
+          <span class="contenido">
+                “Excelente producto ”
+          </span>
+          <button id="Alcanfor" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
       <!-- 
@@ -780,20 +789,21 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/bicarbonatodesodio.png" alt="" />
+                <img src="/images/productos/producto10.jpg" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
+              <span class="descripcionPorducto">
+                    Alumbre 
+              </span>
+              <span class="presentacion">
+                    Caja x 25 sobres x 20g 
+              </span>
+              <span class="contenido">
+                    “Excelente producto”
+              </span>
+              <button id="alumbre" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+            </div>
             </div>
       <!-- 
             11
@@ -807,20 +817,21 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/glicerina.png" alt="" />
+                <img src="/images/productos/producto11.jpg" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
+              <span class="descripcionPorducto">
+                    Azucar de leche 
+              </span>
+              <span class="presentacion">
+                    Caja x 25 sobres x 10g
+              </span>
+              <span class="contenido">
+                    “Excelente producto”
+              </span>
+              <button id="aceiteAlmendra" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+            </div>
             </div>
       <!-- 
             12
@@ -834,20 +845,21 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/nomantepastillas.png" alt="" />
+                <img src="/images/productos/producto12.jpg" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">Nomanté pastilla <br/>
-                "Garganta fresca y despejada <strong> NOMANTÉ </strong>es la indicada"
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
+              <span class="descripcionPorducto">
+                    Bicarbonato de sodio 
+              </span>
+              <span class="presentacion">
+                    Caja x 25 sobres x 20g
+              </span>
+              <span class="contenido">
+                    “Excelente producto”
+              </span>
+              <button id="bicarbonato" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+            </div>
             </div>
       <!-- 
             13
@@ -861,20 +873,21 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/saldeepson.png" alt="" />
+                <img src="/images/productos/producto13.jpg" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
+              <span class="descripcionPorducto">
+                    Glicerina
+              </span>
+              <span class="presentacion">
+                    Frasco x 30ml  
+              </span>
+              <span class="contenido">
+                    “Excelente producto”
+              </span>
+              <button id="aceiteAlmendra" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+            </div>
             </div>
       <!-- 
             14
@@ -888,20 +901,21 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/salgrauber.png" alt="" />
+                <img src="/images/productos/producto14.jpg" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
+              <span class="descripcionPorducto">
+                    Sal de Epsom 
+              </span>
+              <span class="presentacion">
+                    Caja x 25 sobres x20g
+              </span>
+              <span class="contenido">
+                    “Excelente producto”
+              </span>
+              <button id="salEpson" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+            </div>
             </div>
                   <!-- 
             15
@@ -915,20 +929,21 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/vaselinapuraX100g.png" alt="" />
+                <img src="/images/productos/producto15.jpg" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
+              <span class="descripcionPorducto">
+                    Sal Glauber 
+              </span>
+              <span class="presentacion">
+                    Caja x 25 sobres x 20g  
+              </span>
+              <span class="contenido">
+                    “Excelente producto”
+              </span>
+              <button id="salGluber" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
+            </div>
             </div>
              <!-- 
             16
@@ -942,21 +957,23 @@ function pagProductos() {
               </div>
               <!-- titulos>  -->
               <div class="imageProducto">
-                <img src="/images/productos/vaselinapuraX20g.png" alt="" />
+                <img src="/images/productos/producto16.jpg" alt="" />
               </div>
               <!-- imagen  -->
               <div class="info">
-                <div class="descripcionPorducto">
-                  iNFIBU Probiotico mg x 8 capsulas liquidas
-                </div>
-                <!-- nombre producto  -->
-                <div>
-                  <span class="presentacion">Disponible en Presentacion de:</span>
-                </div>
-                <div class="contenido">500 MILIGRAMOS</div>
-                <button id="Infibu" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
-              </div>
+              <span class="descripcionPorducto">
+                    Vaselina Pura 
+              </span>
+              <span class="presentacion">
+                    Pote x 20g, y x 100g 
+              </span>
+              <span class="contenido">
+                    “Excelente producto”
+              </span>
+              <button id="vacelina" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>
+            </div>
+          </div>
     </div>
   </div>
   `;
@@ -1000,6 +1017,20 @@ function distribuidores() {
     <div class="dist-nombre">
     <img src="images/distribuidor7.png" alt="">
     </div>
+
+    <div class="dist-nombre">
+    <img src="images/distribuidor8.png" alt="">
+  </div>
+  <div class="dist-nombre">
+    <img src="images/distribuidor9.png" alt="">
+  </div>
+  <div class="dist-nombre">
+    <img src="images/distribuidor10.png" alt="">
+  </div>
+  <div class="dist-nombre">
+  <img src="images/distribuidor11.png" alt="">
+  </div>
+
   </div>
 </div>
   `;
