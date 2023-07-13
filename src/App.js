@@ -44,41 +44,22 @@ function contactos() {
 <div class="figura1">
   <div id="contactos-p">
       <p>
-          <span><strong>SINCELEJO, SUCRE</strong></span><br />
-          <span>CELULAR: (+57) 3135120781</span><br />
-          <span>E-mail: sincelejo@laboratoriodelcaribe.com</span>
+          <span>1- ventas@laboratoriodelcaribe.com</span>
       </p>
       <p>
-          <span><strong>BARRANQUILLA, ATLÁNTICO</strong></span><br />
-          <span>CELULAR: (+57) 3126873831</span><br />
-          <span>E-mail:</span><br />
-          <span>barranquilla@laboratoriodelcaribe.com</span><br />
-          <span>barranquilla1@laboratoriodelcaribe.com</span>
+          <span>2- comercial@laboratoriodelcaribe.com</span>  <br/> <span> Celular: (+57) 3126869891</span>
       </p>
       <p>
-          <span><strong>MONTERÍA, CÓRDOBA</strong></span><br />
-          <span>CELULAR: (+57) 3126874903</span><br />
-          <span>E-mail: monteria@laboratoriodelcaribe.com</span>
+          <span>3- sincelejo@laboratoriodelcaribe.com</span>  <br/> <span>Celular: (+57) 3135120781</span>
       </p>
       <p>
-          <span><strong>BUCARAMANGA, SANTANDER</strong></span><br />
-          <span>CELULAR: (+57) 3126874922</span><br />
-          <span>Email: bucaramanga@laboratoriodelcaribe.com</span>
+      <span>4- monteria@laboratoriodelcaribe.com</span>  <br/> <span>Celular: (+57) 3126874903</span>
       </p>
       <p>
-          <span><strong>CARTAGENA, BOLIVAR</strong></span><br />
-          <span>CELULAR: (+57) 3216987967</span><br />
-          <span>E-mail: cartagena@laboratoriodelcaribe.com</span>
+      <span>5- gerencia@laboratoriodelcaribe.com </span>  <br/> <span>Celular: (+57) 3126869891</span>
       </p>
       <p>
-          <span><strong>VALLEDUPAR, CESAR</strong></span><br />
-          <span>CELULAR: (+57) 3126703794</span><br />
-          <span>E-mail: valledupar@laboratoriodelcaribe.com</span>
-      </p>
-      <p>
-          <span><strong>CÚCUTA, NORTE DE SANTANDER</strong></span><br />
-          <span>CELULAR: (+57) 3145247471</span><br />
-          <span>E-mail: cucuta@laboratoriodelcaribe.com</span>
+          <span>6- WhatsApp:</span>  <br/> <span> Numeros: (+57) 3135120781 y (+57) 3126869891</span>
       </p>
   </div>
   <div id="form-correo">
@@ -143,7 +124,6 @@ function contactos() {
  *
  */
 
-
 async function fNosotros() {
   await functionNosotros();
 }
@@ -154,159 +134,114 @@ function functionNosotros() {
   var nosotros = document.getElementById("cajon");
   nosotros.innerHTML = `
   <section id="pag-nosotros">
-  <div id="figuraN">
-    <div id="figura1">
-      <span> ACERCA DE NOSOTROS </span>
+    <div id="figuraN">
+      <div id="figura1">
+        <span> ACERCA DE NOSOTROS </span>
+      </div>
+      <div id="linea1nosotros"></div>
     </div>
-    <div id="linea1nosotros"></div>
-  </div>
-
-  <div id="nosotros">
-    <div class="nos">
-      <div id="nos11" class="nosT">
-        <h2 id="denosotros" class="tit-nos">Reseña historica.</h2>
-        <br />
+  
+    <div id="nosotros">
+      <div class="nos">
+        <div id="nos11" class="nosT">
+          <h2 id="denosotros" class="tit-nos">Reseña historica.</h2>
+          <br />
+        </div>
+        <div id="nos12" class="nosC">
+          <p>
+            <span>
+            Laboratorio del caribe S.A.S. inició labores en Sincelejo el 20 de marzo de 1984. 
+            Se obtiene el primer Registro Sanitario para el producto comercializado bajo la marca 
+            Artrixin iniciándose la expansión y posicionamiento en todo el territorio Nacional. <br/><br/>
+            A través de los años Laboratorio del Caribe S.A.S. ha crecido de manera importante en 
+            el mercado Nacional, manteniendo una posición de liderazgo y prestigio ante el 
+            cuerpo médico por la calidad de sus productos.
+            </span>
+          </p>
+        </div>
       </div>
-      <div id="nos12" class="nosC">
-        <p>
-          <span>
-            Laboratorio del caribe S.A.S. inició labores en Sincelejo el 20 de
-            marzo de 1984. Se obtiene el primer Registro Sanitario para el
-            producto comercializado bajo la marca Artrixin iniciándose la
-            expansión y posicionamiento en todo el territorio Nacional.
-            <br />
-            A través de los años Laboratorio del Caribe S.A.S. ha crecido de
-            manera importante en el mercado Nacional, manteniendo una posición
-            de liderazgo y prestigio ante el cuerpo médico por la calidad de sus
-            productos.
-            <br />  <br />
-          Laboratorio del Caribe S.A.S., fue certificado con Buenas Prácticas de
-          Manufactura en el año 2002, lo que le permitirá en el siglo XXI
-          continuar ofreciendo medicamentos de excelente calidad seguros y
-          confiables al sistema de salud.
-          </span>
-        </p>
+      <div class="nos">
+        <div id="nos21" class="nosT">
+          <h2 id="politica-calidad" class="tit-nos">Politícas de la calidad.</h2>
+          <br />
+        </div>
+        <div id="nos22" class="nosC">
+          <p>
+            <span>
+            Laboratorio del Caribe S.A.S., es una empresa farmacéutica que está en un mejoramiento 
+            continuo, ofreciendo productos y servicios confiables que cumplan con las normas de Buenas 
+            Prácticas de Manufactura, para contribuir de esta forma al bienestar de la Sociedad. <br /><br />
+            Con ética y responsabilidad ofrecemos al mercado productos de excelente calidad, seguros y 
+            efectivos, que satisfacen las necesidades del cliente, cumpliendo con normas Nacionales e 
+            Internacionales, y respetando el medio ambiente. <br /><br />
+            A través de la gestión adecuada de los recursos y el compromiso asumido por nuestros 
+            colaboradores, Laboratorio del Caribe S.A.S., genera el nivel de rentabilidad acorde a las 
+            expectativas de los socios, permitiendo el desarrollo integral de los miembros de nuestra 
+            organización.
+            </span>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="nos">
-      <div id="nos21" class="nosT">
-        <h2 id="politica-calidad" class="tit-nos">Politícas de la calidad.</h2>
-        <br />
+      <div class="nos">
+        <div id="nos41" class="nosT">
+          <h2 id="politica-calidad" class="tit-nos">Misión.</h2>
+          <br />
+        </div>
+        <div id="nos42" class="nosC">
+          <p>
+            <span>
+            Laboratorio del Caribe S.A.S., es una empresa farmacéutica que tiene como misión, comercializar 
+            productos de excelente calidad, cumpliendo con todas las Normas exigidas por las entidades que 
+            nos vigilan, respetando el medio ambiente y generando de esta forma bienestar a la comunidad. <br /><br />
+            Laboratorio del Caribe S.A.S. propenderá por el desarrollo integral de sus colaboradores al mismo tiempo 
+            que satisface las expectativas de sus socios.
+            </span>
+          </p>
+        </div>
       </div>
-      <div id="nos22" class="nosC">
-        <p>
-          <span>Laboratorio del Caribe S.A.S., es una empresa farmacéutica que está
-            en un mejoramiento continuo, ofreciendo productos y servicios
-            confiables que cumplan con las normas de Buenas Prácticas de
-            Manufactura, para contribuir de esta forma al bienestar de la
-            Sociedad.
-            <br />
-            <br />
-            Con ética y responsabilidad ofrecemos al mercado productos de
-            excelente calidad, seguros y efectivos, que satisfacen las
-            necesidades del cliente, cumpliendo con normas Nacionales e
-            Internacionales, y respetando el medio ambiente.
-            <br /><br />
-            A través de la gestión adecuada de los recursos y el compromiso
-            asumido por nuestros colaboradores, Laboratorio del Caribe S.A.,
-            genera el nivel de rentabilidad acorde a las expectativas de los
-            socios, permitiendo el desarrollo integral de los miembros de
-            nuestra organización.
-          </span>
-        </p>
-        <br />
+      <div class="nos">
+        <div id="nos51" class="nosT">
+          <h2 id="politica-calidad" class="tit-nos">Visión.</h2>
+          <br />
+        </div>
+        <div id="nos52" class="nosC">
+          <p>
+            <span>
+            Laboratorios del Caribe S.A.S. va a ser uno de los más reconocidos Laboratorios farmacéuticos de 
+            Colombia, ampliando su línea de productos, para hacer una contribución a la sociedad, a través de 
+            sus productos, construyendo herramientas para ser más competitivos y posicionarse como uno de los 
+            principales laboratorios farmacéuticos en las regiones donde hace presencia
+            </span>
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="nos">
-      <div id="nos31" class="nosT">
-        <h2 id="politica-calidad" class="tit-nos">Objetivo de la calidad.</h2>
-        <br />
-      </div>
-      <div id="nos32" class="nosC">
-        <p>
-          <span>
-            Lograr el cumplimiento de las expectativas del cliente, entregando
-            productos a tiempo, efectivos, seguros y confiables para el
-            bienestar Social. Optimizar los tiempos de respuesta al cliente.
-          </span>
-        </p>
-        <p>• Lograr el compromiso de cada uno de nuestros Colaboradores a través
-          del mejoramiento Continuo de nuestros recursos.
-        </p>
-        <p>• Generar excelente rentabilidad con el manejo efectivo de los
-          recursos.
-        </p>
-      </div>
-    </div>
-    <div class="nos">
-      <div id="nos41" class="nosT">
-        <h2 id="politica-calidad" class="tit-nos">Misión.</h2>
-        <br />
-      </div>
-      <div id="nos42" class="nosC">
-        <p>
-          <span>
-            Laboratorio del Caribe S.A.S., es una empresa farmacéutica que tiene
-            como misión, comercializar productos de excelente calidad,
-            cumpliendo con todas las Normas exigidas por las entidades que nos
-            vigilan, respetando el medio ambiente y generando de esta forma
-            bienestar a la comunidad.
-            <br /><br />
-            Laboratorio del Caribe S.A.S. propenderá por el desarrollo integral de sus
-            colaboradores al mismo tiempo que satisface las expectativas de sus
-            socios.
-            <br /><br />
-          </span>
-        </p>
-      </div>
-    </div>
-    <div class="nos">
-      <div id="nos51" class="nosT">
-        <h2 id="politica-calidad" class="tit-nos">Visión.</h2>
-        <br />
-      </div>
-      <div id="nos52" class="nosC">
-        <p>
-          <span>
-            Laboratorios del Caribe S.A.S. para el año 2030 pretende ser uno de
-            los más reconocidos Laboratorios farmacéuticos de Colombia, y estar
-            presente en todo el territorio nacional, así como iniciar su
-            expansión a centro América ampliando su línea de productos cada año,
-            para hacer una contribución a la región, construyendo herramientas
-            para ser más competitivos y posicionarse como uno de los principales
-            laboratorios farmacéuticos en las regiones donde hace presencia.
-          </span>
-        </p>
-        <br />
+      <div class="nos">
+        <div id="nos61" class="nosT">
+          <h2 id="politica-calidad" class="tit-nos">Valores corporativos.</h2>
+          <br />
+        </div>
+        <div id="nos62" class="nosC">
+          <p>
+            <span class="list-container">
+              <span><strong>Respeto:</strong> Aceptamos las decisiones y acciones de
+                los clientes internos y externos siendo tolerantes.</span>         <br />        <br />
+              <span><strong>Compromiso:</strong> Damos lo máximo de cada uno de
+                nosotros con sentido de pertenencia hacia la empresa.</span> <br>        <br />
+              <span><strong>Honestidad:</strong> Actuamos conforme a los intereses
+                comunes y no particulares de acuerdo a la ley y las
+                costumbres.</span>         <br />        <br />
+              <span><strong>Lealtad:</strong> Somos fieles frente a los compromisos y
+                objetivos de la empresa.</span>         <br />        <br />
+              <span><strong>Responsabilidad:</strong> Somos conscientes de nuestras
+                actuaciones, cumpliendo cabalmente de forma que se logren los
+                objetivos de la empresa.</span>
+            </span>
+          </p>
+        </div>
       </div>
     </div>
-    <div class="nos">
-      <div id="nos61" class="nosT">
-        <h2 id="politica-calidad" class="tit-nos">Valores corporativos.</h2>
-        <br />
-      </div>
-      <div id="nos62" class="nosC">
-        <p>
-          <span class="list-container">
-            <span><strong>Respeto:</strong> Aceptamos las decisiones y acciones de
-              los clientes internos y externos siendo tolerantes.</span>         <br />        <br />
-            <span><strong>Compromiso:</strong> Damos lo máximo de cada uno de
-              nosotros con sentido de pertenencia hacia la empresa.</span> <br>        <br />
-            <span><strong>Honestidad:</strong> Actuamos conforme a los intereses
-              comunes y no particulares de acuerdo a la ley y las
-              costumbres.</span>         <br />        <br />
-            <span><strong>Lealtad:</strong> Somos fieles frente a los compromisos y
-              objetivos de la empresa.</span>         <br />        <br />
-            <span><strong>Responsabilidad:</strong> Somos conscientes de nuestras
-              actuaciones, cumpliendo cabalmente de forma que se logren los
-              objetivos de la empresa.</span>
-          </span>
-        </p>
-      </div>
     </div>
-  </div>
-  </div>
-</section>
+  </section>
   `;
 }
 

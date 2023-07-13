@@ -221,6 +221,12 @@ header {
   margin-left: auto;
 }
 
+@media (max-width: 800px) {
+  #menus-casa {
+   display:none;
+  }
+}
+
 .opciones-a {
   display: flex;
   justify-content: center;
@@ -255,6 +261,18 @@ header {
   text-align: center;
   flex-direction: row;
 }
+#menuA {
+ position: absolute;
+ margin-left: 90%;
+  display:none;
+}
+
+@media (max-width: 800px) {
+  #menuA {
+   display:block;
+  }
+}
+
 
 #mnu-search {
   margin-left: 20px;
@@ -269,6 +287,12 @@ header {
   font-weight: bold;
   margin-top: 28px;
   transition: width 0.3s ease-in-out;
+}
+
+@media (max-width: 1000px) {
+  #mnu-search {
+   display:none;
+  }
 }
 
 #mnu-search.collapsed {
@@ -340,6 +364,11 @@ input::placeholder {
 @media (max-width: 1000px) {
   #slogan {
     margin-left: 25%;
+  }
+}
+@media (max-width: 800px) {
+  #slogan {
+    display: none;
   }
 }
 
@@ -494,8 +523,8 @@ s #paginablog {
   border-bottom: red;
 }
 
-#textIni span{
-color:red;
+#textIni span {
+  color: red;
 }
 
 #blogs {
@@ -507,6 +536,33 @@ color:red;
   grid-gap: 4vw 3vw;
   z-index: 0;
 }
+
+@media (max-width: 1180px) {
+  #blogs {
+    width: 93.5%;
+    margin: 3vw 0 1vw 3.8vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 4vw 3vw;
+    z-index: 0;
+  }
+
+}
+
+@media (max-width: 780px) {
+  #blogs {
+    width: 93.5%;
+    margin: 3vw 0 1vw 3.8vw;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 4vw 3vw;
+    z-index: 0;
+  }
+
+}
+
 
 .div-blogs {
   display: flex;
@@ -554,6 +610,27 @@ color:red;
   font-family: Tahoma;
   color: black;
 }
+
+@media (max-width: 1180px) {
+  .titBlogs {
+    font-size: 2.2vw;
+  }
+
+  .p-blogs {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 780px) {
+  .titBlogs {
+    font-size: 3.2vw;
+  }
+
+  .p-blogs {
+    font-size: 3vw;
+  }
+}
+
 
 .blogImgFinal {
   margin: 1.5vw 1vw 1vw 1vw;
@@ -648,69 +725,70 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
   justify-content: center;
 }
 
+/*
 #nos-distribucion {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 100px 60px;
 }
-
+*/
 .nos {
-  margin-bottom: 40px;
+  margin-bottom: 10px;
+  margin-left: 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   border: 2px solid rgb(241, 223, 223);
-  margin-left: 50px;
   background: linear-gradient(to right, rgb(167, 165, 165), rgba(155, 154, 154, 0));
   box-shadow: inset 0 0 10px 0 rgb(241, 224, 224);
-}
-
-.nosT {
-  margin-right: 10px;
-  width: 40%;
-  height: 300px;
-
 }
 
 .nosC {
   display: flex;
   flex-direction: column;
-
   width: 60%;
-  height: 300px;
+  height: auto;
   font-size: 20px;
   margin-right: 40px;
   text-align: justify;
   justify-content: center;
 }
 
+.nosT {
+  margin-right: 10px;
+}
+
 #nos11 {
-  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos1.png");
-  background-size: cover;
+  width: 40%;
+  height: 15rem;
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos11.jpg");
 }
 
 #nos21 {
-  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos21.png");
-  background-size: cover;
-}
-
-#nos31 {
-  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos31.png");
+  width: 40%;
+  height: 23rem;
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos21.jpg");
   background-size: cover;
 }
 
 #nos41 {
+  width: 40%;
+  height: 13rem;
   background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos41.png");
   background-size: cover;
 }
 
 #nos51 {
+  width: 40%;
+  height: 11rem;
   background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos51.png");
   background-size: cover;
 }
 
 #nos61 {
+  width: 40%;
+  height: 23rem;
   background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos61.png");
   background-size: cover;
 }
@@ -824,7 +902,7 @@ pagina de productos mostrario
   margin-bottom: 3px;
   font-size: 1.4rem;
   font-weight: bold;
-  color:red;
+  color: red;
 }
 
 .info {
@@ -841,6 +919,7 @@ pagina de productos mostrario
   font-family: sans-serif;
   font-style: italic;
 }
+
 .fichaTecnica {
   margin-top: 20px;
   font-size: 15px;
@@ -868,8 +947,7 @@ pagina de productos mostrario
   height: 850px;
   display: flex;
   flex-direction: column;
-  margin-bottom: 20px;
-  background-color: rgb(238, 234, 234);
+  background-color: rgb(247, 243, 243);
 }
 
 #nombre-contacto {
@@ -909,19 +987,33 @@ pagina de productos mostrario
 }
 
 #contactos-p {
-  margin-top: 20px;
-  margin-left: 120px;
-  width: 50%;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-gap: 20px 10px;
+  margin: 2.6vw 2.5vw 1vw 8vw;
+  width: 45%;
+  height: 92%;
+  padding-left: 3vw;
+  padding-top: 1.5vw;
+  background-color: rgb(235, 233, 233);
+  box-shadow: 0 0 5px 2px rgba(252, 249, 249, 0.2);
+  border-top-left-radius: 17%;
+}
+
+#contactos-p p {
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+  width: 100%;
+}
+
+#contactos-p p span:nth-of-type(2) {
+  font-size: 1.2rem;
+  color: red;
+  margin-left: 1.8rem;
 }
 
 /*
 Area del formulario de envio
 */
 #form-correo {
-  margin: 30px 30px 30px 5px;
+  margin: 30px 30px 0px 5px;
   width: 35%;
   display: flex;
   flex-direction: column;
