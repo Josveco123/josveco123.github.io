@@ -42,26 +42,40 @@ function contactos() {
   <div id="nombre-contacto"> CONTACTOS</div>
 <div class="figura0"></div>
 <div class="figura1">
-  <div id="contactos-p">
-      <p>
-          <span>1- ventas@laboratoriodelcaribe.com</span>
-      </p>
-      <p>
-          <span>2- comercial@laboratoriodelcaribe.com</span>  <br/> <span> Celular: (+57) 3126869891</span>
-      </p>
-      <p>
-          <span>3- sincelejo@laboratoriodelcaribe.com</span>  <br/> <span>Celular: (+57) 3135120781</span>
-      </p>
-      <p>
-      <span>4- monteria@laboratoriodelcaribe.com</span>  <br/> <span>Celular: (+57) 3126874903</span>
-      </p>
-      <p>
-      <span>5- gerencia@laboratoriodelcaribe.com </span>  <br/> <span>Celular: (+57) 3126869891</span>
-      </p>
-      <p>
-          <span>6- WhatsApp:</span>  <br/> <span> Numeros: (+57) 3135120781 y (+57) 3126869891</span>
-      </p>
-  </div>
+<div id="contactos-p">
+<ul>
+  <li>
+    <p>
+      <span>ventas@laboratoriodelcaribe.com</span>
+    </p>
+  </li>
+  <li>
+    <p>
+      <span>comercial@laboratoriodelcaribe.com</span>  <br/> <span> Celular: (+57) 3126869891</span>
+    </p>
+  </li>
+  <li>
+    <p>
+      <span>sincelejo@laboratoriodelcaribe.com</span>  <br/> <span>Celular: (+57) 3135120781</span>
+    </p>
+  </li>
+  <li>
+    <p>
+      <span>monteria@laboratoriodelcaribe.com</span>  <br/> <span>Celular: (+57) 3126874903</span>
+    </p>
+  </li>
+  <li>
+    <p>
+      <span>gerencia@laboratoriodelcaribe.com </span>  <br/> <span>Celular: (+57) 3126869891</span>
+    </p>
+  </li>
+  <li>
+    <p>
+      <span>WhatsApp:</span>  <br/> <span> Numeros: (+57) 3135120781 y (+57) 3126869891</span>
+    </p>
+  </li>
+</ul>
+</div>
   <div id="form-correo">
       <div id="correos">
           <h2 class="tit-pag4D">Queremos escucharte!</h2>
@@ -566,9 +580,6 @@ function pagProductos() {
           <span class="presentacion">
                 Frasco x 30ml  
           </span>
-          <span class="contenido">
-                “Excelente producto de almendra”
-          </span>
           <button id="aceiteAlmendra" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
@@ -593,9 +604,6 @@ function pagProductos() {
           </span>
           <span class="presentacion">
                 Frasco x 30ml  
-          </span>
-          <span class="contenido">
-                “Excelente producto de coco”
           </span>
           <button id="aceiteCoco" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
@@ -622,9 +630,6 @@ function pagProductos() {
           <span class="presentacion">
                 Frasco x 30ml  
           </span>
-          <span class="contenido">
-                “Excelente producto de para la alimentacion”
-          </span>
           <button id="aceiteComer" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
@@ -649,9 +654,6 @@ function pagProductos() {
           </span>
           <span class="presentacion">
                 Caja x 25 sobres x 10g
-          </span>
-          <span class="contenido">
-                “Excelente producto”
           </span>
           <button id="acidoBorico" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
@@ -679,9 +681,6 @@ function pagProductos() {
           <span class="presentacion">
                 Caja x 25 sobres x 7g
           </span>
-          <span class="contenido">
-                “Excelente producto”
-          </span>
           <button id="aceiteSalicilico" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
@@ -708,9 +707,6 @@ function pagProductos() {
           <span class="presentacion">
                 Caja x 25 sobres x 7g  
           </span>
-          <span class="contenido">
-                “Excelente producto ”
-          </span>
           <button id="Alcanfor" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
         </div>
       </div>
@@ -735,9 +731,6 @@ function pagProductos() {
               </span>
               <span class="presentacion">
                     Caja x 25 sobres x 20g 
-              </span>
-              <span class="contenido">
-                    “Excelente producto”
               </span>
               <button id="alumbre" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>
@@ -764,9 +757,6 @@ function pagProductos() {
               <span class="presentacion">
                     Caja x 25 sobres x 10g
               </span>
-              <span class="contenido">
-                    “Excelente producto”
-              </span>
               <button id="aceiteAlmendra" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>
             </div>
@@ -791,9 +781,6 @@ function pagProductos() {
               </span>
               <span class="presentacion">
                     Caja x 25 sobres x 20g
-              </span>
-              <span class="contenido">
-                    “Excelente producto”
               </span>
               <button id="bicarbonato" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>
@@ -820,9 +807,6 @@ function pagProductos() {
               <span class="presentacion">
                     Frasco x 30ml  
               </span>
-              <span class="contenido">
-                    “Excelente producto”
-              </span>
               <button id="aceiteAlmendra" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>
             </div>
@@ -847,9 +831,6 @@ function pagProductos() {
               </span>
               <span class="presentacion">
                     Caja x 25 sobres x20g
-              </span>
-              <span class="contenido">
-                    “Excelente producto”
               </span>
               <button id="salEpson" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>
@@ -876,9 +857,6 @@ function pagProductos() {
               <span class="presentacion">
                     Caja x 25 sobres x 20g  
               </span>
-              <span class="contenido">
-                    “Excelente producto”
-              </span>
               <button id="salGluber" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>
             </div>
@@ -903,9 +881,6 @@ function pagProductos() {
               </span>
               <span class="presentacion">
                     Pote x 20g, y x 100g 
-              </span>
-              <span class="contenido">
-                    “Excelente producto”
               </span>
               <button id="vacelina" onClick="fichaTecnica(event)" class="fichaTecnica">FICHA TECNICA</button>
             </div>

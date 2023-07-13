@@ -270,6 +270,7 @@ header {
 @media (max-width: 800px) {
   #menuA {
    display:block;
+   border: 2ps solid white;
   }
 }
 
@@ -775,21 +776,21 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
 #nos41 {
   width: 40%;
   height: 13rem;
-  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos41.png");
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos41.jpg");
   background-size: cover;
 }
 
 #nos51 {
   width: 40%;
   height: 11rem;
-  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos51.png");
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos51.jpg");
   background-size: cover;
 }
 
 #nos61 {
   width: 40%;
   height: 23rem;
-  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos61.png");
+  background-image: linear-gradient(to right, rgba(139, 136, 136, 0), rgb(199, 197, 197)), url("/images/nos61.jpg");
   background-size: cover;
 }
 
@@ -997,16 +998,20 @@ pagina de productos mostrario
   border-top-left-radius: 17%;
 }
 
-#contactos-p p {
-  margin-bottom: 15px;
+#contactos-p ul{
+  margin-left: 4rem;
+}
+
+#contactos-p ul p {
+   margin-bottom: 15px;
   font-size: 1.5rem;
   width: 100%;
 }
 
-#contactos-p p span:nth-of-type(2) {
+#contactos-p ul p span:nth-of-type(2) {
   font-size: 1.2rem;
   color: red;
-  margin-left: 1.8rem;
+
 }
 
 /*
@@ -1500,6 +1505,7 @@ area de los mensaje ================================  alestas
   background-color: #c5bfbf;
 }
 
+
 #footerBase {
   margin: 0 30px 20px 3.3vw;
   display: flex;
@@ -1507,8 +1513,14 @@ area de los mensaje ================================  alestas
   justify-content: space-between;
   background-color: #f3ecec;
   border-radius: 0 0 80px 80px;
-
 }
+@media (max-width: 800px) {
+  #footerBase {
+    flex-direction: column;
+  }
+    
+  }
+
 
 #footer-empresa {
   margin: 2% 0 2% 2%;
@@ -1527,6 +1539,19 @@ area de los mensaje ================================  alestas
   font-size: 1.2vw;
   line-height: 1.5;
 }
+@media (max-width: 1000px) {
+  #footer-empresa {
+    width: 45%;
+  }
+  #footer-empresa h1 {
+    font-size: 2.5vw;
+  }
+  #footer-empresa ul {
+    font-size: 1.8vw;
+  }
+}
+
+
 
 #footer-link {
   margin: 2% 0 2% 0;
@@ -1537,6 +1562,14 @@ area de los mensaje ================================  alestas
   border-right: 1px solid rgb(141, 141, 138);
   border-left: 1px solid rgb(133, 133, 130);
 }
+
+@media (max-width: 1000px) {
+  #footer-link {
+   display:none;
+  }
+}
+
+
 
 #footer-link h1 {
   align-items: center;
@@ -1566,7 +1599,12 @@ area de los mensaje ================================  alestas
   display: flex;
   flex-direction: column;
   width: 30%;
+}
 
+@media (max-width: 1000px) {
+  #footer-redes-sociales {
+    width: 45%;
+  }
 }
 
 #footer-redes-sociales h1 {
@@ -1596,6 +1634,21 @@ area de los mensaje ================================  alestas
   margin-left: 3%;
 }
 
+@media (max-width: 1000px) {
+  #footer-redes-sociales h1 {
+    font-size: 2.5vw;
+  }
+
+  #footer-redes-sociales ul {
+    font-size: 2vw;
+  }
+  #redesS a img {
+    width: 4.5vw; 
+  }
+}
+
+
+
 #autor {
   display: flex;
   flex-direction: row;
@@ -1604,6 +1657,7 @@ area de los mensaje ================================  alestas
   font-size: 12px;
   color: white;
 }
+
 
 #autorD {
   margin-left: 200px;
