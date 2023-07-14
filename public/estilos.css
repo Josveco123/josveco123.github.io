@@ -734,8 +734,7 @@ Insercio de pagina NOSOTROS inicio ====================================== NOSOTR
 }
 */
 .nos {
-  margin-bottom: 10px;
-  margin-left: 50px;
+  margin: 0px 35px 10px 50px;
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -988,7 +987,7 @@ pagina de productos mostrario
 }
 
 #contactos-p {
-  margin: 2.6vw 2.5vw 1vw 8vw;
+  margin: 2.6vw 2.5vw 1vw 10vw;
   width: 45%;
   height: 92%;
   padding-left: 3vw;
